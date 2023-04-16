@@ -24,6 +24,6 @@ public class Movement_Navicella : MonoBehaviour
         activeHoverSpeed = Input.GetAxisRaw("Hover") * hoverSpeed;
 
         // Attribuizione del movimento al player
-        transform.position += transfrom.forward * activeForwardSpeed * Time.deltaTime;
+        transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
     }
 }
