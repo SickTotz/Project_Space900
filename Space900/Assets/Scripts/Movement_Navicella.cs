@@ -25,5 +25,7 @@ public class Movement_Navicella : MonoBehaviour
 
         // Attribuizione del movimento al player
         transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
+        transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
+        transform.position += tranform.up * activeHoverSpeed * Time.deltaTime;
     }
 }
