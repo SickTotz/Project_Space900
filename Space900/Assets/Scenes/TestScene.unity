@@ -264,6 +264,9 @@ MonoBehaviour:
   forwardSpeed: 25
   strafeSpeed: 7.5
   hoverSpeed: 5
+  lookRateSpeed: 90
+  rollSpeed: 90
+  rollAcceleration: 3.5
 --- !u!1 &842662317
 GameObject:
   m_ObjectHideFlags: 0
