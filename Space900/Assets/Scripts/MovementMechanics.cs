@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement_Navicella : MonoBehaviour
+public class MovementMechanics : MonoBehaviour
 {   
     // Creazione di variabili per il movimento del player
 

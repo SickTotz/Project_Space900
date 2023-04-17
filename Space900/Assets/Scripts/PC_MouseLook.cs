@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement_Navicella : MonoBehaviour
+public class PC_MouseLook : MonoBehaviour
 {   
     // Creazione di ulteriori variabili per provare nuovi input del mouse
     
