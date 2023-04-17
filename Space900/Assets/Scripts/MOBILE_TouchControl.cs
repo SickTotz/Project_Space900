@@ -19,6 +19,7 @@ public class MOBILE_TouchControl : MonoBehaviour
         leftFingerID = -1;      // Settaggio a -1 per gli input del movimento
         rightFingerID = -1;     // Settaggio a -1 per gli input della visuale
         screenWidth = Screen.width;
+        //commento a caso
     }
 
     // Update is called once per frame
