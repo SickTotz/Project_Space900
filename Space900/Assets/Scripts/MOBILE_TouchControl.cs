@@ -19,7 +19,6 @@ public class MOBILE_TouchControl : MonoBehaviour
         leftFingerID = -1;      // Settaggio a -1 per gli input del movimento
         rightFingerID = -1;     // Settaggio a -1 per gli input della visuale
         screenWidth = Screen.width;
-        //commento a caso
     }
 
     // Update is called once per frame
@@ -41,6 +40,12 @@ public class MOBILE_TouchControl : MonoBehaviour
                     if(t.position.x > (screenWidth / 2) && rightFingerID == -1){    // Se la posizione del dito > della grandezza del dello schermo / 2 e si trova a -1...
                         rightFingerID = t.fingerId;                                         // Il dito destro corrisponde ai comandi del dito destro stesso
                     }
+                    else{
+                        if(t.postion.x < (screenWidth / 2) && leftFingerID == -1){
+                            leftFingerID = t.fingerId;
+                            moveTouchStartPostition = t.postion;
+                        }
+                    }
                     break;                                                          // Interrompi
                 
                 case TouchPhase.Canceled:           // Nel caso in cui l'input da touch viene cancellato...
@@ -48,11 +53,22 @@ public class MOBILE_TouchControl : MonoBehaviour
                     if(t.fingerId == rightFingerID){        
                         rightFingerID = -1;
                     }
+                    else{
+                        if(t.fingerId == leftFingerID){
+                            leftFingerID = -1;
+                            moveTouchStartPostition = moveInput = Vector2.zero;
+                        }
+                    }
                     break;
 
                 case TouchPhase.Moved:
                     if(rightFingerID == t.fingerId){
                         lookInput = t.deltaPosition * Time.deltaTime * sensitivity;
+                    }
+                    else{
+                        if(leftFingerID == t.fingerId){
+                            moveInput = t.postion - moveTouchStartPostition;
+                        }
                     }
                     break;
                 

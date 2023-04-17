@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Movement_Navicella : MonoBehaviour
 {   
-    /*
     // Creazione di variabili per il movimento del player
+
+    public MOBILE_TouchControl touch;           // Link delle meccaniche di touch
     public float forwardSpeed = 25f, strafeSpeed = 7.5f, hoverSpeed = 5f;
     private float activeForwardSpeed, activeStrafeSpeed, activeHoverSpeed;
     private float forwardAcceleration = 2.5f, strafeAcceleration = 2f, hoverAcceleration = 2f;
@@ -15,31 +16,20 @@ public class Movement_Navicella : MonoBehaviour
 
     private float rollInput;
     public float rollSpeed = 90f, rollAcceleration = 3.5f;
-    */
-    
-    // Creazione di ulteriori variabili per provare nuovi input
-    
-    public float sensitivity = 100f, sensitivityMultiplier;
-    public Transform parentBody;
-    public float velocity, maxUpwardRotation;
-    float _mouseX, _mouseY, _xRotation, _yRotation;
-    public MOBILE_TouchControl touch;
+
+    float _xMovement, _yMovement;
 
     // Start is called before the first frame update
     void Start()
     {   
         // Variabili per la definizione della visuale in gioco
-        // screenCenter.x = Screen.width * .5f;
-        // screenCenter.y = Screen.height * .5f;
+        screenCenter.x = Screen.width * .5f;
+        screenCenter.y = Screen.height * .5f;
     }
 
     // Update is called once per frame
     void Update()
-    {   
-        if(touch.rightFingerID != -1){
-            Look();
-        }
-        /*
+    {        
         // Impostazioni per la visualizzaione con il mouse
         lookInput.x = Input.mousePosition.x;
         lookInput.y = Input.mousePosition.y;
@@ -56,26 +46,17 @@ public class Movement_Navicella : MonoBehaviour
 
 
         // Utilizzo delle variabili per i movimenti del player
-        activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);
-        activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
-        activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
+        // activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);
+        // activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
+        // activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
 
+        _xMovement = touch.moveInput.x;
+        _yMovement = touch.moveInput.y;
+        
         // Attribuizione del movimento al player
         transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
         transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
         transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
-        */
-    }
-    void Look(){
-
-        _mouseX = touch.lookInput.x;
-        _mouseY = touch.lookInput.y;
-        _xRotation += _mouseX * sensitivity * Time.deltaTime;
-        _yRotation += _mouseY * sensitivity * sensitivityMultiplier * Time.deltaTime;
-        _yRotation = Mathf.Clamp(_yRotation, -maxUpwardRotation, maxUpwardRotation);
-
-
-        parentBody.transform.rotation = Quaterion.Euler(0, _xRotation, 0);
-        transform.localRotation = Quaterion.Euler(_yRotation, 0, 0);
+        
     }
 }
