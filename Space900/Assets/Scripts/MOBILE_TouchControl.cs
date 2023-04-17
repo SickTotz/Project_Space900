@@ -18,7 +18,7 @@ public class MOBILE_TouchControl : MonoBehaviour
     {
         leftFingerID = -1;      // Settaggio a -1 per gli input del movimento
         rightFingerID = -1;     // Settaggio a -1 per gli input della visuale
-        screenWidth = Screen.Width;
+        screenWidth = Screen.width;
     }
 
     // Update is called once per frame
@@ -55,7 +55,7 @@ public class MOBILE_TouchControl : MonoBehaviour
                     }
                     break;
                 
-                case TouchPase.Stationary:
+                case TouchPhase.Stationary:
                     lookInput = Vector2.zero;
 
                     break;

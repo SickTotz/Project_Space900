@@ -15,6 +15,8 @@ public class Movement_Navicella : MonoBehaviour
     private float rollInput;
     public float rollSpeed = 90f, rollAcceleration = 3.5f;
 
+    public MOBILE_TouchControl touch;
+
     // Start is called before the first frame update
     void Start()
     {   
