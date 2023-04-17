@@ -28,6 +28,13 @@ public class Movement_Navicella : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        if(touch.rightFingerID != -1){
+            Look();
+        }
+    }
+    void Look()
+    {
+        
         // Impostazioni per la visualizzaione con il mouse
         lookInput.x = Input.mousePosition.x;
         lookInput.y = Input.mousePosition.y;
