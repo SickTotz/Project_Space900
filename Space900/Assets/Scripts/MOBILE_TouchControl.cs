@@ -41,9 +41,9 @@ public class MOBILE_TouchControl : MonoBehaviour
                         rightFingerID = t.fingerId;                                         // Il dito destro corrisponde ai comandi del dito destro stesso
                     }
                     else{
-                        if(t.postion.x < (screenWidth / 2) && leftFingerID == -1){
+                        if(t.position.x < (screenWidth / 2) && leftFingerID == -1){
                             leftFingerID = t.fingerId;
-                            moveTouchStartPostition = t.postion;
+                            moveTouchStartPostition = t.position;
                         }
                     }
                     break;                                                          // Interrompi
@@ -67,7 +67,7 @@ public class MOBILE_TouchControl : MonoBehaviour
                     }
                     else{
                         if(leftFingerID == t.fingerId){
-                            moveInput = t.postion - moveTouchStartPostition;
+                            moveInput = t.position - moveTouchStartPostition;
                         }
                     }
                     break;
