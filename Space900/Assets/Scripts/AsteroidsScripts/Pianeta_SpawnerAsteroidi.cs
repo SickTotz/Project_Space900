@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerAsteroidi : MonoBehaviour
+public class Pianeta_SpawnerAsteroidi : MonoBehaviour
 {
     // Start is called before the first frame update
     [Header("Spawner Settings")]
