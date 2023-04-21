@@ -240,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808529003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -25.64}
   m_LocalScale: {x: 1, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -478,8 +478,10 @@ GameObject:
   - component: {fileID: 1558091721}
   - component: {fileID: 1558091720}
   - component: {fileID: 1558091719}
+  - component: {fileID: 1558091723}
+  - component: {fileID: 1558091724}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Pianeta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -563,14 +565,60 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558091718}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.79, y: 1, z: 8.1}
+  m_LocalRotation: {x: 0.2607016, y: -0.26853585, z: 0.37232053, w: 0.8492942}
+  m_LocalPosition: {x: 9.6, y: 20.2, z: 33.3}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: -20, z: 40}
+--- !u!114 &1558091723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558091718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c10cb5be26914fe68ebce8d698006e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 550038140243441414, guid: c65f834fb64914ccbb406b75c3ead4a2, type: 3}
+  cubeDensity: 200
+  seed: 0
+  innerRadious: 20
+  outerRadious: 25
+  height: 5
+  rotatingClockwise: 1
+  minOrbitSpeed: 0.2
+  maxOrbitSpeed: 1.5
+  minRotationSpeed: 1
+  maxRotationSpeed: 20
+--- !u!114 &1558091724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558091718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c10cb5be26914fe68ebce8d698006e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 550038140243441414, guid: c65f834fb64914ccbb406b75c3ead4a2, type: 3}
+  cubeDensity: 400
+  seed: 0
+  innerRadious: 40
+  outerRadious: 50
+  height: 10
+  rotatingClockwise: 0
+  minOrbitSpeed: 0.4
+  maxOrbitSpeed: 3
+  minRotationSpeed: 2
+  maxRotationSpeed: 40
 --- !u!1 &1594531017
 GameObject:
   m_ObjectHideFlags: 0
