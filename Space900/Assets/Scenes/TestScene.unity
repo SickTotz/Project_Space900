@@ -552,14 +552,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 550038140243441414, guid: c65f834fb64914ccbb406b75c3ead4a2, type: 3}
-  cubeDensity: 600
+  cubeDensity: 100
   seed: 0
-  innerRadious: 40
-  outerRadious: 60
-  height: 15
+  innerRadious: 50
+  outerRadious: 10
+  height: 0
   rotatingClockwise: 0
-  minOrbitSpeed: 0.4
-  maxOrbitSpeed: 3
+  minOrbitSpeed: 0.3
+  maxOrbitSpeed: 1.5
   minRotationSpeed: 2
   maxRotationSpeed: 40
 --- !u!135 &1379828670
