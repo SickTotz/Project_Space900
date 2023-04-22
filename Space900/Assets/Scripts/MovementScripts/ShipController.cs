@@ -1,65 +1,83 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour
 {
+    //Velocità massima della navicella
     public float maxSpeed = 10f;
-    public float acceleration = 5f;
-    public float deceleration = 2f;
+    
+    //Accelerazione della navicella
+    public float acceleration = 2f;
+    
+    //Rallentamento della navicella
+    public float deceleration = 0.5f;
+    
+    //Angolo di rotazione massimo
+    public float maxRotationAngle = 45f;
+    
+    //Variabili per la gestione del movimento
+    private float currentSpeed = 0f;
+    private Vector2 touchStartPos = Vector2.zero;
+    private float touchDelta = 0f;
+    
+    //Variabili per la gestione della rotazione
+    private float currentRotationAngle = 0f;
+    private Vector2 rotationStartPos = Vector2.zero;
+    private float rotationDelta = 0f;
 
-    private Rigidbody shipRigidbody;
-    private Vector3 velocity;
-    private float speed;
-
-    public RectTransform joystickBackground;
-    public RectTransform joystickHandle;
-
-    private bool isMoving;
-    private Vector2 joystickStartPosition;
-
-    private void Start()
+    void Update()
     {
-        shipRigidbody = GetComponent<Rigidbody>();
-        joystickStartPosition = joystickHandle.position;
-    }
-
-    private void FixedUpdate()
-    {
-        if (isMoving)
+        //Movimento della navicella
+        if (Input.touchCount > 0)
         {
-            Vector2 joystickOffset = (Vector2)joystickHandle.position - joystickStartPosition;
-            float xMovement = joystickOffset.x / joystickBackground.sizeDelta.x;
-            float yMovement = joystickOffset.y / joystickBackground.sizeDelta.y;
-            Vector3 movement = new Vector3(xMovement, 0f, yMovement);
-
-            speed = Mathf.Clamp(movement.magnitude, 0f, 1f) * maxSpeed;
-            movement = transform.TransformDirection(movement);
-
-            if (speed > 0f)
+            Touch touch = Input.GetTouch(0);
+            Vector2 touchPos = new Vector2(touch.position.y, Screen.width - touch.position.x);
+            
+            if (touchPos.x < Screen.width / 2)
             {
-                shipRigidbody.AddForce(movement * acceleration * speed, ForceMode.Acceleration);
+                if (touch.phase == TouchPhase.Began)
+                {
+                    touchStartPos = touchPos;
+                    currentSpeed = 0f;
+                }
+                else if (touch.phase == TouchPhase.Moved)
+                {
+                    touchDelta = touchPos.y - touchStartPos.y;
+                    float speed = Mathf.Clamp(touchDelta / Screen.height * maxSpeed, 0f, maxSpeed);
+                    currentSpeed = Mathf.MoveTowards(currentSpeed, speed, acceleration * Time.deltaTime);
+                    transform.Translate(0f, 0f, currentSpeed * Time.deltaTime);
+                }
+                else if (touch.phase == TouchPhase.Ended)
+                {
+                    touchStartPos = Vector2.zero;
+                    currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, deceleration * Time.deltaTime);
+                    transform.Translate(0f, 0f, currentSpeed * Time.deltaTime);
+                }
+            }
+            
+            //Rotazione della navicella
+            else if (touchPos.x >= Screen.width / 2)
+            {
+                if (touch.phase == TouchPhase.Began)
+                {
+                    rotationStartPos = touchPos;
+                    currentRotationAngle = transform.eulerAngles.y;
+                }
+                else if (touch.phase == TouchPhase.Moved)
+                {
+                    rotationDelta = touchPos.x - rotationStartPos.x;
+                    float angle = Mathf.Clamp(rotationDelta / Screen.width * maxRotationAngle, -maxRotationAngle, maxRotationAngle);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, currentRotationAngle + angle, transform.eulerAngles.z);
+                }
+                else if (touch.phase == TouchPhase.Ended)
+                {
+                    rotationStartPos = Vector2.zero;
+                }
             }
         }
         else
         {
-            speed = Mathf.Lerp(speed, 0f, deceleration * Time.fixedDeltaTime);
+            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, deceleration * Time.deltaTime);
+            transform.Translate(0f, 0f, currentSpeed * Time.deltaTime);
         }
-
-        shipRigidbody.velocity = transform.forward * speed;
-    }
-
-    public void StartMoving()
-    {
-        isMoving = true;
-    }
-
-    public void StopMoving()
-    {
-        isMoving = false;
-    }
-
-    public void ResetJoystick()
-    {
-        joystickHandle.position = joystickStartPosition;
     }
 }
