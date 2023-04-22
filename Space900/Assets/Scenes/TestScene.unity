@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298064964c98c469aa487476471a9a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 550038140243441414, guid: c65f834fb64914ccbb406b75c3ead4a2, type: 3}
+  asteroidPrefab: {fileID: 5659370114661212229, guid: 042f5eb4b9cf94934a25207689b9162e, type: 3}
   density: 1.2
   minSize: 0.5
   maxSize: 3
@@ -278,6 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 808529004}
   - component: {fileID: 808529005}
+  - component: {fileID: 808529006}
   m_Layer: 0
   m_Name: P_Navicella
   m_TagString: Untagged
@@ -309,9 +310,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808529003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc75c429ba14d40e589e9520ad1303f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardSpeed: 25
+  strafeSpeed: 7.5
+  hoverSpeed: 5
+  lookRateSpeed: 90
+  rollSpeed: 90
+  rollAcceleration: 3.5
+--- !u!114 &808529006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808529003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3cb15ddd91a41ba8ce78918b3f26b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 25
@@ -551,17 +570,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c10cb5be26914fe68ebce8d698006e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 550038140243441414, guid: c65f834fb64914ccbb406b75c3ead4a2, type: 3}
+  cubePrefab: {fileID: 8004256811368284540, guid: aaddb732550024454b22073ec7fd1921, type: 3}
   cubeDensity: 100
   seed: 0
-  innerRadious: 50
-  outerRadious: 10
-  height: 0
-  rotatingClockwise: 0
-  minOrbitSpeed: 0.3
+  innerRadious: 25
+  outerRadious: 35
+  height: 5
+  rotatingClockwise: 1
+  minOrbitSpeed: 1
   maxOrbitSpeed: 1.5
-  minRotationSpeed: 2
-  maxRotationSpeed: 40
+  minRotationSpeed: 1
+  maxRotationSpeed: 1
+  minSize: 0.9
+  maxSize: 1.5
 --- !u!135 &1379828670
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -641,7 +662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379828668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 242.2}
+  m_LocalPosition: {x: 0, y: 0, z: 200}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
