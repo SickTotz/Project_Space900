@@ -15142,7 +15142,7 @@ struct iOSStepCounterState_t083C1D97E6F948B31ADDD38B9DA83E6EA4F39E5B
 {
 	int32_t ___stepCounter;
 };
-struct __StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82 
+struct __StaticArrayInitTypeSizeU3D143_t473D4507630C5704335F3BC1F6935B1852C6FC92 
 {
 	union
 	{
@@ -15152,7 +15152,7 @@ struct __StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82__padding[144];
+		uint8_t __StaticArrayInitTypeSizeU3D143_t473D4507630C5704335F3BC1F6935B1852C6FC92__padding[143];
 	};
 };
 struct __StaticArrayInitTypeSizeU3D359_t7A824D2B59B823B26E1CC29E3A9C68731A197DDE 
@@ -36340,6 +36340,30 @@ struct LinearAccelerationSensor_tE9FB374E1BBE28478D63F7A580BF74664411BE68  : pub
 {
 	Vector3Control_t32D7E4836F56C2FDC61BF0D96ED455DEFA6C949A* ___U3CaccelerationU3Ek__BackingField;
 };
+struct MOBILE_TouchControl_t96170C7A1CB313233A344DA295BADB2AA4EBA07A  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	float ___forwardSpeed;
+	float ___strafeSpeed;
+	float ___hoverSpeed;
+	float ___activeForwardSpeed;
+	float ___activeStrafeSpeed;
+	float ___activeHoverSpeed;
+	float ___forwardAcceleration;
+	float ___strafeAcceleration;
+	float ___hoverAcceleration;
+	float ___lookRateSpeed;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___lookInput;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___screenCenter;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___mouseDistance;
+	float ___rollInput;
+	float ___rollSpeed;
+	float ___rollAcceleration;
+	float ____xMovement;
+	float ____yMovement;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___touchPosition;
+	float ___screenWidth;
+	float ___screenHeight;
+};
 struct MagneticFieldSensor_tCC668B97017215736B7B7BDDB0AB4E690EF16C34  : public Sensor_t8EF743F06C5B025B572E11A5B2CD0B23833D3FD4
 {
 	Vector3Control_t32D7E4836F56C2FDC61BF0D96ED455DEFA6C949A* ___U3CmagneticFieldU3Ek__BackingField;
@@ -36366,27 +36390,6 @@ struct MissingMetadataException_tA21BA3C1DACB682E66F4D285973CACA72E0A77B4  : pub
 };
 struct MissingMethodException_t3D861B41F6520C32A7994A884343802925703155  : public MissingMemberException_tB9D7B25FF06EEBB52D036DA8B1BE67F67619D211
 {
-};
-struct Mobile_TouchControls_t8342F326B1C4ACA1BBC27673054EE50606D47C52  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	float ___forwardSpeed;
-	float ___strafeSpeed;
-	float ___hoverSpeed;
-	float ___activeForwardSpeed;
-	float ___activeStrafeSpeed;
-	float ___activeHoverSpeed;
-	float ___forwardAcceleration;
-	float ___strafeAcceleration;
-	float ___hoverAcceleration;
-	float ___lookRateSpeed;
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___lookInput;
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___screenCenter;
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___mouseDistance;
-	float ___rollInput;
-	float ___rollSpeed;
-	float ___rollAcceleration;
-	float ____xMovement;
-	float ____yMovement;
 };
 struct MonoType_t  : public RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1
 {
@@ -37781,8 +37784,8 @@ struct VerticalLayoutGroup_t06B5E51FC8051BF2009E6494876FBB9F3E5320B8  : public H
 };
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
+	__StaticArrayInitTypeSizeU3D143_t473D4507630C5704335F3BC1F6935B1852C6FC92 ___15D88BD9868C818827B48613BFA8D4D5ACBAA737EB1EEE1711A4C368ED510765;
 	__StaticArrayInitTypeSizeU3D359_t7A824D2B59B823B26E1CC29E3A9C68731A197DDE ___17CC66D8EA72222F733BDD19138DFE35587A1FB8715A605EC7958B4AE10127E8;
-	__StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82 ___E6C1BA56A946A380E7B5AECD78DC2724753435A6C18F51981BD7E1D8A2722377;
 };
 struct U3CPrivateImplementationDetailsU3E_t56F624E1051A2E261613B6A81CA2333397F49CB3_StaticFields
 {
@@ -51098,7 +51101,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize4480 = { sizeof(Pianeta_Spaw
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4481;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize4481 = { sizeof(TotalSpace_SpawnerAsteroidi_tDC8E5950EFD470D7E4B08452457ECAFF9DF11080), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4482;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize4482 = { sizeof(Mobile_TouchControls_t8342F326B1C4ACA1BBC27673054EE50606D47C52), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize4482 = { sizeof(MOBILE_TouchControl_t96170C7A1CB313233A344DA295BADB2AA4EBA07A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4483;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize4483 = { sizeof(MovementMechanics_t2358AF7E11714239B5BF8991B849B225FD55BC53), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4484;
@@ -51108,7 +51111,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize4485 = { sizeof(MonoScriptDa
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4486;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize4486 = { sizeof(UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4487;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize4487 = { sizeof(__StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82)+ sizeof(RuntimeObject), sizeof(__StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize4487 = { sizeof(__StaticArrayInitTypeSizeU3D143_t473D4507630C5704335F3BC1F6935B1852C6FC92)+ sizeof(RuntimeObject), sizeof(__StaticArrayInitTypeSizeU3D143_t473D4507630C5704335F3BC1F6935B1852C6FC92), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4488;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize4488 = { sizeof(__StaticArrayInitTypeSizeU3D359_t7A824D2B59B823B26E1CC29E3A9C68731A197DDE)+ sizeof(RuntimeObject), sizeof(__StaticArrayInitTypeSizeU3D359_t7A824D2B59B823B26E1CC29E3A9C68731A197DDE), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4489;
