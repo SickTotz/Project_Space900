@@ -380,7 +380,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 808529004}
-  - component: {fileID: 808529005}
+  - component: {fileID: 808529006}
+  - component: {fileID: 808529008}
+  - component: {fileID: 808529007}
   m_Layer: 0
   m_Name: P_Navicella
   m_TagString: Untagged
@@ -405,7 +407,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &808529005
+--- !u!54 &808529006
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808529003}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &808529007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,17 +443,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 808529003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7611750d656a44a72a87809eb019940a, type: 3}
+  m_Script: {fileID: 11500000, guid: 789c1651e78044e358be11179547a0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 20
-  acceleration: 5
-  deceleration: 5
+  joystickImage: {fileID: 1282641887}
+  joystickRadius: 50
+--- !u!114 &808529008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808529003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aaf813dfea8e4ee0a5eee8a909670b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 30
+  acceleration: 10
+  deceleration: 3
   decelerationDelay: 0.5
-  moveJoystickImage: {fileID: 1282641887}
-  moveJoystickRadius: 50
-  lookJoystickImage: {fileID: 1438304363}
-  lookJoystickRadius: 50
 --- !u!1 &842662317
 GameObject:
   m_ObjectHideFlags: 0
