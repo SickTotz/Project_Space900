@@ -914,10 +914,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GameObject_TryGetComponentInternal();
 		Register_UnityEngine_GameObject_TryGetComponentInternal();
 
-		//UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
-		void Register_UnityEngine_GameObject_Find();
-		Register_UnityEngine_GameObject_Find();
-
 		//UnityEngine.Transform UnityEngine.GameObject::get_transform()
 		void Register_UnityEngine_GameObject_get_transform();
 		Register_UnityEngine_GameObject_get_transform();

@@ -25,13 +25,6 @@ extern void TotalSpace_SpawnerAsteroidi__ctor_m09DFD5CE0EAB1FDCBE0560962FE46DC54
 extern void PC_MovementMechanics_Start_mE7C69DB2987737C44644752C7C83CAE6EAAF48C0 (void);
 extern void PC_MovementMechanics_Update_m4403B45116D74C663CB3D3F67DA2C9B5FC910574 (void);
 extern void PC_MovementMechanics__ctor_mF3CAE7F6C256362E7BE0A2F93B34DF2D4C8F5380 (void);
-extern void Prova_ShipMovementController_Update_mFC26E5E09512CF94F43D94D48167AA15D879D883 (void);
-extern void Prova_ShipMovementController_SetMoveDirection_m2CDCCC7CF519A2196F2FF40411EBC873CFBC6570 (void);
-extern void Prova_ShipMovementController_StopMoving_mD9BAA550634EF48DBEA70919D8C89170E8B6F428 (void);
-extern void Prova_ShipMovementController__ctor_m56572727DFB5148190352A2C42610B72CEE66EB4 (void);
-extern void Prova_VirtualJoystickController_Start_m97E8AADD3B315CA54DE34AA03B9AE06A2A27D693 (void);
-extern void Prova_VirtualJoystickController_Update_m1B0B7081F25C061AED6CC9E8A938CFE14960FB05 (void);
-extern void Prova_VirtualJoystickController__ctor_m9FDEFB69CB12CFEC89C0ADC6D6095E92E42BBDD9 (void);
 extern void ShipController_Start_m67120F2E87F500D5A81B8766ECDD307BF4ABDC7A (void);
 extern void ShipController_Update_mBBB11654D21367FEFF0E25C5B639E1920963C51D (void);
 extern void ShipController__ctor_mE4736418B5427059FE5DF6518C34F2642720CD2D (void);
@@ -40,7 +33,7 @@ extern void TestVSCode_Update_mA778C9F8766D7D07A45C4C3A4E25E91C0B4A9844 (void);
 extern void TestVSCode__ctor_mE2FC78AA4137147D7ADF9C7BAF6A6D7838EAA55E (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[28] = 
+static Il2CppMethodPointer s_methodPointers[21] = 
 {
 	BeltObject_SetupBeltObject_m83E10D464225858FE506E78AE3595601E4A54DBC,
 	BeltObject_Update_m798139F69462BE4A80274B8966D5C34D708B7031,
@@ -55,13 +48,6 @@ static Il2CppMethodPointer s_methodPointers[28] =
 	PC_MovementMechanics_Start_mE7C69DB2987737C44644752C7C83CAE6EAAF48C0,
 	PC_MovementMechanics_Update_m4403B45116D74C663CB3D3F67DA2C9B5FC910574,
 	PC_MovementMechanics__ctor_mF3CAE7F6C256362E7BE0A2F93B34DF2D4C8F5380,
-	Prova_ShipMovementController_Update_mFC26E5E09512CF94F43D94D48167AA15D879D883,
-	Prova_ShipMovementController_SetMoveDirection_m2CDCCC7CF519A2196F2FF40411EBC873CFBC6570,
-	Prova_ShipMovementController_StopMoving_mD9BAA550634EF48DBEA70919D8C89170E8B6F428,
-	Prova_ShipMovementController__ctor_m56572727DFB5148190352A2C42610B72CEE66EB4,
-	Prova_VirtualJoystickController_Start_m97E8AADD3B315CA54DE34AA03B9AE06A2A27D693,
-	Prova_VirtualJoystickController_Update_m1B0B7081F25C061AED6CC9E8A938CFE14960FB05,
-	Prova_VirtualJoystickController__ctor_m9FDEFB69CB12CFEC89C0ADC6D6095E92E42BBDD9,
 	ShipController_Start_m67120F2E87F500D5A81B8766ECDD307BF4ABDC7A,
 	ShipController_Update_mBBB11654D21367FEFF0E25C5B639E1920963C51D,
 	ShipController__ctor_mE4736418B5427059FE5DF6518C34F2642720CD2D,
@@ -71,7 +57,7 @@ static Il2CppMethodPointer s_methodPointers[28] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[28] = 
+static const int32_t s_InvokerIndices[21] = 
 {
 	812,
 	5240,
@@ -81,13 +67,6 @@ static const int32_t s_InvokerIndices[28] =
 	5240,
 	5240,
 	5240,
-	5240,
-	5240,
-	5240,
-	5240,
-	5240,
-	5240,
-	4228,
 	5240,
 	5240,
 	5240,
@@ -106,7 +85,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	28,
+	21,
 	s_methodPointers,
 	0,
 	NULL,

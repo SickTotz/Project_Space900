@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour
@@ -88,7 +88,8 @@ public class ShipController : MonoBehaviour
         transform.Translate(moveDirection * currentSpeed * Time.deltaTime, Space.World);
     }
 }
-/* 2 - ALTRA VARIANTE 
+*/
+/* 2 - ALTRA VARIANTE */
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -185,7 +186,7 @@ public class ShipController : MonoBehaviour
         transform.Translate(moveDirection * currentSpeed * Time.deltaTime, Space.World);
     }
 }
-*/
+
 
 /* VARIANTE CON DUE JOYSTICK PER IL MOVIMENTO E LA VISUALE
 using UnityEngine;
