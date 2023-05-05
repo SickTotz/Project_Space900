@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -13,7 +13,6 @@ public class Test_TouchScreen : MonoBehaviour
        private FloatingJoystick Joystick;
        [SerializeField]
        private NavMeshAgent Player;
-
        private Finger MovementFinger;
        private Vector2 MovementAmount;
 
@@ -85,9 +84,6 @@ public class Test_TouchScreen : MonoBehaviour
             Joystick.RectTransform.anchoredPosition = ClampStartPosition(TouchedFinger.screenPosition);
            }
        }
-
-
-
     private Vector2 ClampStartPosition(Vector2 StartPosition)
     {
         if (StartPosition.x < JoystickSize.x / 2)
@@ -106,8 +102,6 @@ public class Test_TouchScreen : MonoBehaviour
 
         return StartPosition;
     }
-
-
     private void Update ()
     {
         Vector3 scaleMovement = Player.speed * Time.deltaTime * new Vector3(
@@ -119,6 +113,5 @@ public class Test_TouchScreen : MonoBehaviour
         Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
         Player.Move (scaledMovement);
     }
-
-   
 }
+*/
