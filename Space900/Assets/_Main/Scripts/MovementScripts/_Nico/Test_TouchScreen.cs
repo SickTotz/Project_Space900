@@ -19,9 +19,9 @@ public class Test_TouchScreen : MonoBehaviour
     private void OnEnable()
     {
         EnhancedTouchSupport.Enable ();
-        ETouch.Touch.onFingerDown  +=  Touch_onFingerDown;
-        ETouch.Touch.onFingerUp    +=  Touch_onFingerUp;
-        ETouch.Touch.onFingerMove  +=  Touch_onFingerMove;
+        ETouch.Touch.onFingerDown += Touch_onFingerDown;
+        ETouch.Touch.onFingerUp += Touch_onFingerUp;
+        ETouch.Touch.onFingerMove += Touch_onFingerMove;
     }
 
     private void OnDisable()
