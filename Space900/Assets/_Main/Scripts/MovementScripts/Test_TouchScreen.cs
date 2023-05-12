@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,20 +18,18 @@ public class Test_TouchScreen : MonoBehaviour
 
        private void OnEnable()
        {
-          EnhancedTouchSupport.Enable ();
-          ETouch.Touch.onFingerDown  +=  Touch_onFingerDown;
-          ETouch.Touch.onFingerUp    +=  Touch_onFingerUp;
-          ETouch.Touch.onFingerMove  +=  Touch_onFingerMove;
-
+            EnhancedTouchSupport.Enable ();
+            ETouch.Touch.onFingerDown  +=  Touch_onFingerDown;
+            ETouch.Touch.onFingerUp    +=  Touch_onFingerUp;
+            ETouch.Touch.onFingerMove  +=  Touch_onFingerMove;
        }
 
        private void OnDisable()
        {
-           ETouch.Touch.onFingerDown -= Touch_onFingerDown;
-           ETouch.Touch.onFingerUp   -= Touch_onFingerUp;
-           ETouch.Touch.onFingerMove -= Touch_onFingerMove;           
-           EnhancedTouchSupport.Disable();
-
+            ETouch.Touch.onFingerDown -= Touch_onFingerDown;
+            ETouch.Touch.onFingerUp   -= Touch_onFingerUp;
+            ETouch.Touch.onFingerMove -= Touch_onFingerMove;           
+            EnhancedTouchSupport.Disable();
        }
 
        private void HandleFingerMove(Finger MovedFinger)
@@ -51,39 +49,39 @@ public class Test_TouchScreen : MonoBehaviour
                         currentTouch.screenPosition - Joystick.RectTransform.anchoredPosition
                         ) .normalized
                         * maxMovement; 
-                 }
-                 else
-                 {
+                }
+                else
+                {
                     knobPosition = currentTouch.screenPosition - Joystick.RectTransform.anchoredPosition;
-                 }
+                }
 
-                 Joystick.Knob.anchoredPosition = knobPosition;
-                 MovementAmount = knobPosition / maxMovement;
-           }
-       }
+                Joystick.Knob.anchoredPosition = knobPosition;
+                MovementAmount = knobPosition / maxMovement;
+            }
+        }
 
        private void HandleLoseFinger(Finger LostFinger)
        {
-         if (LostFinger == MovementFinger)
-         {
-            MovementFinger = null;
-            Joystick.Knob.anchoredPosition = Vector2.zero;
-            Joystick.gameObject.SetActive(false);
-            MovementAmount = Vector2.zero;
-         }
-       }
+        if (LostFinger == MovementFinger)
+            {
+                MovementFinger = null;
+                Joystick.Knob.anchoredPosition = Vector2.zero;
+                Joystick.gameObject.SetActive(false);
+                MovementAmount = Vector2.zero;
+            }
+        }
 
        private void HandleFingerDown(Finger TouchedFinger)
        {
            if (MovementFinger == null && TouchedFinger.screenPosition.x <= Screen.width / 2f)
            {
-            MovementFinger = TouchedFinger;
-            MovementAmount = Vector2.zero;
-            Joystick.gameObject.SetActive(true);
-            Joystick.RectTransform.sizeDelta = JoystickSize;
-            Joystick.RectTransform.anchoredPosition = ClampStartPosition(TouchedFinger.screenPosition);
+                MovementFinger = TouchedFinger;
+                MovementAmount = Vector2.zero;
+                Joystick.gameObject.SetActive(true);
+                Joystick.RectTransform.sizeDelta = JoystickSize;
+                Joystick.RectTransform.anchoredPosition = ClampStartPosition(TouchedFinger.screenPosition);
            }
-       }
+        }
     private Vector2 ClampStartPosition(Vector2 StartPosition)
     {
         if (StartPosition.x < JoystickSize.x / 2)
@@ -114,4 +112,3 @@ public class Test_TouchScreen : MonoBehaviour
         Player.Move (scaledMovement);
     }
 }
-*/
