@@ -28,10 +28,10 @@ public class VirutalDPad : MonoBehaviour
                     direction = "Tapped";
                 }
                 else if(Mathf.Abs(x) > Mathf.Abs(y)){
-                    direction = x > 0 ? 'Right' : "Left";
+                    direction = x > 0 ? "Right" : "Left";
                 }
                 else{
-                    direction = y > 0 ? "Up" : 'Down';
+                    direction = y > 0 ? "Up" : "Down";
                 }
             }
         }
