@@ -1190,7 +1190,7 @@ struct InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555_marshaled_co
 };
 struct InputEventPtr_tC2A58521C9AFB479CC88789D5E0797D817C721C0 
 {
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
 };
 struct InputMetrics_t78495D1E8D7F510AC82FAD0A297AE5FA4AAC1338 
 {
@@ -1238,6 +1238,7 @@ struct KeyboardTextEditorEventHandler_t325F3C36F8293D4146610AA3776DB49C58931A9D 
 	Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___m_ImguiEvent;
 	bool ___m_Changed;
 };
+#pragma pack(push, tp, 1)
 struct NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 
 {
 	union
@@ -1319,6 +1320,7 @@ struct NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8
 		uint8_t NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8__padding[20];
 	};
 };
+#pragma pack(pop, tp)
 struct PrimitiveValue_t1CC37566F40746757D5E3F87474A05909D85C2D4 
 {
 	union
@@ -1995,6 +1997,7 @@ struct ReadFileJson_tFF5D8F02142C27FF9FB5A9274B99F21799FD09BB_marshaled_com
 	ReadActionJson_t912C3AB53939E37EA2AAE5AC5E50CABB2CE52A75_marshaled_com* ___actions;
 	ReadMapJson_t4C2C1BF7E023C8F056170F9BB2E037A0C2BED356_marshaled_com* ___maps;
 };
+#pragma pack(push, tp, 1)
 struct BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA 
 {
 	union
@@ -2174,6 +2177,8 @@ struct BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA
 		uint8_t BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA__padding[32];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D 
 {
 	union
@@ -2341,6 +2346,7 @@ struct TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D
 		uint8_t TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D__padding[48];
 	};
 };
+#pragma pack(pop, tp)
 struct UnmanagedMemory_t862EBE5224929ED0E2F989D790EB6B8633E612A2 
 {
 	void* ___basePtr;
@@ -2350,9 +2356,9 @@ struct UnmanagedMemory_t862EBE5224929ED0E2F989D790EB6B8633E612A2
 	int32_t ___bindingCount;
 	int32_t ___controlCount;
 	int32_t ___compositeCount;
-	TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D* ___actionStates;
-	BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA* ___bindingStates;
-	InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE* ___interactionStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D* ___actionStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA* ___bindingStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE* ___interactionStates;
 	float* ___controlMagnitudes;
 	float* ___compositeMagnitudes;
 	int32_t* ___enabledControls;
@@ -3171,6 +3177,7 @@ struct InputDeviceBuilder_t7F4266EBB8FB0AC0DAE225F7FA1532B9AA9174BE_marshaled_co
 	List_1_t9B68833848E4C4D7F623C05F6B77F0449396354A* ___m_StateOffsetToControlMap;
 	Il2CppChar* ___m_StringBuilder;
 };
+#pragma pack(push, tp, 1)
 struct InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E 
 {
 	union
@@ -3206,6 +3213,8 @@ struct InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E
 		uint8_t InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E__padding[8];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 
 {
 	union
@@ -3217,13 +3226,13 @@ struct InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 ___m_Event;
+					alignas(1) NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 ___m_Event;
 				};
 				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 ___m_Event_forAlignmentOnly;
+					alignas(1) NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 ___m_Event_forAlignmentOnly;
 				};
 				#pragma pack(pop, tp)
 			};
@@ -3231,6 +3240,7 @@ struct InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5
 		uint8_t InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5__padding[20];
 	};
 };
+#pragma pack(pop, tp)
 struct InputEventBuffer_t3123D90CE491FA9828E878B2BEF766A3DC6E74FE 
 {
 	NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF ___m_Buffer;
@@ -3303,6 +3313,7 @@ struct InputStateHistory_tF2145C4E34E0E3AC84270533F58F047D6E28A480  : public Run
 	Nullable_1_t01EA562E317937F4460711CFA1BFDE2AA35CBF20 ___m_UpdateMask;
 	bool ___m_AddNewControls;
 };
+#pragma pack(push, tp, 1)
 struct MouseState_t0D9AD9D7629CA3F363E7C2AFD710A11D965408E1 
 {
 	union
@@ -3386,6 +3397,7 @@ struct MouseState_t0D9AD9D7629CA3F363E7C2AFD710A11D965408E1
 		uint8_t MouseState_t0D9AD9D7629CA3F363E7C2AFD710A11D965408E1__padding[30];
 	};
 };
+#pragma pack(pop, tp)
 struct NameAndParameters_t8F37102128EFD31CA57808AE6E3D1244758DEA01 
 {
 	String_t* ___U3CnameU3Ek__BackingField;
@@ -3417,6 +3429,7 @@ struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B
 {
 	intptr_t ___value;
 };
+#pragma pack(push, tp, 1)
 struct TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97 
 {
 	union
@@ -3572,6 +3585,7 @@ struct TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97
 		uint8_t TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97__padding[56];
 	};
 };
+#pragma pack(pop, tp)
 struct RawData_t37CAF2D3F74B7723974ED7CEEE9B297D8FA64ED0  : public RuntimeObject
 {
 	intptr_t ___Bounds;
@@ -3759,6 +3773,7 @@ struct Span_1_tDEB40BEFA77B5E4BB49B058CD3050EEA4DD36C54
 	ByReference_1_t607C1F3BC28B0E21B969461CDB0720FB01A82141 ____pointer;
 	int32_t ____length;
 };
+#pragma pack(push, tp, 1)
 struct ActionEvent_tFC934B0EAC602EBEF4E6F4A34EC21B329DE11444 
 {
 	union
@@ -3770,12 +3785,12 @@ struct ActionEvent_tFC934B0EAC602EBEF4E6F4A34EC21B329DE11444
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -3866,9 +3881,11 @@ struct ActionEvent_tFC934B0EAC602EBEF4E6F4A34EC21B329DE11444
 		uint8_t ActionEvent_tFC934B0EAC602EBEF4E6F4A34EC21B329DE11444__padding[37];
 	};
 };
+#pragma pack(pop, tp)
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
 {
 };
+#pragma pack(push, tp, 1)
 struct DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859 
 {
 	union
@@ -3880,13 +3897,13 @@ struct DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
 				};
 				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
 				};
 				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
@@ -3936,6 +3953,8 @@ struct DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859
 		uint8_t DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859__padding[29];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct DeviceConfigurationEvent_tC73A3703BADB78DDA67BE9C3DE2E4C93B34A19CB 
 {
 	union
@@ -3947,18 +3966,20 @@ struct DeviceConfigurationEvent_tC73A3703BADB78DDA67BE9C3DE2E4C93B34A19CB
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
 				};
 			};
 		};
 		uint8_t DeviceConfigurationEvent_tC73A3703BADB78DDA67BE9C3DE2E4C93B34A19CB__padding[20];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct DisableDeviceCommand_t974D69BE0CA6623C190CC3FA2EB8371165042BAD 
 {
 	union
@@ -3970,18 +3991,20 @@ struct DisableDeviceCommand_t974D69BE0CA6623C190CC3FA2EB8371165042BAD
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 			};
 		};
 		uint8_t DisableDeviceCommand_t974D69BE0CA6623C190CC3FA2EB8371165042BAD__padding[8];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct DualMotorRumbleCommand_t75FFA626B609E72A4FA3A861A77A90416477ED3E 
 {
 	union
@@ -3993,12 +4016,12 @@ struct DualMotorRumbleCommand_t75FFA626B609E72A4FA3A861A77A90416477ED3E
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4029,6 +4052,8 @@ struct DualMotorRumbleCommand_t75FFA626B609E72A4FA3A861A77A90416477ED3E
 		uint8_t DualMotorRumbleCommand_t75FFA626B609E72A4FA3A861A77A90416477ED3E__padding[16];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct EnableDeviceCommand_tD03828E5A5F935FBF0611920EEC17719DEC8CCC4 
 {
 	union
@@ -4040,18 +4065,20 @@ struct EnableDeviceCommand_tD03828E5A5F935FBF0611920EEC17719DEC8CCC4
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 			};
 		};
 		uint8_t EnableDeviceCommand_tD03828E5A5F935FBF0611920EEC17719DEC8CCC4__padding[8];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct EnableIMECompositionCommand_t334151D7E5F5213E80B473930388F6063795DA8C 
 {
 	union
@@ -4063,12 +4090,12 @@ struct EnableIMECompositionCommand_t334151D7E5F5213E80B473930388F6063795DA8C
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4087,6 +4114,8 @@ struct EnableIMECompositionCommand_t334151D7E5F5213E80B473930388F6063795DA8C
 		uint8_t EnableIMECompositionCommand_t334151D7E5F5213E80B473930388F6063795DA8C__padding[9];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct GetHapticCapabilitiesCommand_t722C4E66ED17A4B4AFD944369D3AFABB2697F0AE 
 {
 	union
@@ -4098,12 +4127,12 @@ struct GetHapticCapabilitiesCommand_t722C4E66ED17A4B4AFD944369D3AFABB2697F0AE
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4146,6 +4175,8 @@ struct GetHapticCapabilitiesCommand_t722C4E66ED17A4B4AFD944369D3AFABB2697F0AE
 		uint8_t GetHapticCapabilitiesCommand_t722C4E66ED17A4B4AFD944369D3AFABB2697F0AE__padding[20];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct InitiateUserAccountPairingCommand_t2D75489C6B2746268CC6757AA10E86F8AE2733EF 
 {
 	union
@@ -4157,18 +4188,19 @@ struct InitiateUserAccountPairingCommand_t2D75489C6B2746268CC6757AA10E86F8AE2733
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 			};
 		};
 		uint8_t InitiateUserAccountPairingCommand_t2D75489C6B2746268CC6757AA10E86F8AE2733EF__padding[8];
 	};
 };
+#pragma pack(pop, tp)
 struct InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD  : public RuntimeObject
 {
 	String_t* ___m_Name;
@@ -4302,13 +4334,13 @@ struct InputControlLayout_t46A40BE4C976BE33E85F61E63EB34323FED9831D  : public Ru
 struct InputEventStream_t2554B37D1CA000A187A16415D63972F80010DEB9 
 {
 	InputEventBuffer_t3123D90CE491FA9828E878B2BEF766A3DC6E74FE ___m_NativeBuffer;
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentNativeEventReadPtr;
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentNativeEventWritePtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentNativeEventReadPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentNativeEventWritePtr;
 	int32_t ___m_RemainingNativeEventCount;
 	int32_t ___m_MaxAppendedEvents;
 	InputEventBuffer_t3123D90CE491FA9828E878B2BEF766A3DC6E74FE ___m_AppendBuffer;
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentAppendEventReadPtr;
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentAppendEventWritePtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentAppendEventReadPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentAppendEventWritePtr;
 	int32_t ___m_RemainingAppendEventCount;
 	int32_t ___m_NumEventsRetainedInBuffer;
 	bool ___m_IsOpen;
@@ -4360,6 +4392,7 @@ struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
 {
 	Delegate_t_marshaled_com** ___delegates;
 };
+#pragma pack(push, tp, 1)
 struct QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341 
 {
 	union
@@ -4371,12 +4404,12 @@ struct QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4395,6 +4428,7 @@ struct QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341
 		uint8_t QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341__padding[9];
 	};
 };
+#pragma pack(pop, tp)
 struct QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341_marshaled_pinvoke
 {
 	union
@@ -4409,10 +4443,12 @@ struct QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341_marshal
 					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -4420,11 +4456,13 @@ struct QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341_marshal
 					int32_t ___canRunInBackground;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___canRunInBackground_OffsetPadding_forAlignmentOnly[8];
 					int32_t ___canRunInBackground_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 			};
 		};
 		uint8_t QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341__padding[9];
@@ -4444,10 +4482,12 @@ struct QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341_marshal
 					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -4455,16 +4495,19 @@ struct QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341_marshal
 					int32_t ___canRunInBackground;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___canRunInBackground_OffsetPadding_forAlignmentOnly[8];
 					int32_t ___canRunInBackground_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 			};
 		};
 		uint8_t QueryCanRunInBackground_tC4968BE4E8005935A3747507F3652882719FE341__padding[9];
 	};
 };
+#pragma pack(push, tp, 1)
 struct QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4 
 {
 	union
@@ -4476,12 +4519,12 @@ struct QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4500,6 +4543,7 @@ struct QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4
 		uint8_t QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4__padding[9];
 	};
 };
+#pragma pack(pop, tp)
 struct QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4_marshaled_pinvoke
 {
 	union
@@ -4514,10 +4558,12 @@ struct QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4_marsha
 					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -4525,11 +4571,13 @@ struct QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4_marsha
 					int32_t ___isEnabled;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___isEnabled_OffsetPadding_forAlignmentOnly[8];
 					int32_t ___isEnabled_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 			};
 		};
 		uint8_t QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4__padding[9];
@@ -4549,10 +4597,12 @@ struct QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4_marsha
 					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -4560,16 +4610,19 @@ struct QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4_marsha
 					int32_t ___isEnabled;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___isEnabled_OffsetPadding_forAlignmentOnly[8];
 					int32_t ___isEnabled_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 			};
 		};
 		uint8_t QueryEnabledStateCommand_t32FB8F3C31DD9250FCE728E29FE6C8D580FEAED4__padding[9];
 	};
 };
+#pragma pack(push, tp, 1)
 struct QueryKeyNameCommand_tCEEA57BE2D12A0FFDCD9FE3F8A5851CC31DBE247 
 {
 	union
@@ -4581,12 +4634,12 @@ struct QueryKeyNameCommand_tCEEA57BE2D12A0FFDCD9FE3F8A5851CC31DBE247
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4617,6 +4670,8 @@ struct QueryKeyNameCommand_tCEEA57BE2D12A0FFDCD9FE3F8A5851CC31DBE247
 		uint8_t QueryKeyNameCommand_tCEEA57BE2D12A0FFDCD9FE3F8A5851CC31DBE247__padding[268];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct QueryKeyboardLayoutCommand_tFC7F5A66A40C43E85CE0374D9845F342ECBD019F 
 {
 	union
@@ -4628,12 +4683,12 @@ struct QueryKeyboardLayoutCommand_tFC7F5A66A40C43E85CE0374D9845F342ECBD019F
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4652,6 +4707,8 @@ struct QueryKeyboardLayoutCommand_tFC7F5A66A40C43E85CE0374D9845F342ECBD019F
 		uint8_t QueryKeyboardLayoutCommand_tFC7F5A66A40C43E85CE0374D9845F342ECBD019F__padding[264];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct QueryPairedUserAccountCommand_t0E05ACE98295E34BA26542A994F2F66027E09582 
 {
 	union
@@ -4663,12 +4720,12 @@ struct QueryPairedUserAccountCommand_t0E05ACE98295E34BA26542A994F2F66027E09582
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4711,6 +4768,8 @@ struct QueryPairedUserAccountCommand_t0E05ACE98295E34BA26542A994F2F66027E09582
 		uint8_t QueryPairedUserAccountCommand_t0E05ACE98295E34BA26542A994F2F66027E09582__padding[1040];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct QuerySamplingFrequencyCommand_t4AC08C713EA92FEEDC2BCFBDBC4FB32C7E7E36CA 
 {
 	union
@@ -4722,12 +4781,12 @@ struct QuerySamplingFrequencyCommand_t4AC08C713EA92FEEDC2BCFBDBC4FB32C7E7E36CA
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4746,6 +4805,8 @@ struct QuerySamplingFrequencyCommand_t4AC08C713EA92FEEDC2BCFBDBC4FB32C7E7E36CA
 		uint8_t QuerySamplingFrequencyCommand_t4AC08C713EA92FEEDC2BCFBDBC4FB32C7E7E36CA__padding[12];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct RequestResetCommand_tE0530BE3081FF0C347BA0BCAFF3D88F34DED4968 
 {
 	union
@@ -4757,18 +4818,20 @@ struct RequestResetCommand_tE0530BE3081FF0C347BA0BCAFF3D88F34DED4968
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 			};
 		};
 		uint8_t RequestResetCommand_tE0530BE3081FF0C347BA0BCAFF3D88F34DED4968__padding[8];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct RequestSyncCommand_t3766C746434641EF91025D272D9A53B4DF5387B8 
 {
 	union
@@ -4780,18 +4843,20 @@ struct RequestSyncCommand_t3766C746434641EF91025D272D9A53B4DF5387B8
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 			};
 		};
 		uint8_t RequestSyncCommand_t3766C746434641EF91025D272D9A53B4DF5387B8__padding[8];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct SendBufferedHapticCommand_tCEB5243696EAF76DD1AF10EA0F010E21104B127B 
 {
 	union
@@ -4803,12 +4868,12 @@ struct SendBufferedHapticCommand_tCEB5243696EAF76DD1AF10EA0F010E21104B127B
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4851,6 +4916,8 @@ struct SendBufferedHapticCommand_tCEB5243696EAF76DD1AF10EA0F010E21104B127B
 		uint8_t SendBufferedHapticCommand_tCEB5243696EAF76DD1AF10EA0F010E21104B127B__padding[1040];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct SendHapticImpulseCommand_t42CA883363081815B470517D48D7743EAE0EEF2C 
 {
 	union
@@ -4862,12 +4929,12 @@ struct SendHapticImpulseCommand_t42CA883363081815B470517D48D7743EAE0EEF2C
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4910,6 +4977,8 @@ struct SendHapticImpulseCommand_t42CA883363081815B470517D48D7743EAE0EEF2C
 		uint8_t SendHapticImpulseCommand_t42CA883363081815B470517D48D7743EAE0EEF2C__padding[20];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct SetIMECursorPositionCommand_tDC69815817474DA1629D5883FA53F8D4BDF6BF46 
 {
 	union
@@ -4921,12 +4990,12 @@ struct SetIMECursorPositionCommand_tDC69815817474DA1629D5883FA53F8D4BDF6BF46
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4945,6 +5014,8 @@ struct SetIMECursorPositionCommand_tDC69815817474DA1629D5883FA53F8D4BDF6BF46
 		uint8_t SetIMECursorPositionCommand_tDC69815817474DA1629D5883FA53F8D4BDF6BF46__padding[16];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct SetSamplingFrequencyCommand_t2629221ED175F235C8221C64640B3737AF751D88 
 {
 	union
@@ -4956,12 +5027,12 @@ struct SetSamplingFrequencyCommand_t2629221ED175F235C8221C64640B3737AF751D88
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -4980,6 +5051,8 @@ struct SetSamplingFrequencyCommand_t2629221ED175F235C8221C64640B3737AF751D88
 		uint8_t SetSamplingFrequencyCommand_t2629221ED175F235C8221C64640B3737AF751D88__padding[12];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F 
 {
 	union
@@ -4991,13 +5064,13 @@ struct StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
 				};
 				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
 				};
 				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
@@ -5033,9 +5106,11 @@ struct StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F
 		uint8_t StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F__padding[25];
 	};
 };
+#pragma pack(pop, tp)
 struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
 {
 };
+#pragma pack(push, tp, 1)
 struct TextEvent_tF73CB03EDB372F136C2771DD4C35D1450CD5089E 
 {
 	union
@@ -5047,12 +5122,12 @@ struct TextEvent_tF73CB03EDB372F136C2771DD4C35D1450CD5089E
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -5071,10 +5146,12 @@ struct TextEvent_tF73CB03EDB372F136C2771DD4C35D1450CD5089E
 		uint8_t TextEvent_tF73CB03EDB372F136C2771DD4C35D1450CD5089E__padding[24];
 	};
 };
+#pragma pack(pop, tp)
 struct Type_t  : public MemberInfo_t
 {
 	RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ____impl;
 };
+#pragma pack(push, tp, 1)
 struct UseWindowsGamingInputCommand_tE6897727C198264D391C348B0C5F52119CE01D05 
 {
 	union
@@ -5086,12 +5163,12 @@ struct UseWindowsGamingInputCommand_tE6897727C198264D391C348B0C5F52119CE01D05
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -5110,6 +5187,8 @@ struct UseWindowsGamingInputCommand_tE6897727C198264D391C348B0C5F52119CE01D05
 		uint8_t UseWindowsGamingInputCommand_tE6897727C198264D391C348B0C5F52119CE01D05__padding[9];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct WarpMousePositionCommand_t7E08561BB4C9C77F171BACDCE2D71E8B7BA79FB0 
 {
 	union
@@ -5121,12 +5200,12 @@ struct WarpMousePositionCommand_t7E08561BB4C9C77F171BACDCE2D71E8B7BA79FB0
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -5145,6 +5224,7 @@ struct WarpMousePositionCommand_t7E08561BB4C9C77F171BACDCE2D71E8B7BA79FB0
 		uint8_t WarpMousePositionCommand_t7E08561BB4C9C77F171BACDCE2D71E8B7BA79FB0__padding[16];
 	};
 };
+#pragma pack(pop, tp)
 struct MatchResult_t02FDB08E41694242EC6B6F66D6DB30768EEA2F27 
 {
 	int32_t ___m_Result;
@@ -5333,12 +5413,12 @@ struct GlobalState_tC6D38701EF2670B99D214B9A482C428DFEA8408A_marshaled_com
 };
 struct DeltaStateEventBuffer_tCED43A07419447C1CD388366C15627AD26E3E61E 
 {
-	DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859 ___stateEvent;
+	alignas(1) DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859 ___stateEvent;
 	U3CdataU3Ee__FixedBuffer_tAA42105B7EFA169DAD89AFD5B0DC0187B052E976 ___data;
 };
 struct StateEventBuffer_tD7EB124C1C161995156015D35DAA8740259097C2 
 {
-	StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F ___stateEvent;
+	alignas(1) StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F ___stateEvent;
 	U3CdataU3Ee__FixedBuffer_t47657C7F3734D0DA55A5A333340DF08BC90FB8E6 ___data;
 };
 struct ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129  : public ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263

@@ -1702,7 +1702,7 @@ struct TextGenerationSettings_t3E75DB1D14DF53934AF76C9ACB1CD94A344A92A2  : publi
 	bool ___enableKerning;
 	bool ___richText;
 	bool ___isRightToLeft;
-	bool ___extraPadding;
+	float ___extraPadding;
 	bool ___parseControlCharacters;
 	bool ___isOrthographic;
 	bool ___tagNoParsing;
@@ -3425,6 +3425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontFeatureTable_SortMarkToMarkAdjustmen
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontAsset_SortGlyphTable_mC853714CB002D923A19C3A925BB24D6BF42A08CD (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontAsset_SortCharacterTable_m9A551DF3B19E246E8C4BE86463E0ED1DEB27D321 (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontAsset_SortFontFeatureTable_m072B32D6D8C562F60D3D6CBCC7DCB3282EDD587F (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FontAsset_HasCharacter_mE87EEF6CDA1F4E1D6928CC9A3C01A91922D4FB21 (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, Il2CppChar ___0_character, bool ___1_searchFallbacks, bool ___2_tryAddCharacter, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FontAsset_TryAddCharacterInternal_mCDC9AE2C61B9F73B8879C3F5AE00598A67B2BA7F (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, uint32_t ___0_unicode, Character_t9B671B493FAC8D43638C69AF6AE92CBD103D80EC** ___1_character, bool ___2_shouldGetFontFeatures, const RuntimeMethod* method) ;
 inline void HashSet_1__ctor_m90EA29D74B137C5317CDC485AA1D799F0B6726FF (HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* __this, const RuntimeMethod* method)
 {
@@ -7695,6 +7696,25 @@ IL_0021:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FontAsset_HasCharacter_mE87EEF6CDA1F4E1D6928CC9A3C01A91922D4FB21 (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, Il2CppChar ___0_character, bool ___1_searchFallbacks, bool ___2_tryAddCharacter, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
+	{
+		Il2CppChar L_0 = ___0_character;
+		bool L_1 = ___1_searchFallbacks;
+		bool L_2 = ___2_tryAddCharacter;
+		bool L_3;
+		L_3 = FontAsset_HasCharacter_mE87EEF6CDA1F4E1D6928CC9A3C01A91922D4FB21(__this, L_0, L_1, L_2, NULL);
+		V_0 = L_3;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		bool L_4 = V_0;
+		return L_4;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FontAsset_HasCharacter_m3E405FA081E68243DDB6558FA03530686E894EFE (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, uint32_t ___0_character, bool ___1_searchFallbacks, bool ___2_tryAddCharacter, const RuntimeMethod* method) 
+{
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
@@ -7760,7 +7780,7 @@ IL_002a:
 IL_002b:
 	{
 		Dictionary_2_t93CDF0F4011A5A3024EB73A492F9512E3046EACB* L_4 = __this->___m_CharacterLookupDictionary;
-		Il2CppChar L_5 = ___0_character;
+		uint32_t L_5 = ___0_character;
 		NullCheck(L_4);
 		bool L_6;
 		L_6 = Dictionary_2_ContainsKey_m41E44D991D406BD27C0690AC1A1067893829BEA8(L_4, L_5, Dictionary_2_ContainsKey_m41E44D991D406BD27C0690AC1A1067893829BEA8_RuntimeMethod_var);
@@ -7823,7 +7843,7 @@ IL_005d:
 		}
 	}
 	{
-		Il2CppChar L_12 = ___0_character;
+		uint32_t L_12 = ___0_character;
 		bool L_13;
 		L_13 = FontAsset_TryAddCharacterInternal_mCDC9AE2C61B9F73B8879C3F5AE00598A67B2BA7F(__this, L_12, (&V_5), (bool)0, NULL);
 		V_6 = L_13;
@@ -7953,7 +7973,7 @@ IL_00e2:
 	}
 	{
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_37 = V_11;
-		Il2CppChar L_38 = ___0_character;
+		uint32_t L_38 = ___0_character;
 		bool L_39 = ___2_tryAddCharacter;
 		NullCheck(L_37);
 		bool L_40;
@@ -22563,11 +22583,11 @@ IL_001f:
 		}
 	}
 	{
-		bool L_101 = __this->___extraPadding;
+		float L_101 = __this->___extraPadding;
 		TextGenerationSettings_t3E75DB1D14DF53934AF76C9ACB1CD94A344A92A2* L_102 = ___0_other;
 		NullCheck(L_102);
-		bool L_103 = L_102->___extraPadding;
-		if ((!(((uint32_t)L_101) == ((uint32_t)L_103))))
+		float L_103 = L_102->___extraPadding;
+		if ((!(((float)L_101) == ((float)L_103))))
 		{
 			goto IL_03dc;
 		}
@@ -22991,8 +23011,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextGenerationSettings_GetHashCode_m1
 		HashCode_Add_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mEA1F67EF8834607227E505C6AD99001D60C53E89((&V_0), L_25, HashCode_Add_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mEA1F67EF8834607227E505C6AD99001D60C53E89_RuntimeMethod_var);
 		bool L_26 = __this->___isRightToLeft;
 		HashCode_Add_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mEA1F67EF8834607227E505C6AD99001D60C53E89((&V_0), L_26, HashCode_Add_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mEA1F67EF8834607227E505C6AD99001D60C53E89_RuntimeMethod_var);
-		bool L_27 = __this->___extraPadding;
-		HashCode_Add_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mEA1F67EF8834607227E505C6AD99001D60C53E89((&V_0), L_27, HashCode_Add_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mEA1F67EF8834607227E505C6AD99001D60C53E89_RuntimeMethod_var);
+		float L_27 = __this->___extraPadding;
+		HashCode_Add_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_mC82DA151D2386137C49332E58501545701B0E8BC((&V_0), L_27, HashCode_Add_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_mC82DA151D2386137C49332E58501545701B0E8BC_RuntimeMethod_var);
 		bool L_28 = __this->___parseControlCharacters;
 		HashCode_Add_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mEA1F67EF8834607227E505C6AD99001D60C53E89((&V_0), L_28, HashCode_Add_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mEA1F67EF8834607227E505C6AD99001D60C53E89_RuntimeMethod_var);
 		bool L_29 = __this->___isOrthographic;
@@ -23432,9 +23452,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TextGenerationSettings_ToString_mF8
 		ArrayElementTypeCheck (L_120, _stringLiteral9F93CEA71E960FC713476AC8B7BBAD43F2695656);
 		(L_120)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)54)), (RuntimeObject*)_stringLiteral9F93CEA71E960FC713476AC8B7BBAD43F2695656);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_121 = L_120;
-		bool L_122 = __this->___extraPadding;
-		bool L_123 = L_122;
-		RuntimeObject* L_124 = Box(Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var, &L_123);
+		float L_122 = __this->___extraPadding;
+		float L_123 = L_122;
+		RuntimeObject* L_124 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_123);
 		NullCheck(L_121);
 		ArrayElementTypeCheck (L_121, L_124);
 		(L_121)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)55)), (RuntimeObject*)L_124);
@@ -23717,6 +23737,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextGenerationSettings__ctor_mA20608A164
 		__this->___shouldConvertToLinearSpace = (bool)1;
 		__this->___fontSize = (18.0f);
 		__this->___enableKerning = (bool)1;
+		__this->___extraPadding = (6.0f);
 		__this->___parseControlCharacters = (bool)1;
 		__this->___isOrthographic = (bool)1;
 		__this->___tagNoParsing = (bool)0;

@@ -2912,7 +2912,7 @@ struct InputDeviceDescription_tE86DD77422AAF60ADDAC788B31E5A05E739B708F_marshale
 };
 struct InputEventPtr_tC2A58521C9AFB479CC88789D5E0797D817C721C0 
 {
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
 };
 struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
 {
@@ -3688,6 +3688,7 @@ struct DeviceArray_t7F2F2D8A9D5CAF504DC1A21C1FEF79BCA9E4761E_marshaled_com
 	int32_t ___m_DeviceCount;
 	InputDeviceU5BU5D_tA9AEFC6AF63557D3D5DCFB2B26DDA6F63147D548* ___m_DeviceArray;
 };
+#pragma pack(push, tp, 1)
 struct BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA 
 {
 	union
@@ -3867,6 +3868,8 @@ struct BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA
 		uint8_t BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA__padding[32];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D 
 {
 	union
@@ -4034,6 +4037,7 @@ struct TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D
 		uint8_t TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D__padding[48];
 	};
 };
+#pragma pack(pop, tp)
 struct UnmanagedMemory_t862EBE5224929ED0E2F989D790EB6B8633E612A2 
 {
 	void* ___basePtr;
@@ -4043,9 +4047,9 @@ struct UnmanagedMemory_t862EBE5224929ED0E2F989D790EB6B8633E612A2
 	int32_t ___bindingCount;
 	int32_t ___controlCount;
 	int32_t ___compositeCount;
-	TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D* ___actionStates;
-	BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA* ___bindingStates;
-	InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE* ___interactionStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D* ___actionStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA* ___bindingStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE* ___interactionStates;
 	float* ___controlMagnitudes;
 	float* ___compositeMagnitudes;
 	int32_t* ___enabledControls;

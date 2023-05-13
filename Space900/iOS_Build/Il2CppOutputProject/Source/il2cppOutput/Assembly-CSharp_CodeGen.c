@@ -36,15 +36,18 @@ extern void PC_MovementMechanics__ctor_mF3CAE7F6C256362E7BE0A2F93B34DF2D4C8F5380
 extern void ShipController_Start_m67120F2E87F500D5A81B8766ECDD307BF4ABDC7A (void);
 extern void ShipController_Update_mBBB11654D21367FEFF0E25C5B639E1920963C51D (void);
 extern void ShipController__ctor_mE4736418B5427059FE5DF6518C34F2642720CD2D (void);
-extern void Touch_MovementMechanics_Start_mBA62F72C4D95677A1C516C948C507379C5439DF3 (void);
-extern void Touch_MovementMechanics_Update_m057BB97CCBEADB6FD1642C87E60879E3B6E12117 (void);
-extern void Touch_MovementMechanics__ctor_m92E2834F74C9AE3325BC5A8E113265644D7E247C (void);
+extern void PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF (void);
+extern void PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33 (void);
+extern void PlayerController_OnPointerDown_m6604B158434C25E238FD3E0EA22E78A8AC687212 (void);
+extern void PlayerController_OnPointerUp_mC568CD9A38DC7786D1FB236BCAE78E6573AC334B (void);
+extern void PlayerController_OnDrag_mFFF4ED872B0AD3BBFAE3C937B6AA6571E48F5F64 (void);
+extern void PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33 (void);
 extern void TestVSCode_Start_mA0BD68E6744BB3F99A0048847B12A6BFE97233BD (void);
 extern void TestVSCode_Update_mA778C9F8766D7D07A45C4C3A4E25E91C0B4A9844 (void);
 extern void TestVSCode__ctor_mE2FC78AA4137147D7ADF9C7BAF6A6D7838EAA55E (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[32] = 
+static Il2CppMethodPointer s_methodPointers[35] = 
 {
 	BeltObject_SetupBeltObject_m83E10D464225858FE506E78AE3595601E4A54DBC,
 	BeltObject_Update_m798139F69462BE4A80274B8966D5C34D708B7031,
@@ -70,16 +73,19 @@ static Il2CppMethodPointer s_methodPointers[32] =
 	ShipController_Start_m67120F2E87F500D5A81B8766ECDD307BF4ABDC7A,
 	ShipController_Update_mBBB11654D21367FEFF0E25C5B639E1920963C51D,
 	ShipController__ctor_mE4736418B5427059FE5DF6518C34F2642720CD2D,
-	Touch_MovementMechanics_Start_mBA62F72C4D95677A1C516C948C507379C5439DF3,
-	Touch_MovementMechanics_Update_m057BB97CCBEADB6FD1642C87E60879E3B6E12117,
-	Touch_MovementMechanics__ctor_m92E2834F74C9AE3325BC5A8E113265644D7E247C,
+	PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF,
+	PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33,
+	PlayerController_OnPointerDown_m6604B158434C25E238FD3E0EA22E78A8AC687212,
+	PlayerController_OnPointerUp_mC568CD9A38DC7786D1FB236BCAE78E6573AC334B,
+	PlayerController_OnDrag_mFFF4ED872B0AD3BBFAE3C937B6AA6571E48F5F64,
+	PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33,
 	TestVSCode_Start_mA0BD68E6744BB3F99A0048847B12A6BFE97233BD,
 	TestVSCode_Update_mA778C9F8766D7D07A45C4C3A4E25E91C0B4A9844,
 	TestVSCode__ctor_mE2FC78AA4137147D7ADF9C7BAF6A6D7838EAA55E,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[32] = 
+static const int32_t s_InvokerIndices[35] = 
 {
 	812,
 	5240,
@@ -107,18 +113,21 @@ static const int32_t s_InvokerIndices[32] =
 	5240,
 	5240,
 	5240,
+	4152,
+	4152,
+	4152,
 	5240,
 	5240,
 	5240,
 	5240,
-	7834,
+	7835,
 	5240,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	32,
+	35,
 	s_methodPointers,
 	0,
 	NULL,

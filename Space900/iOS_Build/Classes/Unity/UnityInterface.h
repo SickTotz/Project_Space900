@@ -271,6 +271,7 @@ void            UnityGfxInitedCallback(void);
 void            UnityPresentContextCallback(struct UnityFrameStats const* frameStats);
 void            UnityFramerateChangeCallback(int targetFPS);
 int             UnitySelectedRenderingAPI(void);
+int             UnityIsBatchmode(void);
 
 NSBundle*           UnityGetMetalBundle(void);
 MTLDeviceRef        UnityGetMetalDevice(void);

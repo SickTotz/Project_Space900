@@ -16,6 +16,7 @@
 		5623C57717FDCB0800090B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B5C100E5ED4C100C7819F /* UIKit.framework */; };
 		5623C57D17FDCB0900090B9E = {isa = PBXBuildFile; fileRef = 5623C57B17FDCB0900090B9E /* InfoPlist.strings */; };
 		5623C57F17FDCB0900090B9E /* Unity_iPhone_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5623C57E17FDCB0900090B9E /* Unity_iPhone_Tests.m */; };
+		56C56C9817D6015200616839 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C56C9717D6015100616839 /* Images.xcassets */; };
 		574A8D1BFDF4103B13A6538A /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ECD27EDF8EB21168769097 /* GameController.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		63ACF7178776C648B96974EB /* baselib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD8D832DF5E49F3229DE515 /* baselib.a */; };
 		763ED5D885EABF761B2FE262 /* LaunchScreen-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6444ABDD2799CC877EBAF7E /* LaunchScreen-iPad.storyboard */; };
@@ -237,6 +238,7 @@
 		56B7959A1442E0F20026B3DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		56B795C11442E1100026B3DD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		56BCBA380FCF049A0030C3B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		56C56C9717D6015100616839 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Unity-iPhone/Images.xcassets"; sourceTree = "<group>"; };
 		56DBF99C15E3CDC9007A4A8D /* iPhone_Sensors.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhone_Sensors.mm; sourceTree = "<group>"; };
 		56DBF99E15E3CE85007A4A8D /* iPhone_Sensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Sensors.h; sourceTree = "<group>"; };
 		56FD43950ED4745200FE3770 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -601,6 +603,7 @@
 				5623C57817FDCB0800090B9E /* Unity-iPhone Tests */,
 				9D25AB9E213FB47800354C27 /* UnityFramework */,
 				AA31BF961B55660D0013FB1B /* Data */,
+				56C56C9717D6015100616839 /* Images.xcassets */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				D556450C3DBEECE838996A3D /* LaunchScreen-iPad.png */,
 				A6444ABDD2799CC877EBAF7E /* LaunchScreen-iPad.storyboard */,
@@ -1189,6 +1192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9DE4EA221D84E60049D9A1 /* Data in Resources */,
+				56C56C9817D6015200616839 /* Images.xcassets in Resources */,
 				BEE3E21D322649C83B0DD4DC /* LaunchScreen-iPhone.storyboard in Resources */,
 				F5C03E9DD3BF40D8EC0F4404 /* LaunchScreen-iPhonePortrait.png in Resources */,
 				415674EFD2EC187355BC05B1 /* LaunchScreen-iPhoneLandscape.png in Resources */,
@@ -1222,7 +1226,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "HOST_ARCH=$(uname -m)\nIL2CPP_DIR=\"$PROJECT_DIR/Il2CppOutputProject/IL2CPP/build/deploy_$HOST_ARCH\"\nIL2CPP=\"$IL2CPP_DIR/il2cpp\"\nchmod +x \"$IL2CPP\"\nchmod +x \"$IL2CPP_DIR/bee_backend/mac-$HOST_ARCH/bee_backend\"\nif [ \"$CONFIGURATION\" = \"Debug\" ];\nthen\n    IL2CPP_CONFIG=\"Debug\"\nelse\n    IL2CPP_CONFIG=\"Release\"\nfi\n\"$IL2CPP\" --compile-cpp --platform=iOS --architecture=arm64 --outputpath=\"libGameAssembly.a\" --libil2cpp-static --baselib-directory=\"$PROJECT_DIR/Libraries\" --additional-defines=IL2CPP_DEBUG=0 --incremental-g-c-time-slice=3 --configuration=Release --dotnetprofile=unityaot-macos --profiler-report --profiler-output-file=\"$CONFIGURATION_TEMP_DIR/artifacts/profile.json\" --print-command-line --external-lib-il2-cpp=\"$PROJECT_DIR/Libraries/libil2cpp.a\" --data-folder=\"/Volumes/Archivio SSD/Project_Space900/Space900/Library/Bee/artifacts/iOS/il2cppOutput/data\" --generatedcppdir=\"Il2CppOutputProject/Source/il2cppOutput\" --architecture=arm64 --outputpath=\"$CONFIGURATION_BUILD_DIR/libGameAssembly.a\" --cachedirectory=\"$CONFIGURATION_TEMP_DIR/artifacts/arm64\" --configuration=\"$IL2CPP_CONFIG\"\n";
+			shellScript = "HOST_ARCH=$(uname -m)\nIL2CPP_DIR=\"$PROJECT_DIR/Il2CppOutputProject/IL2CPP/build/deploy_$HOST_ARCH\"\nIL2CPP=\"$IL2CPP_DIR/il2cpp\"\nchmod +x \"$IL2CPP\"\nchmod +x \"$IL2CPP_DIR/bee_backend/mac-$HOST_ARCH/bee_backend\"\nif [ \"$CONFIGURATION\" = \"Debug\" ];\nthen\n    IL2CPP_CONFIG=\"Debug\"\nelse\n    IL2CPP_CONFIG=\"Release\"\nfi\n\"$IL2CPP\" --compile-cpp --platform=iOS --architecture=arm64 --outputpath=\"libGameAssembly.a\" --baselib-directory=\"$PROJECT_DIR/Libraries\" --additional-defines=IL2CPP_DEBUG=0 --incremental-g-c-time-slice=3 --configuration=Release --dotnetprofile=unityaot-macos --profiler-report --profiler-output-file=\"$CONFIGURATION_TEMP_DIR/artifacts/profile.json\" --print-command-line --external-lib-il2-cpp=\"$PROJECT_DIR/Libraries/libil2cpp.a\" --data-folder=\"/Volumes/Archivio SSD/Project_Space900/Space900/Library/Bee/artifacts/iOS/il2cppOutput/data\" --generatedcppdir=\"Il2CppOutputProject/Source/il2cppOutput\" --architecture=arm64 --outputpath=\"$CONFIGURATION_BUILD_DIR/libGameAssembly.a\" --cachedirectory=\"$CONFIGURATION_TEMP_DIR/artifacts/arm64\" --configuration=\"$IL2CPP_CONFIG\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1367,7 +1371,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 			};
 			name = Debug;
@@ -1407,7 +1411,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 			};
 			name = Release;
@@ -1450,7 +1454,7 @@
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME_APP).app/$(PRODUCT_NAME_APP)";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
@@ -1502,7 +1506,7 @@
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME_APP).app/$(PRODUCT_NAME_APP)";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1583,7 +1587,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 			};
 			name = ReleaseForRunning;
@@ -1626,7 +1630,7 @@
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME_APP).app/$(PRODUCT_NAME_APP)";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
@@ -1707,7 +1711,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 			};
 			name = ReleaseForProfiling;
@@ -1750,7 +1754,7 @@
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME_APP).app/$(PRODUCT_NAME_APP)";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
@@ -1958,7 +1962,7 @@
 					"-fno-strict-overflow",
 					"-DUNITY_VERSION_VER=2022",
 					"-DUNITY_VERSION_MAJ=2",
-					"-DUNITY_VERSION_MIN=14",
+					"-DUNITY_VERSION_MIN=19",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1975,7 +1979,7 @@
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 				WARNING_CFLAGS = "-Wno-missing-declarations";
 			};
@@ -2031,7 +2035,7 @@
 					"-fno-strict-overflow",
 					"-DUNITY_VERSION_VER=2022",
 					"-DUNITY_VERSION_MAJ=2",
-					"-DUNITY_VERSION_MIN=14",
+					"-DUNITY_VERSION_MIN=19",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2048,7 +2052,7 @@
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 				WARNING_CFLAGS = "-Wno-missing-declarations";
 			};
@@ -2105,7 +2109,7 @@
 					"-fno-strict-overflow",
 					"-DUNITY_VERSION_VER=2022",
 					"-DUNITY_VERSION_MAJ=2",
-					"-DUNITY_VERSION_MIN=14",
+					"-DUNITY_VERSION_MIN=19",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2122,7 +2126,7 @@
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 				WARNING_CFLAGS = "-Wno-missing-declarations";
 			};
@@ -2180,7 +2184,7 @@
 					"-fno-strict-overflow",
 					"-DUNITY_VERSION_VER=2022",
 					"-DUNITY_VERSION_MAJ=2",
-					"-DUNITY_VERSION_MIN=14",
+					"-DUNITY_VERSION_MIN=19",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2197,7 +2201,7 @@
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				UNITY_RUNTIME_VERSION = 2022.2.14f1;
+				UNITY_RUNTIME_VERSION = 2022.2.19f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
 				WARNING_CFLAGS = "-Wno-missing-declarations";
 			};

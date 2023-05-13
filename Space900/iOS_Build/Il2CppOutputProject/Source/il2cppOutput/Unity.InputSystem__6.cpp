@@ -1411,7 +1411,7 @@ struct InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555_marshaled_co
 };
 struct InputEventPtr_tC2A58521C9AFB479CC88789D5E0797D817C721C0 
 {
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
 };
 struct InputMetrics_t78495D1E8D7F510AC82FAD0A297AE5FA4AAC1338 
 {
@@ -2087,6 +2087,7 @@ struct DeviceArray_t7F2F2D8A9D5CAF504DC1A21C1FEF79BCA9E4761E_marshaled_com
 	int32_t ___m_DeviceCount;
 	InputDeviceU5BU5D_tA9AEFC6AF63557D3D5DCFB2B26DDA6F63147D548* ___m_DeviceArray;
 };
+#pragma pack(push, tp, 1)
 struct BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA 
 {
 	union
@@ -2266,6 +2267,7 @@ struct BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA
 		uint8_t BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA__padding[32];
 	};
 };
+#pragma pack(pop, tp)
 struct UnmanagedMemory_t862EBE5224929ED0E2F989D790EB6B8633E612A2 
 {
 	void* ___basePtr;
@@ -2275,9 +2277,9 @@ struct UnmanagedMemory_t862EBE5224929ED0E2F989D790EB6B8633E612A2
 	int32_t ___bindingCount;
 	int32_t ___controlCount;
 	int32_t ___compositeCount;
-	TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D* ___actionStates;
-	BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA* ___bindingStates;
-	InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE* ___interactionStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D* ___actionStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA* ___bindingStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE* ___interactionStates;
 	float* ___controlMagnitudes;
 	float* ___compositeMagnitudes;
 	int32_t* ___enabledControls;
@@ -2833,6 +2835,7 @@ struct InputActionState_t780948EA293BAA800AD8699518B58B59FFB8A700  : public Runt
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___m_OnBeforeUpdateDelegate;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___m_OnAfterUpdateDelegate;
 };
+#pragma pack(push, tp, 1)
 struct InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E 
 {
 	union
@@ -2868,6 +2871,7 @@ struct InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E
 		uint8_t InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E__padding[8];
 	};
 };
+#pragma pack(pop, tp)
 struct InputEventBuffer_t3123D90CE491FA9828E878B2BEF766A3DC6E74FE 
 {
 	NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF ___m_Buffer;
@@ -2942,6 +2946,7 @@ struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
 {
 	intptr_t ___m_CachedPtr;
 };
+#pragma pack(push, tp, 1)
 struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2 
 {
 	union
@@ -3025,6 +3030,7 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2
 		uint8_t PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2__padding[60];
 	};
 };
+#pragma pack(pop, tp)
 struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_pinvoke
 {
 	union
@@ -3039,10 +3045,12 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_pinvoke
 					int32_t ___isTracked;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					int32_t ___isTracked_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3050,11 +3058,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_pinvoke
 					uint32_t ___trackingState;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___trackingState_OffsetPadding_forAlignmentOnly[4];
 					uint32_t ___trackingState_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3062,11 +3072,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_pinvoke
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___position_OffsetPadding_forAlignmentOnly[8];
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3074,11 +3086,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_pinvoke
 					Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___rotation_OffsetPadding_forAlignmentOnly[20];
 					Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3086,11 +3100,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_pinvoke
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___velocity;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___velocity_OffsetPadding_forAlignmentOnly[36];
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___velocity_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3098,11 +3114,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_pinvoke
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___angularVelocity;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___angularVelocity_OffsetPadding_forAlignmentOnly[48];
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___angularVelocity_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 			};
 		};
 		uint8_t PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2__padding[60];
@@ -3122,10 +3140,12 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_com
 					int32_t ___isTracked;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					int32_t ___isTracked_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3133,11 +3153,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_com
 					uint32_t ___trackingState;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___trackingState_OffsetPadding_forAlignmentOnly[4];
 					uint32_t ___trackingState_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3145,11 +3167,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_com
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___position_OffsetPadding_forAlignmentOnly[8];
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3157,11 +3181,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_com
 					Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___rotation_OffsetPadding_forAlignmentOnly[20];
 					Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3169,11 +3195,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_com
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___velocity;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___velocity_OffsetPadding_forAlignmentOnly[36];
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___velocity_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
@@ -3181,11 +3209,13 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_com
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___angularVelocity;
 				};
 				#pragma pack(pop, tp)
+				#pragma pack(push, tp, 1)
 				struct
 				{
 					char ___angularVelocity_OffsetPadding_forAlignmentOnly[48];
 					Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___angularVelocity_forAlignmentOnly;
 				};
+				#pragma pack(pop, tp)
 			};
 		};
 		uint8_t PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2__padding[60];
@@ -3542,13 +3572,13 @@ struct InputControlLayout_t46A40BE4C976BE33E85F61E63EB34323FED9831D  : public Ru
 struct InputEventStream_t2554B37D1CA000A187A16415D63972F80010DEB9 
 {
 	InputEventBuffer_t3123D90CE491FA9828E878B2BEF766A3DC6E74FE ___m_NativeBuffer;
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentNativeEventReadPtr;
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentNativeEventWritePtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentNativeEventReadPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentNativeEventWritePtr;
 	int32_t ___m_RemainingNativeEventCount;
 	int32_t ___m_MaxAppendedEvents;
 	InputEventBuffer_t3123D90CE491FA9828E878B2BEF766A3DC6E74FE ___m_AppendBuffer;
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentAppendEventReadPtr;
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentAppendEventWritePtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentAppendEventReadPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_CurrentAppendEventWritePtr;
 	int32_t ___m_RemainingAppendEventCount;
 	int32_t ___m_NumEventsRetainedInBuffer;
 	bool ___m_IsOpen;
@@ -3606,6 +3636,7 @@ struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_pinv
 struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
 {
 };
+#pragma pack(push, tp, 1)
 struct SendHapticImpulseCommand_t42CA883363081815B470517D48D7743EAE0EEF2C 
 {
 	union
@@ -3617,12 +3648,12 @@ struct SendHapticImpulseCommand_t42CA883363081815B470517D48D7743EAE0EEF2C
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand;
 				};
 				#pragma pack(pop, tp)
 				struct
 				{
-					InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
+					alignas(4) InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E ___baseCommand_forAlignmentOnly;
 				};
 				#pragma pack(push, tp, 1)
 				struct
@@ -3665,6 +3696,7 @@ struct SendHapticImpulseCommand_t42CA883363081815B470517D48D7743EAE0EEF2C
 		uint8_t SendHapticImpulseCommand_t42CA883363081815B470517D48D7743EAE0EEF2C__padding[20];
 	};
 };
+#pragma pack(pop, tp)
 struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
 {
 };

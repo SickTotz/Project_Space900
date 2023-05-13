@@ -1991,9 +1991,9 @@ struct TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0  : public BindableE
 	bool ___U3CUnityEngine_UIElements_ITextSelection_tripleClickSelectsLineU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnFocusU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnMouseUpU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_selectionColorU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_cursorColorU3Ek__BackingField;
-	float ___U3CUnityEngine_UIElements_ITextSelection_cursorWidthU3Ek__BackingField;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_SelectionColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_CursorColor;
+	float ___m_CursorWidth;
 };
 struct BasePopupField_2_t42613BF7260A870BBE4E44C49E88726DA9F18200  : public BaseField_1_t5B07C4F16426F3DB4A05D137F6E0A910FAC6B21B
 {
@@ -19491,7 +19491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1_OnTextFieldValueChange_m775
 	{
 		int32_t L_9 = V_0;
 		NullCheck((BaseField_1_tB351B262306464787F5A31B33CDC431E89796615*)__this);
-		VirtualActionInvoker1< int32_t >::Invoke(106, (BaseField_1_tB351B262306464787F5A31B33CDC431E89796615*)__this, L_9);
+		BaseField_1_SetValueWithoutNotify_mB16D9A1FF9E29E44947FDAE0357912DB83F3175B((BaseField_1_tB351B262306464787F5A31B33CDC431E89796615*)__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 12));
 		ChangeEvent_1_tC8920B8153267870361787158B3897821AA4522F* L_10 = ___0_evt;
 		NullCheck((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_10);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_10, NULL);
@@ -22814,7 +22814,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1_OnTextFieldValueChange_m7B4
 	{
 		float L_9 = V_0;
 		NullCheck((BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7*)__this);
-		VirtualActionInvoker1< float >::Invoke(106, (BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7*)__this, L_9);
+		BaseField_1_SetValueWithoutNotify_m090BEDB708C0F96DD7E680464F6BE62AFAB5534F((BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7*)__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 12));
 		ChangeEvent_1_tC8920B8153267870361787158B3897821AA4522F* L_10 = ___0_evt;
 		NullCheck((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_10);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_10, NULL);

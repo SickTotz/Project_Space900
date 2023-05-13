@@ -3,7 +3,6 @@
 #include "UnityRendering.h"
 #include <UIKit/UIKit.h>
 
-@class EAGLContext;
 @class UnityView;
 
 @interface DisplayConnection : NSObject

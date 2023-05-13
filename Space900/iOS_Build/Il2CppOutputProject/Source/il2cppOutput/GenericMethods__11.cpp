@@ -2400,7 +2400,7 @@ struct InputDeviceDescription_tE86DD77422AAF60ADDAC788B31E5A05E739B708F_marshale
 };
 struct InputEventPtr_tC2A58521C9AFB479CC88789D5E0797D817C721C0 
 {
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
 };
 struct InputUser_tD938B6FAC4D79FB2BA7040DE247549A4F832000E 
 {
@@ -2491,6 +2491,7 @@ struct MonoPropertyInfo_t8022292639E946C5DEE573BC1C902DB8D7290A1C_marshaled_com
 	MethodInfo_t* ___set_method;
 	int32_t ___attrs;
 };
+#pragma pack(push, tp, 1)
 struct NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 
 {
 	union
@@ -2572,6 +2573,7 @@ struct NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8
 		uint8_t NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8__padding[20];
 	};
 };
+#pragma pack(pop, tp)
 struct Navigation_t4D2E201D65749CF4E104E8AC1232CF1D6F14795C 
 {
 	int32_t ___m_Mode;
@@ -3663,6 +3665,7 @@ struct Exception_t_marshaled_com
 	Il2CppSafeArray* ___native_trace_ips;
 	int32_t ___caught_in_unmanaged;
 };
+#pragma pack(push, tp, 1)
 struct InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 
 {
 	union
@@ -3674,13 +3677,13 @@ struct InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 ___m_Event;
+					alignas(1) NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 ___m_Event;
 				};
 				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 ___m_Event_forAlignmentOnly;
+					alignas(1) NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 ___m_Event_forAlignmentOnly;
 				};
 				#pragma pack(pop, tp)
 			};
@@ -3688,6 +3691,7 @@ struct InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5
 		uint8_t InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5__padding[20];
 	};
 };
+#pragma pack(pop, tp)
 struct InputStateBlock_t0E05211ACF29A99C0FE7FC9EA7042196BFF1F3B5 
 {
 	FourCC_tA6CAA4015BC25A7F1053B6C512202D57A9C994ED ___U3CformatU3Ek__BackingField;
@@ -3926,6 +3930,7 @@ struct TextShadow_t6BADF37AB90ABCB63859A225B58AC5A580950A05
 	float ___blurRadius;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___color;
 };
+#pragma pack(push, tp, 1)
 struct TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97 
 {
 	union
@@ -4081,6 +4086,7 @@ struct TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97
 		uint8_t TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97__padding[56];
 	};
 };
+#pragma pack(pop, tp)
 struct TransformOrigin_tD11A368A96C0771398EBB4E6D435318AC0EF8502 
 {
 	Length_t90BB06D47DD6DB461ED21BD3E3241FAB6C824256 ___m_X;
@@ -4260,6 +4266,7 @@ struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_pinv
 struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
 {
 };
+#pragma pack(push, tp, 1)
 struct StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F 
 {
 	union
@@ -4271,13 +4278,13 @@ struct StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent;
 				};
 				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
 				struct
 				{
-					InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
+					alignas(1) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 ___baseEvent_forAlignmentOnly;
 				};
 				#pragma pack(pop, tp)
 				#pragma pack(push, tp, 1)
@@ -4313,6 +4320,7 @@ struct StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F
 		uint8_t StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F__padding[25];
 	};
 };
+#pragma pack(pop, tp)
 struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
 {
 };
@@ -4605,9 +4613,9 @@ struct TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0  : public BindableE
 	bool ___U3CUnityEngine_UIElements_ITextSelection_tripleClickSelectsLineU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnFocusU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnMouseUpU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_selectionColorU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_cursorColorU3Ek__BackingField;
-	float ___U3CUnityEngine_UIElements_ITextSelection_cursorWidthU3Ek__BackingField;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_SelectionColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_CursorColor;
+	float ___m_CursorWidth;
 };
 struct Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70  : public TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0
 {

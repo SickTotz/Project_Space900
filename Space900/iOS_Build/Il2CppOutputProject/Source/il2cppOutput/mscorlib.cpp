@@ -1311,6 +1311,7 @@ struct PreviousInfo_t4E178296147ACBF0CEBE0A60D25D2AF0C9D5A103
 	int32_t ___Code;
 	uint8_t* ___SortKey;
 };
+#pragma pack(push, tp, 1)
 struct ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B 
 {
 	union
@@ -1324,6 +1325,7 @@ struct ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B
 		uint8_t ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B__padding[32];
 	};
 };
+#pragma pack(pop, tp)
 struct DirectoryEntry_t4FE272EECFF03032105F6F23CB60435287DB1CA2 
 {
 	uint8_t* ___Name;

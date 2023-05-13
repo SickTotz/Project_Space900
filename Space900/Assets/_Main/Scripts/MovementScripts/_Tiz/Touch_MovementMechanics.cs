@@ -1,55 +1,84 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Touch_MovementMechanics : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
-    // Creazione di variabili per il movimento del player
-    public float forwardSpeed = 25f, strafeSpeed = 7.5f, hoverSpeed = 5f;
-    private float activeForwardSpeed, activeStrafeSpeed, activeHoverSpeed;
-    private float forwardAcceleration = 2.5f, strafeAcceleration = 2f, hoverAcceleration = 2f;
+    [SerializeField] private float speed = 5.0f;
+    [SerializeField] private float rotationSpeed = 30.0f;
 
-    public float lookRateSpeed = 90f;
-    private Vector2 lookInput, screenCenter, mouseDistance;
+    private RectTransform joystickBackground;
+    private RectTransform joystickHandle;
+    private Vector2 joystickPosition;
 
-    private float rollInput;
-    public float rollSpeed = 90f, rollAcceleration = 3.5f;
+    private bool isJoystickPressed = false;
+    private bool isRotating = false;
+    private float initialRotationAngle;
+    private Vector2 initialTouchPosition;
 
-    // Aggiunta di un joystick virtuale per il movimento del personaggio
-    public Image joystickBackground;
-    public Image joystick;
-
-    // Start is called before the first frame update
     void Start()
     {
-        // Variabili per la definizione della visuale in gioco
-        screenCenter.x = Screen.width * .5f;
-        screenCenter.y = Screen.height * .5f;
+        joystickBackground = GameObject.Find("JoystickBackground").GetComponent<RectTransform>();
+        joystickHandle = GameObject.Find("JoystickHandle").GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Impostazioni per la visualizzazione con il joystick
-        Vector2 input = joystick.transform.position - joystickBackground.transform.position;
-        input /= joystickBackground.rectTransform.sizeDelta.x * 0.5f;
+        if (isJoystickPressed)
+        {
+            float horizontalInput = (joystickPosition.x - joystickBackground.position.x) / (joystickBackground.rect.width / 2);
+            float verticalInput = (joystickPosition.y - joystickBackground.position.y) / (joystickBackground.rect.height / 2);
 
-        // Impostazioni per la rotazione del personaggio con il touch
-        lookInput.x = input.x * screenCenter.y;
-        lookInput.y = input.y * screenCenter.y;
+            Vector2 movement = new Vector2(horizontalInput, verticalInput);
+            transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        }
 
-        // Setting della velocita` massima del movimento da input col joystick
-        rollInput = Mathf.Lerp(rollInput, Input.GetAxisRaw("Roll"), rollAcceleration * Time.deltaTime);
+        if (isRotating)
+        {
+            float distanceFromCenter = (initialTouchPosition.y - Input.mousePosition.y) / (Screen.height / 2);
+            float rotationAngle = initialRotationAngle + distanceFromCenter * rotationSpeed;
 
-        transform.Rotate(-lookInput.y * lookRateSpeed * Time.deltaTime, lookInput.x * lookRateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
+            transform.rotation = Quaternion.Euler(rotationAngle, rotationAngle, 0);
+        }
+    }
 
-        // Utilizzo delle variabili per i movimenti del player
-        activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, input.y * forwardSpeed, forwardAcceleration * Time.deltaTime);
-        activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, input.x * strafeSpeed, strafeAcceleration * Time.deltaTime);
-        activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (RectTransformUtility.RectangleContainsScreenPoint(joystickBackground, eventData.position))
+        {
+            isJoystickPressed = true;
+            joystickPosition = eventData.position;
+        }
+        else
+        {
+            isRotating = true;
+            initialRotationAngle = transform.rotation.eulerAngles.x;
+            initialTouchPosition = eventData.position;
+        }
+    }
 
-        // Attribuizione del movimento al player
-        transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
-        transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
-        transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        isJoystickPressed = false;
+        isRotating = false;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (isJoystickPressed)
+        {
+            joystickPosition = eventData.position;
+
+            Vector3 direction = new Vector3(joystickPosition.x - joystickBackground.position.x, joystickPosition.y - joystickBackground.position.y, 0);
+            float distance = Vector2.Distance(joystickPosition, joystickBackground.position);
+
+            if (distance < joystickBackground.rect.width / 2)
+            {
+                joystickHandle.anchoredPosition = direction * distance;
+            }
+            else
+            {
+                joystickHandle.anchoredPosition = direction * joystickBackground.rect.width / 2;
+            }
+        }
     }
 }

@@ -1112,7 +1112,7 @@ struct InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555_marshaled_co
 };
 struct InputEventPtr_tC2A58521C9AFB479CC88789D5E0797D817C721C0 
 {
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
 };
 struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
 {
@@ -2003,6 +2003,7 @@ struct ActionMapIndices_t013BEFD76B7FE52E413C5DBF5C7CDA4194800CBD
 	int32_t ___compositeStartIndex;
 	int32_t ___compositeCount;
 };
+#pragma pack(push, tp, 1)
 struct BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA 
 {
 	union
@@ -2182,6 +2183,8 @@ struct BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA
 		uint8_t BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA__padding[32];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE 
 {
 	union
@@ -2313,6 +2316,8 @@ struct InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE
 		uint8_t InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE__padding[48];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D 
 {
 	union
@@ -2480,6 +2485,7 @@ struct TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D
 		uint8_t TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D__padding[48];
 	};
 };
+#pragma pack(pop, tp)
 struct UnmanagedMemory_t862EBE5224929ED0E2F989D790EB6B8633E612A2 
 {
 	void* ___basePtr;
@@ -2489,9 +2495,9 @@ struct UnmanagedMemory_t862EBE5224929ED0E2F989D790EB6B8633E612A2
 	int32_t ___bindingCount;
 	int32_t ___controlCount;
 	int32_t ___compositeCount;
-	TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D* ___actionStates;
-	BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA* ___bindingStates;
-	InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE* ___interactionStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) TriggerState_t99B6AEA05EECEE1FEE7B60C2ABA73FA03685F38D* ___actionStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) BindingState_t69D9579E13933436EAF3A3886EAED220DFD696EA* ___bindingStates;
+	alignas(IL2CPP_SIZEOF_VOID_P) InteractionState_t057CEDBCC55120B30A48DAD0A4111EF8FF62D3AE* ___interactionStates;
 	float* ___controlMagnitudes;
 	float* ___compositeMagnitudes;
 	int32_t* ___enabledControls;

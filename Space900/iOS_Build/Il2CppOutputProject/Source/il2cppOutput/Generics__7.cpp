@@ -1901,7 +1901,7 @@ struct InputDeviceDescription_tE86DD77422AAF60ADDAC788B31E5A05E739B708F_marshale
 };
 struct InputEventPtr_tC2A58521C9AFB479CC88789D5E0797D817C721C0 
 {
-	InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
+	alignas(IL2CPP_SIZEOF_VOID_P) InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5* ___m_EventPtr;
 };
 struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
 {
@@ -4137,9 +4137,9 @@ struct TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0  : public BindableE
 	bool ___U3CUnityEngine_UIElements_ITextSelection_tripleClickSelectsLineU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnFocusU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnMouseUpU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_selectionColorU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_cursorColorU3Ek__BackingField;
-	float ___U3CUnityEngine_UIElements_ITextSelection_cursorWidthU3Ek__BackingField;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_SelectionColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_CursorColor;
+	float ___m_CursorWidth;
 };
 struct BaseSlider_1_tCD357038DC0A12750F4E032D975E8D9F2AA6CD95  : public BaseField_1_tB351B262306464787F5A31B33CDC431E89796615
 {
@@ -10239,7 +10239,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1_OnTextFieldValueChange_m924
 	{
 		il2cpp_codegen_memcpy(L_9, V_0, SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		NullCheck((BaseField_1_t138FF51687BD46C69284C164DC2E54C531A39AAA*)__this);
-		VirtualActionInvoker1Invoker< Il2CppFullySharedGenericAny >::Invoke(106, (BaseField_1_t138FF51687BD46C69284C164DC2E54C531A39AAA*)__this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_9: *(void**)L_9));
+		InvokerActionInvoker1< Il2CppFullySharedGenericAny >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 12)), il2cpp_rgctx_method(method->klass->rgctx_data, 12), (BaseField_1_t138FF51687BD46C69284C164DC2E54C531A39AAA*)__this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_9: *(void**)L_9));
 		ChangeEvent_1_tC8920B8153267870361787158B3897821AA4522F* L_10 = ___0_evt;
 		NullCheck((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_10);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_10, NULL);

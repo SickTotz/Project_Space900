@@ -1818,6 +1818,7 @@ struct Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6
 	float ___m23;
 	float ___m33;
 };
+#pragma pack(push, tp, 1)
 struct ProfilerCategory_tA55212CD512C618AF6D2147791F20319896592AC 
 {
 	union
@@ -1841,6 +1842,7 @@ struct ProfilerCategory_tA55212CD512C618AF6D2147791F20319896592AC
 		uint8_t ProfilerCategory_tA55212CD512C618AF6D2147791F20319896592AC__padding[2];
 	};
 };
+#pragma pack(pop, tp)
 struct PropertyName_tE4B4AAA58AF3BF2C0CD95509EB7B786F096901C2 
 {
 	int32_t ___id;
@@ -3569,9 +3571,9 @@ struct TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0  : public BindableE
 	bool ___U3CUnityEngine_UIElements_ITextSelection_tripleClickSelectsLineU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnFocusU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnMouseUpU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_selectionColorU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_cursorColorU3Ek__BackingField;
-	float ___U3CUnityEngine_UIElements_ITextSelection_cursorWidthU3Ek__BackingField;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_SelectionColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_CursorColor;
+	float ___m_CursorWidth;
 };
 struct UxmlTraits_tFB3C7A9DB57C6E5237CF60234A229A8C050DD891  : public UxmlTraits_tC0F237554376517ACB6D02877E9CD375F8476E1A
 {

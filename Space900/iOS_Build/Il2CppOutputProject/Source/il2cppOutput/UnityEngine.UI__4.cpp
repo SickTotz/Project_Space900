@@ -519,6 +519,7 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
 	};
 };
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D12_tE6E9A5118C80D71EA1E9325D404FAB06593F00C3 
 {
 	union
@@ -532,6 +533,8 @@ struct __StaticArrayInitTypeSizeU3D12_tE6E9A5118C80D71EA1E9325D404FAB06593F00C3
 		uint8_t __StaticArrayInitTypeSizeU3D12_tE6E9A5118C80D71EA1E9325D404FAB06593F00C3__padding[12];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D5527_tD5B99764858063E4F11DFDE451D717FE2630BD9A 
 {
 	union
@@ -545,6 +548,8 @@ struct __StaticArrayInitTypeSizeU3D5527_tD5B99764858063E4F11DFDE451D717FE2630BD9
 		uint8_t __StaticArrayInitTypeSizeU3D5527_tD5B99764858063E4F11DFDE451D717FE2630BD9A__padding[5527];
 	};
 };
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D7141_t7D5BE5C5FF769D52E91CAF086FC71F1B4A9E91AD 
 {
 	union
@@ -558,6 +563,7 @@ struct __StaticArrayInitTypeSizeU3D7141_t7D5BE5C5FF769D52E91CAF086FC71F1B4A9E91A
 		uint8_t __StaticArrayInitTypeSizeU3D7141_t7D5BE5C5FF769D52E91CAF086FC71F1B4A9E91AD__padding[7141];
 	};
 };
+#pragma pack(pop, tp)
 struct UIToolkitOverrideConfig_t4E6B4528E38BCA7DA72C45424634806200A50182 
 {
 	EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* ___activeEventSystem;

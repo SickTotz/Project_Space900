@@ -455,6 +455,7 @@ struct U3CU3Ec_tAD8FB578B20F3F9C2DFCA4FA681BA387CC40ABBE;
 struct U3CU3Ec__DisplayClass61_0_tEB34CF894E6FFF62E49CFD70A8426450C3560CB8;
 struct U3Cget_stylesheetsU3Ed__23_t084BB43C160D07BB39AC22ED785CA130162000D8;
 struct U3Cget_templateDependenciesU3Ed__19_t44FF636B2F49D4E1E5B1B624512BD2BCC055C74C;
+struct UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913;
 struct U3CU3Ec_tD85AC599FA8D7FFDFB50F5FD2F62908FDEB78B2C;
 struct UpdaterArray_tF8D43D2A3598E7C17ABB5308E83FDECF1F36A449;
 
@@ -568,6 +569,8 @@ IL2CPP_EXTERN_C RuntimeClass* UIRVEShaderInfoAllocator_t7A9BCF1924EA027462B8DBBA
 IL2CPP_EXTERN_C RuntimeClass* UIRenderDevice_t59628CBA89B4617E832C2B270E1C1A3931D01302_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UpdaterArray_tF8D43D2A3598E7C17ABB5308E83FDECF1F36A449_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Utility_t8CE21DCF1C28EAB31D71109C60BE5319271612D9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* VertexAttributeDescriptorU5BU5D_t5D10E60612F12777F59B7E33939F9075DB0E02B2_il2cpp_TypeInfo_var;
@@ -1458,6 +1461,9 @@ struct U3CU3Ec_tAD8FB578B20F3F9C2DFCA4FA681BA387CC40ABBE  : public RuntimeObject
 struct U3CU3Ec__DisplayClass61_0_tEB34CF894E6FFF62E49CFD70A8426450C3560CB8  : public RuntimeObject
 {
 	VisualElementAsset_t558B207D551F8C727D1CD0F443F7211D095C3FA9* ___childVea;
+};
+struct UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913  : public RuntimeObject
+{
 };
 struct U3CU3Ec_tD85AC599FA8D7FFDFB50F5FD2F62908FDEB78B2C  : public RuntimeObject
 {
@@ -3639,9 +3645,9 @@ struct TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0  : public BindableE
 	bool ___U3CUnityEngine_UIElements_ITextSelection_tripleClickSelectsLineU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnFocusU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnMouseUpU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_selectionColorU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_cursorColorU3Ek__BackingField;
-	float ___U3CUnityEngine_UIElements_ITextSelection_cursorWidthU3Ek__BackingField;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_SelectionColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_CursorColor;
+	float ___m_CursorWidth;
 };
 struct Comparer_1_t2FF14F26F4D678A8FA199B888FF61A2A9D1D2D80_StaticFields
 {
@@ -4775,10 +4781,13 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m7
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_mFB2D2D8D46EF3D012B6DBDB769450567E290BE12_gshared (List_1_t558C941DC24A59973D98EDA0C9C3EFDFF486AC15* __this, AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 ___0_item, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_mA75C46FD4DAF68C5D629BA83C68C30FF0827FCFF_gshared (List_1_t5C1C55636F11C4FEC3CCBC415FE4529B01D406D2* __this, AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 ___0_item, const RuntimeMethod* method) ;
 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsingEntry__ctor_m14EAD47346286E109A3B94D241327E93BB5B6D37 (UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484* __this, String_t* ___0_alias, String_t* ___1_path, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsingEntryComparer__ctor_mC4CBDA692A08E33901C56667FF13187519A1360F (UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t String_CompareOrdinal_mC6F612DEA1F7B3BF24A44C79D17AF7F8C29C9D3C (String_t* ___0_strA, String_t* ___1_strB, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UxmlObjectEntry__ctor_m5D7FC0A7B97FE29C22161472B3246A94A8E0CE90 (UxmlObjectEntry_t1E72E4EBFDF4A1D3B8017BC882A5BAC71BE19E02* __this, int32_t ___0_parentId, List_1_t66ECB78C59D17DA730CE87022DD41F5781CAB6D4* ___1_uxmlObjectAssets, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* AssetEntry_get_type_mF58DB144BB0A3D53633E8A2EA2EB4C692CDDC23D (AssetEntry_tEB6FC90E5BB63DCA4FF932F2D64595339A28806D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetEntry__ctor_mA7062A99D91DA3ADDAC72178861C1D5A12779299 (AssetEntry_tEB6FC90E5BB63DCA4FF932F2D64595339A28806D* __this, String_t* ___0_path, Type_t* ___1_type, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___2_asset, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UxmlAsset_get_id_mE5E706A24A79DA4C60DD23B39CFE269FE15C7F08_inline (UxmlAsset_t3390B2BDC40F2F8C1E82D9E0E724998D51BA109A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Environment_get_CurrentManagedThreadId_m66483AADCCC13272EBDCD94D31D2E52603C24BDF (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3Cget_stylesheetsU3Ed__23_U3CU3Em__Finally1_m59734590C2844DC7F009E16FCF062D4E70E60154 (U3Cget_stylesheetsU3Ed__23_t084BB43C160D07BB39AC22ED785CA130162000D8* __this, const RuntimeMethod* method) ;
@@ -6025,6 +6034,113 @@ inline void List_1_AddWithResize_mA75C46FD4DAF68C5D629BA83C68C30FF0827FCFF (List
 {
 	((  void (*) (List_1_t5C1C55636F11C4FEC3CCBC415FE4529B01D406D2*, AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512, const RuntimeMethod*))List_1_AddWithResize_mA75C46FD4DAF68C5D629BA83C68C30FF0827FCFF_gshared)(__this, ___0_item, method);
 }
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshal_pinvoke(const UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484& unmarshaled, UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshaled_pinvoke& marshaled)
+{
+	Exception_t* ___assetException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'asset' of type 'UsingEntry': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___assetException, NULL);
+}
+IL2CPP_EXTERN_C void UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshal_pinvoke_back(const UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshaled_pinvoke& marshaled, UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484& unmarshaled)
+{
+	Exception_t* ___assetException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'asset' of type 'UsingEntry': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___assetException, NULL);
+}
+IL2CPP_EXTERN_C void UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshal_pinvoke_cleanup(UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshaled_pinvoke& marshaled)
+{
+}
+IL2CPP_EXTERN_C void UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshal_com(const UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484& unmarshaled, UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshaled_com& marshaled)
+{
+	Exception_t* ___assetException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'asset' of type 'UsingEntry': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___assetException, NULL);
+}
+IL2CPP_EXTERN_C void UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshal_com_back(const UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshaled_com& marshaled, UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484& unmarshaled)
+{
+	Exception_t* ___assetException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'asset' of type 'UsingEntry': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___assetException, NULL);
+}
+IL2CPP_EXTERN_C void UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshal_com_cleanup(UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshaled_com& marshaled)
+{
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsingEntry__ctor_m14EAD47346286E109A3B94D241327E93BB5B6D37 (UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484* __this, String_t* ___0_alias, String_t* ___1_path, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_alias;
+		__this->___alias = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___alias), (void*)L_0);
+		String_t* L_1 = ___1_path;
+		__this->___path = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___path), (void*)L_1);
+		__this->___asset = (VisualTreeAsset_tFB5BF81F0780A412AE5A7C2C552B3EEA64EA2EEB*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___asset), (void*)(VisualTreeAsset_tFB5BF81F0780A412AE5A7C2C552B3EEA64EA2EEB*)NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void UsingEntry__ctor_m14EAD47346286E109A3B94D241327E93BB5B6D37_AdjustorThunk (RuntimeObject* __this, String_t* ___0_alias, String_t* ___1_path, const RuntimeMethod* method)
+{
+	UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484*>(__this + _offset);
+	UsingEntry__ctor_m14EAD47346286E109A3B94D241327E93BB5B6D37(_thisAdjusted, ___0_alias, ___1_path, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsingEntry__cctor_m9617DED67F3B74CFBC9E50CB9DCF6C1379E2C786 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913* L_0 = (UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913*)il2cpp_codegen_object_new(UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913_il2cpp_TypeInfo_var);
+		UsingEntryComparer__ctor_mC4CBDA692A08E33901C56667FF13187519A1360F(L_0, NULL);
+		((UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_StaticFields*)il2cpp_codegen_static_fields_for(UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_il2cpp_TypeInfo_var))->___comparer = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_StaticFields*)il2cpp_codegen_static_fields_for(UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_il2cpp_TypeInfo_var))->___comparer), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UsingEntryComparer_Compare_m3B3136D9BDE913718EDC56A92A5663F862048ABD (UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913* __this, UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 ___0_x, UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 ___1_y, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 L_0 = ___0_x;
+		String_t* L_1 = L_0.___alias;
+		UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 L_2 = ___1_y;
+		String_t* L_3 = L_2.___alias;
+		int32_t L_4;
+		L_4 = String_CompareOrdinal_mC6F612DEA1F7B3BF24A44C79D17AF7F8C29C9D3C(L_1, L_3, NULL);
+		V_0 = L_4;
+		goto IL_0015;
+	}
+
+IL_0015:
+	{
+		int32_t L_5 = V_0;
+		return L_5;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsingEntryComparer__ctor_mC4CBDA692A08E33901C56667FF13187519A1360F (UsingEntryComparer_tDF9E363012C0596E774C16C7318AA7D484C46913* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

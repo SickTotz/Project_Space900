@@ -16,6 +16,12 @@
 - (void)updateAppOrientation:(UIInterfaceOrientation)orientation;
 @end
 
+#ifndef __IPHONE_16_0
+@interface UIViewController ()
+- (void)setNeedsUpdateOfSupportedInterfaceOrientations;
+@end
+#endif
+
 
 @implementation UnityViewControllerBase (iOS)
 
@@ -97,11 +103,20 @@ ScreenOrientation _currentOrientation;
 - (void)updateSupportedOrientations
 {
     _supportedOrientations = EnabledAutorotationInterfaceOrientations();
+    if (@available(iOS 16.0, *))
+        [self setNeedsUpdateOfSupportedInterfaceOrientations];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
     return _supportedOrientations;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    _currentOrientation = UIViewControllerOrientation(self);
+    [GetAppController() updateAppOrientation: ConvertToIosScreenOrientation(_currentOrientation)];
+    [super viewWillAppear: animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated

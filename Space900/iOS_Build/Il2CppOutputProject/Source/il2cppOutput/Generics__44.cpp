@@ -1184,9 +1184,9 @@ struct TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0  : public BindableE
 	bool ___U3CUnityEngine_UIElements_ITextSelection_tripleClickSelectsLineU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnFocusU3Ek__BackingField;
 	bool ___U3CUnityEngine_UIElements_ITextSelection_selectAllOnMouseUpU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_selectionColorU3Ek__BackingField;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CUnityEngine_UIElements_ITextSelection_cursorColorU3Ek__BackingField;
-	float ___U3CUnityEngine_UIElements_ITextSelection_cursorWidthU3Ek__BackingField;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_SelectionColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_CursorColor;
+	float ___m_CursorWidth;
 };
 struct BaseSlider_1_t72796443D058B00401238104911BE7078A9FD0BA  : public BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7
 {
@@ -1892,7 +1892,6 @@ inline void TextInputBase_UpdateScrollOffset_m819BA862B1DCAB63E91A08062F757154C0
 {
 	((  void (*) (TextInputBase_t9B8585EEB5FFED192A9A4373403CD665CB85CC1A*, bool, bool, const RuntimeMethod*))TextInputBase_UpdateScrollOffset_m819BA862B1DCAB63E91A08062F757154C0E9614E_gshared)(__this, ___0_isBackspace, ___1_widthChanged, method);
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4 (CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* __this, const RuntimeMethod* method) ;
 inline bool TextInputBase_get_isReadOnly_m392B32F71BD47B8211B5091C643FF12F9DD4BFE5 (TextInputBase_t9B8585EEB5FFED192A9A4373403CD665CB85CC1A* __this, const RuntimeMethod* method)
 {
@@ -2380,7 +2379,6 @@ inline String_t* TextInputBaseField_1_get_text_m37F624B14ADD8A9054086DCA58E5CE79
 {
 	return ((  String_t* (*) (TextInputBaseField_1_t22B13113CAA1983EB68A9C82AA257206C5729320*, const RuntimeMethod*))TextInputBaseField_1_get_text_m37F624B14ADD8A9054086DCA58E5CE79C1B3E876_gshared)(__this, method);
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) ;
 inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared)(__this, ___0_item, method);
@@ -3206,7 +3204,7 @@ IL_0028:
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		float L_16;
 		L_16 = fabsf(((float)il2cpp_codegen_subtract(L_11, L_15)));
-		V_0 = (bool)((((float)L_16) > ((float)(1.40129846E-45f)))? 1 : 0);
+		V_0 = (bool)((((float)L_16) > ((float)(1.0E-30f)))? 1 : 0);
 		bool L_17 = V_0;
 		TextInputBase_UpdateScrollOffset_m819BA862B1DCAB63E91A08062F757154C0E9614E(__this, (bool)0, L_17, il2cpp_rgctx_method(method->klass->rgctx_data, 26));
 	}
@@ -3225,70 +3223,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInputBase_OnInputCustomStyleResolved
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	RuntimeObject* V_0 = NULL;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	RuntimeObject* V_2 = NULL;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		L_0 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_0 = L_0;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
-		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_1 = L_1;
-		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_2 = ___0_e;
+		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_0 = ___0_e;
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_3 = ((TextInputBaseField_1_t34062BDA2EA570F154B05FB68863556F5A96A800_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
 		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_2, NULL);
-		V_2 = L_3;
-		RuntimeObject* L_4 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_5 = ((TextInputBaseField_1_t34062BDA2EA570F154B05FB68863556F5A96A800_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_4, L_5, (&V_0));
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		bool L_4;
+		L_4 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_2, L_3, (&V_1));
+		V_3 = L_4;
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_0032;
+			goto IL_0026;
 		}
 	}
 	{
-		RuntimeObject* L_8;
-		L_8 = TextInputBase_get_textSelection_m9C8F68B0F3CD58E7CB2C5A948678684F60172240(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
+		RuntimeObject* L_6;
+		L_6 = TextInputBase_get_textSelection_m9C8F68B0F3CD58E7CB2C5A948678684F60172240(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_1;
+		NullCheck(L_6);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_6, L_7);
+	}
+
+IL_0026:
+	{
+		RuntimeObject* L_8 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_9 = ((TextInputBaseField_1_t34062BDA2EA570F154B05FB68863556F5A96A800_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
 		NullCheck(L_8);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_8, L_9);
-	}
-
-IL_0032:
-	{
-		RuntimeObject* L_10 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_11 = ((TextInputBaseField_1_t34062BDA2EA570F154B05FB68863556F5A96A800_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
-		NullCheck(L_10);
-		bool L_12;
-		L_12 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_10, L_11, (&V_1));
-		V_4 = L_12;
-		bool L_13 = V_4;
-		if (!L_13)
+		bool L_10;
+		L_10 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_8, L_9, (&V_2));
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
 		{
-			goto IL_0052;
+			goto IL_0046;
 		}
 	}
 	{
-		RuntimeObject* L_14;
-		L_14 = TextInputBase_get_textSelection_m9C8F68B0F3CD58E7CB2C5A948678684F60172240(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_1;
-		NullCheck(L_14);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_14, L_15);
+		RuntimeObject* L_12;
+		L_12 = TextInputBase_get_textSelection_m9C8F68B0F3CD58E7CB2C5A948678684F60172240(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_2;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_12, L_13);
 	}
 
-IL_0052:
+IL_0046:
 	{
 		TextInputBase_SetScrollViewMode_m1CD5224B67BE4244CD9B9F0BD0899C35A57636BB(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 22));
 		TextInputBase_SetMultilineContainerStyle_mEE25328A55C49031874AEE2D376ABE0CCBF78D56(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 25));
@@ -5159,7 +5151,7 @@ IL_0028:
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		float L_16;
 		L_16 = fabsf(((float)il2cpp_codegen_subtract(L_11, L_15)));
-		V_0 = (bool)((((float)L_16) > ((float)(1.40129846E-45f)))? 1 : 0);
+		V_0 = (bool)((((float)L_16) > ((float)(1.0E-30f)))? 1 : 0);
 		bool L_17 = V_0;
 		TextInputBase_UpdateScrollOffset_mEADB2339BCCDF68BD1BAB8B3D91CB84598ED8507(__this, (bool)0, L_17, il2cpp_rgctx_method(method->klass->rgctx_data, 26));
 	}
@@ -5178,70 +5170,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInputBase_OnInputCustomStyleResolved
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	RuntimeObject* V_0 = NULL;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	RuntimeObject* V_2 = NULL;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		L_0 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_0 = L_0;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
-		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_1 = L_1;
-		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_2 = ___0_e;
+		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_0 = ___0_e;
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_3 = ((TextInputBaseField_1_t41FB3FB32B037D38DBEB3BDFD415D4EE22136160_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
 		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_2, NULL);
-		V_2 = L_3;
-		RuntimeObject* L_4 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_5 = ((TextInputBaseField_1_t41FB3FB32B037D38DBEB3BDFD415D4EE22136160_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_4, L_5, (&V_0));
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		bool L_4;
+		L_4 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_2, L_3, (&V_1));
+		V_3 = L_4;
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_0032;
+			goto IL_0026;
 		}
 	}
 	{
-		RuntimeObject* L_8;
-		L_8 = TextInputBase_get_textSelection_mB8A87CCDB8FD75C96F06BBF986DB73A4985C5D02(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
+		RuntimeObject* L_6;
+		L_6 = TextInputBase_get_textSelection_mB8A87CCDB8FD75C96F06BBF986DB73A4985C5D02(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_1;
+		NullCheck(L_6);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_6, L_7);
+	}
+
+IL_0026:
+	{
+		RuntimeObject* L_8 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_9 = ((TextInputBaseField_1_t41FB3FB32B037D38DBEB3BDFD415D4EE22136160_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
 		NullCheck(L_8);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_8, L_9);
-	}
-
-IL_0032:
-	{
-		RuntimeObject* L_10 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_11 = ((TextInputBaseField_1_t41FB3FB32B037D38DBEB3BDFD415D4EE22136160_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
-		NullCheck(L_10);
-		bool L_12;
-		L_12 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_10, L_11, (&V_1));
-		V_4 = L_12;
-		bool L_13 = V_4;
-		if (!L_13)
+		bool L_10;
+		L_10 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_8, L_9, (&V_2));
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
 		{
-			goto IL_0052;
+			goto IL_0046;
 		}
 	}
 	{
-		RuntimeObject* L_14;
-		L_14 = TextInputBase_get_textSelection_mB8A87CCDB8FD75C96F06BBF986DB73A4985C5D02(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_1;
-		NullCheck(L_14);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_14, L_15);
+		RuntimeObject* L_12;
+		L_12 = TextInputBase_get_textSelection_mB8A87CCDB8FD75C96F06BBF986DB73A4985C5D02(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_2;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_12, L_13);
 	}
 
-IL_0052:
+IL_0046:
 	{
 		TextInputBase_SetScrollViewMode_m04E75FE57B4358FF5BF5E6E6E6C4E7C64E8AE051(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 22));
 		TextInputBase_SetMultilineContainerStyle_mC1A2BE79757929F7ADF0702A7CBE9FBE8C34B7B7(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 25));
@@ -7112,7 +7098,7 @@ IL_0028:
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		float L_16;
 		L_16 = fabsf(((float)il2cpp_codegen_subtract(L_11, L_15)));
-		V_0 = (bool)((((float)L_16) > ((float)(1.40129846E-45f)))? 1 : 0);
+		V_0 = (bool)((((float)L_16) > ((float)(1.0E-30f)))? 1 : 0);
 		bool L_17 = V_0;
 		TextInputBase_UpdateScrollOffset_m820882AA18189ADD37074914E6C46BAF36B4826D(__this, (bool)0, L_17, il2cpp_rgctx_method(method->klass->rgctx_data, 26));
 	}
@@ -7131,70 +7117,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInputBase_OnInputCustomStyleResolved
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	RuntimeObject* V_0 = NULL;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	RuntimeObject* V_2 = NULL;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		L_0 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_0 = L_0;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
-		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_1 = L_1;
-		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_2 = ___0_e;
+		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_0 = ___0_e;
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_3 = ((TextInputBaseField_1_t22B13113CAA1983EB68A9C82AA257206C5729320_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
 		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_2, NULL);
-		V_2 = L_3;
-		RuntimeObject* L_4 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_5 = ((TextInputBaseField_1_t22B13113CAA1983EB68A9C82AA257206C5729320_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_4, L_5, (&V_0));
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		bool L_4;
+		L_4 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_2, L_3, (&V_1));
+		V_3 = L_4;
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_0032;
+			goto IL_0026;
 		}
 	}
 	{
-		RuntimeObject* L_8;
-		L_8 = TextInputBase_get_textSelection_mFC0E76BC720A829F4FFAE2997AEB2989EF736AC8(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
+		RuntimeObject* L_6;
+		L_6 = TextInputBase_get_textSelection_mFC0E76BC720A829F4FFAE2997AEB2989EF736AC8(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_1;
+		NullCheck(L_6);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_6, L_7);
+	}
+
+IL_0026:
+	{
+		RuntimeObject* L_8 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_9 = ((TextInputBaseField_1_t22B13113CAA1983EB68A9C82AA257206C5729320_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
 		NullCheck(L_8);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_8, L_9);
-	}
-
-IL_0032:
-	{
-		RuntimeObject* L_10 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_11 = ((TextInputBaseField_1_t22B13113CAA1983EB68A9C82AA257206C5729320_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
-		NullCheck(L_10);
-		bool L_12;
-		L_12 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_10, L_11, (&V_1));
-		V_4 = L_12;
-		bool L_13 = V_4;
-		if (!L_13)
+		bool L_10;
+		L_10 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_8, L_9, (&V_2));
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
 		{
-			goto IL_0052;
+			goto IL_0046;
 		}
 	}
 	{
-		RuntimeObject* L_14;
-		L_14 = TextInputBase_get_textSelection_mFC0E76BC720A829F4FFAE2997AEB2989EF736AC8(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_1;
-		NullCheck(L_14);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_14, L_15);
+		RuntimeObject* L_12;
+		L_12 = TextInputBase_get_textSelection_mFC0E76BC720A829F4FFAE2997AEB2989EF736AC8(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_2;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_12, L_13);
 	}
 
-IL_0052:
+IL_0046:
 	{
 		TextInputBase_SetScrollViewMode_m18D086659F4CD2D17CD14F358F468A8EF1A13C7F(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 22));
 		TextInputBase_SetMultilineContainerStyle_m27F5F558BA6B74652B3E11421412A1FFA84AE9C6(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 25));
@@ -9065,7 +9045,7 @@ IL_0028:
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		float L_16;
 		L_16 = fabsf(((float)il2cpp_codegen_subtract(L_11, L_15)));
-		V_0 = (bool)((((float)L_16) > ((float)(1.40129846E-45f)))? 1 : 0);
+		V_0 = (bool)((((float)L_16) > ((float)(1.0E-30f)))? 1 : 0);
 		bool L_17 = V_0;
 		TextInputBase_UpdateScrollOffset_mA2969C78C992905C87430C5616D0B376B3970893(__this, (bool)0, L_17, il2cpp_rgctx_method(method->klass->rgctx_data, 26));
 	}
@@ -9084,70 +9064,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInputBase_OnInputCustomStyleResolved
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	RuntimeObject* V_0 = NULL;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	RuntimeObject* V_2 = NULL;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		L_0 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_0 = L_0;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
-		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_1 = L_1;
-		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_2 = ___0_e;
+		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_0 = ___0_e;
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_3 = ((TextInputBaseField_1_tD863D3F1FEC67E004479FCF5081BA84B77B06A1A_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
 		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_2, NULL);
-		V_2 = L_3;
-		RuntimeObject* L_4 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_5 = ((TextInputBaseField_1_tD863D3F1FEC67E004479FCF5081BA84B77B06A1A_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_4, L_5, (&V_0));
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		bool L_4;
+		L_4 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_2, L_3, (&V_1));
+		V_3 = L_4;
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_0032;
+			goto IL_0026;
 		}
 	}
 	{
-		RuntimeObject* L_8;
-		L_8 = TextInputBase_get_textSelection_mE65B1DBF23D487E9A8CF9EE0B22FB3BF94391960(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
+		RuntimeObject* L_6;
+		L_6 = TextInputBase_get_textSelection_mE65B1DBF23D487E9A8CF9EE0B22FB3BF94391960(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_1;
+		NullCheck(L_6);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_6, L_7);
+	}
+
+IL_0026:
+	{
+		RuntimeObject* L_8 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_9 = ((TextInputBaseField_1_tD863D3F1FEC67E004479FCF5081BA84B77B06A1A_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
 		NullCheck(L_8);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_8, L_9);
-	}
-
-IL_0032:
-	{
-		RuntimeObject* L_10 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_11 = ((TextInputBaseField_1_tD863D3F1FEC67E004479FCF5081BA84B77B06A1A_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
-		NullCheck(L_10);
-		bool L_12;
-		L_12 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_10, L_11, (&V_1));
-		V_4 = L_12;
-		bool L_13 = V_4;
-		if (!L_13)
+		bool L_10;
+		L_10 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_8, L_9, (&V_2));
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
 		{
-			goto IL_0052;
+			goto IL_0046;
 		}
 	}
 	{
-		RuntimeObject* L_14;
-		L_14 = TextInputBase_get_textSelection_mE65B1DBF23D487E9A8CF9EE0B22FB3BF94391960(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_1;
-		NullCheck(L_14);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_14, L_15);
+		RuntimeObject* L_12;
+		L_12 = TextInputBase_get_textSelection_mE65B1DBF23D487E9A8CF9EE0B22FB3BF94391960(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_2;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_12, L_13);
 	}
 
-IL_0052:
+IL_0046:
 	{
 		TextInputBase_SetScrollViewMode_mDAB14BB715A2997ED6026480EBEBB04128C68C5C(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 22));
 		TextInputBase_SetMultilineContainerStyle_m5B9DBB8A00A32A75E3A2BAEE808D97965F368C81(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 25));
@@ -11018,7 +10992,7 @@ IL_0028:
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		float L_16;
 		L_16 = fabsf(((float)il2cpp_codegen_subtract(L_11, L_15)));
-		V_0 = (bool)((((float)L_16) > ((float)(1.40129846E-45f)))? 1 : 0);
+		V_0 = (bool)((((float)L_16) > ((float)(1.0E-30f)))? 1 : 0);
 		bool L_17 = V_0;
 		TextInputBase_UpdateScrollOffset_mB2937CC80C0B6D4423E4878169236BF2EEE7FCB7(__this, (bool)0, L_17, il2cpp_rgctx_method(method->klass->rgctx_data, 26));
 	}
@@ -11037,70 +11011,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInputBase_OnInputCustomStyleResolved
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	RuntimeObject* V_0 = NULL;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	RuntimeObject* V_2 = NULL;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		L_0 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_0 = L_0;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
-		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_1 = L_1;
-		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_2 = ___0_e;
+		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_0 = ___0_e;
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_3 = ((TextInputBaseField_1_tFC7CEDAFD67766DBD6C493A21FCE2228250F093E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
 		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_2, NULL);
-		V_2 = L_3;
-		RuntimeObject* L_4 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_5 = ((TextInputBaseField_1_tFC7CEDAFD67766DBD6C493A21FCE2228250F093E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_4, L_5, (&V_0));
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		bool L_4;
+		L_4 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_2, L_3, (&V_1));
+		V_3 = L_4;
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_0032;
+			goto IL_0026;
 		}
 	}
 	{
-		RuntimeObject* L_8;
-		L_8 = TextInputBase_get_textSelection_mADD63CA0621545752FDB4D2F88DEFB5E447B8C4F(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
+		RuntimeObject* L_6;
+		L_6 = TextInputBase_get_textSelection_mADD63CA0621545752FDB4D2F88DEFB5E447B8C4F(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_1;
+		NullCheck(L_6);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_6, L_7);
+	}
+
+IL_0026:
+	{
+		RuntimeObject* L_8 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_9 = ((TextInputBaseField_1_tFC7CEDAFD67766DBD6C493A21FCE2228250F093E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
 		NullCheck(L_8);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_8, L_9);
-	}
-
-IL_0032:
-	{
-		RuntimeObject* L_10 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_11 = ((TextInputBaseField_1_tFC7CEDAFD67766DBD6C493A21FCE2228250F093E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
-		NullCheck(L_10);
-		bool L_12;
-		L_12 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_10, L_11, (&V_1));
-		V_4 = L_12;
-		bool L_13 = V_4;
-		if (!L_13)
+		bool L_10;
+		L_10 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_8, L_9, (&V_2));
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
 		{
-			goto IL_0052;
+			goto IL_0046;
 		}
 	}
 	{
-		RuntimeObject* L_14;
-		L_14 = TextInputBase_get_textSelection_mADD63CA0621545752FDB4D2F88DEFB5E447B8C4F(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_1;
-		NullCheck(L_14);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_14, L_15);
+		RuntimeObject* L_12;
+		L_12 = TextInputBase_get_textSelection_mADD63CA0621545752FDB4D2F88DEFB5E447B8C4F(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_2;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_12, L_13);
 	}
 
-IL_0052:
+IL_0046:
 	{
 		TextInputBase_SetScrollViewMode_mB76520F1087C84E5C28D0BC51C55ADE7BEFCDCE8(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 22));
 		TextInputBase_SetMultilineContainerStyle_m83F7EEC6AFE8C200E6909F7C2269AAFC3664B810(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 25));
@@ -12971,7 +12939,7 @@ IL_0028:
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		float L_16;
 		L_16 = fabsf(((float)il2cpp_codegen_subtract(L_11, L_15)));
-		V_0 = (bool)((((float)L_16) > ((float)(1.40129846E-45f)))? 1 : 0);
+		V_0 = (bool)((((float)L_16) > ((float)(1.0E-30f)))? 1 : 0);
 		bool L_17 = V_0;
 		TextInputBase_UpdateScrollOffset_m51D8A2D0429680699470176BB00F3C184060C133(__this, (bool)0, L_17, il2cpp_rgctx_method(method->klass->rgctx_data, 26));
 	}
@@ -12990,70 +12958,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInputBase_OnInputCustomStyleResolved
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	RuntimeObject* V_0 = NULL;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	RuntimeObject* V_2 = NULL;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		L_0 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_0 = L_0;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
-		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_1 = L_1;
-		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_2 = ___0_e;
+		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_0 = ___0_e;
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_3 = ((TextInputBaseField_1_tC693C9223BC3F56D9387F26A86CAB402209921C2_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
 		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_2, NULL);
-		V_2 = L_3;
-		RuntimeObject* L_4 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_5 = ((TextInputBaseField_1_tC693C9223BC3F56D9387F26A86CAB402209921C2_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_4, L_5, (&V_0));
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		bool L_4;
+		L_4 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_2, L_3, (&V_1));
+		V_3 = L_4;
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_0032;
+			goto IL_0026;
 		}
 	}
 	{
-		RuntimeObject* L_8;
-		L_8 = TextInputBase_get_textSelection_m5FC7C0139CC580F2B3B4958E6F83219B8F4E9BE4(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
+		RuntimeObject* L_6;
+		L_6 = TextInputBase_get_textSelection_m5FC7C0139CC580F2B3B4958E6F83219B8F4E9BE4(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_1;
+		NullCheck(L_6);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_6, L_7);
+	}
+
+IL_0026:
+	{
+		RuntimeObject* L_8 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_9 = ((TextInputBaseField_1_tC693C9223BC3F56D9387F26A86CAB402209921C2_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
 		NullCheck(L_8);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_8, L_9);
-	}
-
-IL_0032:
-	{
-		RuntimeObject* L_10 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_11 = ((TextInputBaseField_1_tC693C9223BC3F56D9387F26A86CAB402209921C2_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
-		NullCheck(L_10);
-		bool L_12;
-		L_12 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_10, L_11, (&V_1));
-		V_4 = L_12;
-		bool L_13 = V_4;
-		if (!L_13)
+		bool L_10;
+		L_10 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_8, L_9, (&V_2));
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
 		{
-			goto IL_0052;
+			goto IL_0046;
 		}
 	}
 	{
-		RuntimeObject* L_14;
-		L_14 = TextInputBase_get_textSelection_m5FC7C0139CC580F2B3B4958E6F83219B8F4E9BE4(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_1;
-		NullCheck(L_14);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_14, L_15);
+		RuntimeObject* L_12;
+		L_12 = TextInputBase_get_textSelection_m5FC7C0139CC580F2B3B4958E6F83219B8F4E9BE4(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_2;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_12, L_13);
 	}
 
-IL_0052:
+IL_0046:
 	{
 		TextInputBase_SetScrollViewMode_m72ABF0EBC2C5F40D9948792BA7D109913BE86B10(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 22));
 		TextInputBase_SetMultilineContainerStyle_m00766458627C5FBAC40463E081C154774DD38FDA(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 25));
@@ -14924,7 +14886,7 @@ IL_0028:
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		float L_16;
 		L_16 = fabsf(((float)il2cpp_codegen_subtract(L_11, L_15)));
-		V_0 = (bool)((((float)L_16) > ((float)(1.40129846E-45f)))? 1 : 0);
+		V_0 = (bool)((((float)L_16) > ((float)(1.0E-30f)))? 1 : 0);
 		bool L_17 = V_0;
 		((  void (*) (TextInputBase_tEC90EE082678B4A2F6AD45223E7A865597BED41D*, bool, bool, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 26)))(__this, (bool)0, L_17, il2cpp_rgctx_method(method->klass->rgctx_data, 26));
 	}
@@ -14943,70 +14905,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInputBase_OnInputCustomStyleResolved
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	RuntimeObject* V_0 = NULL;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	RuntimeObject* V_2 = NULL;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		L_0 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_0 = L_0;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
-		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
-		V_1 = L_1;
-		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_2 = ___0_e;
+		CustomStyleResolvedEvent_t54D095D62773F628A6A05A4531DEE990166062E6* L_0 = ___0_e;
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_3 = ((TextInputBaseField_1_tC43B489775F59FC88CE58986CF0DAD316DDD211E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
 		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = CustomStyleResolvedEvent_get_customStyle_m0F9CBEBB0EAF766F4A913974871BB5B4DCE1D3F4(L_2, NULL);
-		V_2 = L_3;
-		RuntimeObject* L_4 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_5 = ((TextInputBaseField_1_tC43B489775F59FC88CE58986CF0DAD316DDD211E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_SelectionColorProperty;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_4, L_5, (&V_0));
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		bool L_4;
+		L_4 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_2, L_3, (&V_1));
+		V_3 = L_4;
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_0032;
+			goto IL_0026;
 		}
 	}
 	{
-		RuntimeObject* L_8;
-		L_8 = ((  RuntimeObject* (*) (TextInputBase_tEC90EE082678B4A2F6AD45223E7A865597BED41D*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
+		RuntimeObject* L_6;
+		L_6 = ((  RuntimeObject* (*) (TextInputBase_tEC90EE082678B4A2F6AD45223E7A865597BED41D*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_1;
+		NullCheck(L_6);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_6, L_7);
+	}
+
+IL_0026:
+	{
+		RuntimeObject* L_8 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
+		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_9 = ((TextInputBaseField_1_tC43B489775F59FC88CE58986CF0DAD316DDD211E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
 		NullCheck(L_8);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(10, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_8, L_9);
-	}
-
-IL_0032:
-	{
-		RuntimeObject* L_10 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->klass->rgctx_data, 14));
-		CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D L_11 = ((TextInputBaseField_1_tC43B489775F59FC88CE58986CF0DAD316DDD211E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->klass->rgctx_data, 14)))->___s_CursorColorProperty;
-		NullCheck(L_10);
-		bool L_12;
-		L_12 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_10, L_11, (&V_1));
-		V_4 = L_12;
-		bool L_13 = V_4;
-		if (!L_13)
+		bool L_10;
+		L_10 = InterfaceFuncInvoker2< bool, CustomStyleProperty_1_tE4B20CAB5BCFEE711EB4A26F077DC700987C0C2D, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* >::Invoke(2, ICustomStyle_t4385916BE4168875B5CC8B442752D4A1A6A69026_il2cpp_TypeInfo_var, L_8, L_9, (&V_2));
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
 		{
-			goto IL_0052;
+			goto IL_0046;
 		}
 	}
 	{
-		RuntimeObject* L_14;
-		L_14 = ((  RuntimeObject* (*) (TextInputBase_tEC90EE082678B4A2F6AD45223E7A865597BED41D*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_1;
-		NullCheck(L_14);
-		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_14, L_15);
+		RuntimeObject* L_12;
+		L_12 = ((  RuntimeObject* (*) (TextInputBase_tEC90EE082678B4A2F6AD45223E7A865597BED41D*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_2;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(3, ITextSelection_t6FD1C2ED213091E4CFB8ED6F31E911CAC98001C9_il2cpp_TypeInfo_var, L_12, L_13);
 	}
 
-IL_0052:
+IL_0046:
 	{
 		((  void (*) (TextInputBase_tEC90EE082678B4A2F6AD45223E7A865597BED41D*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 22)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 22));
 		((  void (*) (TextInputBase_tEC90EE082678B4A2F6AD45223E7A865597BED41D*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 25)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 25));
@@ -18870,24 +18826,6 @@ IL_002e:
 		return L_12;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline (const RuntimeMethod* method) 
-{
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		memset((&L_0), 0, sizeof(L_0));
-		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (0.0f), (0.0f), (0.0f), (0.0f), NULL);
-		V_0 = L_0;
-		goto IL_001d;
-	}
-
-IL_001d:
-	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = V_0;
-		return L_1;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -19282,19 +19220,5 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BaseField_1_get_showMixedVal
 	{
 		bool L_0 = __this->___m_ShowMixedValue;
 		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
-{
-	{
-		float L_0 = ___0_r;
-		__this->___r = L_0;
-		float L_1 = ___1_g;
-		__this->___g = L_1;
-		float L_2 = ___2_b;
-		__this->___b = L_2;
-		float L_3 = ___3_a;
-		__this->___a = L_3;
-		return;
 	}
 }

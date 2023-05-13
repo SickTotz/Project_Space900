@@ -195,7 +195,10 @@ extern "C" void UnityRepaint()
     @autoreleasepool
     {
         Profiler_FrameStart();
-        UnityPlayerLoop();
+        if (UnityIsBatchmode())
+            UnityBatchPlayerLoop();
+        else
+            UnityPlayerLoop();
         Profiler_FrameEnd();
     }
 }

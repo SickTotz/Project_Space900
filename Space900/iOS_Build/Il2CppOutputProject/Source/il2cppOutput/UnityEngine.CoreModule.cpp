@@ -1406,6 +1406,7 @@ struct NativeSetThreadIndexAttribute_t2A00F63E24255CA22A3777C44EFBBF1371342328  
 struct NotNullAttribute_tFD5F5AE3C9DC85F2B0D94895101FA16B1C864819  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
 {
 };
+#pragma pack(push, tp, 1)
 struct ProfilerCategory_tA55212CD512C618AF6D2147791F20319896592AC 
 {
 	union
@@ -1429,6 +1430,7 @@ struct ProfilerCategory_tA55212CD512C618AF6D2147791F20319896592AC
 		uint8_t ProfilerCategory_tA55212CD512C618AF6D2147791F20319896592AC__padding[2];
 	};
 };
+#pragma pack(pop, tp)
 struct PureAttribute_t3849F74ED557F0AC093F5CB298A7ABE4486A1997  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
 {
 };
@@ -1780,6 +1782,7 @@ struct ProcessingState_t10820A0F2C4361EF738FC9F09881334C28700FD8
 {
 	int32_t ___value__;
 };
+#pragma pack(push, tp, 1)
 struct ProfilerCategoryDescription_t95156934408507201B3A69E71BE15975ACDDED28 
 {
 	union
@@ -1863,6 +1866,7 @@ struct ProfilerCategoryDescription_t95156934408507201B3A69E71BE15975ACDDED28
 		uint8_t ProfilerCategoryDescription_t95156934408507201B3A69E71BE15975ACDDED28__padding[24];
 	};
 };
+#pragma pack(pop, tp)
 struct ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD 
 {
 	intptr_t ___m_Ptr;
