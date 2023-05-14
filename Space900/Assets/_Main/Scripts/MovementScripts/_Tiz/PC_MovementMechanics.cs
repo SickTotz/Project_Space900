@@ -6,6 +6,7 @@ public class PC_MovementMechanics : MonoBehaviour
 {   
     // Creazione di variabili per il movimento del player
 
+    [Header("Movement Settings")]
     public float forwardSpeed = 25f, strafeSpeed = 7.5f, hoverSpeed = 5f;
     private float activeForwardSpeed, activeStrafeSpeed, activeHoverSpeed;
     private float forwardAcceleration = 2.5f, strafeAcceleration = 2f, hoverAcceleration = 2f;
