@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class BlasterScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] ProjectileScript _projectilePrefab;
+    
 
     // Update is called once per frame
     void Update()
