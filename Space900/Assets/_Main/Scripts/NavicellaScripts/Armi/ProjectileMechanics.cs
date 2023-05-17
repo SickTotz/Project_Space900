@@ -1,5 +1,6 @@
 using UnityEngine;
-public class ProjectileScript : MonoBehaviour
+
+public class ProjectileMechanics : MonoBehaviour
 {   
     [SerializeField] [Range(5000f, 25000f)]
     float _launchForce = 10000f;
