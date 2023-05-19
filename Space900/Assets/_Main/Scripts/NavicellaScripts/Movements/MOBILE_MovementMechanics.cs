@@ -33,10 +33,6 @@ public class MOBILE_MovementMechanics : MonoBehaviour
     {
         // Inizializzazione della modalità Input Actions
         InitializeInputActions();
-
-        // Inizializzazione dei joystick
-        // Move_joystick = FindObjectOfType<FixedJoystick>();
-        // Look_joystick = FindObjectOfType<FixedJoystick>();
     }
 
     void Update()
@@ -82,16 +78,6 @@ public class MOBILE_MovementMechanics : MonoBehaviour
     // Movimento della visuale
     void MoveCamera()
     {
-        // Movimento della visuale solo se ci sono touch in corso
-        /*
-        if (Touchscreen.current != null && Touchscreen.current.touches.Count > 0 && Touchscreen.current.touches[0].isInProgress)
-        {
-            // Movimento della visuale basato sul delta touch
-            Vector2 touchDelta = Touchscreen.current.touches[0].delta.ReadValue();
-            transform.Rotate(-touchDelta.y * Time.deltaTime * lookRateSpeed, touchDelta.x * Time.deltaTime * lookRateSpeed, 0, Space.Self);
-        }
-        */
-
         // Movimento della visuale
         float x = Look_joystick.Horizontal;
         float y = Look_joystick.Vertical;

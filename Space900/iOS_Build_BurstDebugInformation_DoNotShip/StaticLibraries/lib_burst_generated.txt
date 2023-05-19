@@ -1,0 +1,19 @@
+Library: /Volumes/Archivio SSD/Project_Space900/Space900/Temp/BurstOutput/StaticLibraries/lib_burst_generated
+--platform=iOS
+--backend=burst-llvm-10
+--target=ARMV8A_AARCH64
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--linker-options=min-ios-version=12.0
+--generate-link-xml=Temp/burst.link.xml
+--temp-folder=/Volumes/Archivio SSD/Project_Space900/Space900/Temp/Burst
+--debug=Full
+--generate-static-linkage-methods
+--key-folder=/Applications/Unity/Hub/Editor/2022.2.19f1/PlaybackEngines/iOSSupport
+--decode-folder=/Volumes/Archivio SSD/Project_Space900/Space900/Library/Burst
+--output=/Volumes/Archivio SSD/Project_Space900/Space900/Temp/BurstOutput/StaticLibraries/lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+

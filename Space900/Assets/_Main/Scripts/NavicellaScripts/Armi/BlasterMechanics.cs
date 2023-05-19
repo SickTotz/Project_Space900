@@ -8,8 +8,7 @@ public class BlasterMechanics : MonoBehaviour
     [SerializeField] Transform _muzzle;
     [SerializeField] [Range(0f, 5f)] float _coolDownTime = 0.25f;
 
-    [Header("Button Settings")]
-    public FixedJoystick Shoot_Button;
+    float _coolDown;
 
     bool canFire{
         get{
@@ -18,16 +17,20 @@ public class BlasterMechanics : MonoBehaviour
         }
     }
 
-    float _coolDown;
-     
     void Update()
     {
-        if(canFire && (Input.GetMouseButton(0))){
+        if(canFire && IsFireButtonPressed()){
             FireProjectile();
         }
     }
 
-    void FireProjectile(){
+    bool IsFireButtonPressed()
+    {
+        // Controlla se il bottone personalizzato "FireButton" è premuto
+        return Input.GetButton("FireButton");
+    }
+
+    public void FireProjectile(){
         _coolDown = _coolDownTime;
         Instantiate(_projectilePrefab, _muzzle.position, transform.rotation);
     }
