@@ -21605,7 +21605,7 @@ IL_001e_1:
 				InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_4 = V_4;
 				NullCheck(L_3);
 				bool L_5;
-				L_5 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(111, L_3, L_4);
+				L_5 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(113, L_3, L_4);
 				V_5 = (bool)((((int32_t)L_5) == ((int32_t)0))? 1 : 0);
 				bool L_6 = V_5;
 				if (!L_6)

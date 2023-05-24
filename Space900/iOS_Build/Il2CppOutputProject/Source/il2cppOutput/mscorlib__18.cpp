@@ -249,6 +249,45 @@ struct IntPtr_t
 struct InternalStringComparer_t04B2D1768998E940BC4619579B7044102591E38B  : public EqualityComparer_1_t7DB7FC11B7957026D1FB280BF9E0D8D8DBEE039A
 {
 };
+#pragma pack(push, tp, 1)
+struct PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+				#pragma pack(push, tp, 1)
+				struct
+				{
+					char ___Head_OffsetPadding[128];
+					int32_t ___Head;
+				};
+				#pragma pack(pop, tp)
+				struct
+				{
+					char ___Head_OffsetPadding_forAlignmentOnly[128];
+					int32_t ___Head_forAlignmentOnly;
+				};
+				#pragma pack(push, tp, 1)
+				struct
+				{
+					char ___Tail_OffsetPadding[256];
+					int32_t ___Tail;
+				};
+				#pragma pack(pop, tp)
+				struct
+				{
+					char ___Tail_OffsetPadding_forAlignmentOnly[256];
+					int32_t ___Tail_forAlignmentOnly;
+				};
+			};
+		};
+		uint8_t PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8__padding[384];
+	};
+};
+#pragma pack(pop, tp)
 struct StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 
 {
 	RuntimeObject* ___m_additionalContext;
@@ -1404,10 +1443,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KeyValuePairsU5BU5D_t417375671A6D0988A66AEB4B
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_0 = __this->____hashtable;
 		NullCheck(L_0);
 		KeyValuePairsU5BU5D_t417375671A6D0988A66AEB4B3FDCDC1308E3B6F6* L_1;
-		L_1 = VirtualFuncInvoker0< KeyValuePairsU5BU5D_t417375671A6D0988A66AEB4B3FDCDC1308E3B6F6* >::Invoke(21, L_0);
+		L_1 = VirtualFuncInvoker0< KeyValuePairsU5BU5D_t417375671A6D0988A66AEB4B3FDCDC1308E3B6F6* >::Invoke(22, L_0);
 		return L_1;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

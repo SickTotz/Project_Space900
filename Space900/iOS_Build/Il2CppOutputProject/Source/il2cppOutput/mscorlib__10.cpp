@@ -9,6 +9,7 @@
 
 #include <limits>
 
+#include "icalls/mscorlib/System.Runtime/RuntimeImports.h"
 #include "icalls/mscorlib/System.Runtime.Remoting/RemotingServices.h"
 #include "icalls/mscorlib/System.Runtime.Remoting.Proxies/RealProxy.h"
 #include "icalls/mscorlib/System.Runtime.Remoting.Contexts/Context.h"
@@ -251,6 +252,7 @@ struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
 struct bucketU5BU5D_t59F1C7BC4EBFE874CA0B3F391EA65717E3C8D587;
 struct ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE;
 struct ActivatedServiceTypeEntry_tBDEA3FA20398A81D96E6A6A65717622B127DCE8B;
+struct AmbiguousImplementationException_tF37AE5B841F72455775D7119A4FE2681F7A37CFF;
 struct AppDomain_tFF7010567CBABAEEA7BB19835234D6485E16AD5F;
 struct AppDomainLevelActivator_tF729C4269DFEA1EE766C5C1F92AFA0957DF286A7;
 struct ArgInfo_tC2B1A084F7885C1949A23F102448DD50A085CE88;
@@ -753,6 +755,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC89BC4B651526324A940F43DBDDD65881B0A8201
 IL2CPP_EXTERN_C String_t* _stringLiteralC9B8816A919F38F832A034340453CDF80CB5EE29;
 IL2CPP_EXTERN_C String_t* _stringLiteralC9F81E441EE5B488543B71C45060E96EA3436615;
 IL2CPP_EXTERN_C String_t* _stringLiteralCAE71C90FAB8676DC4EDCB14AFF79FFB681F6154;
+IL2CPP_EXTERN_C String_t* _stringLiteralCCDFB7ACC5469688BABE1F67B6145B31A5F43B3F;
 IL2CPP_EXTERN_C String_t* _stringLiteralD0A9AA74760549C6A732B0EC13F9519F26FC67E4;
 IL2CPP_EXTERN_C String_t* _stringLiteralD152C10709DCAF3B9D53E13D4AA697A8B6701AFE;
 IL2CPP_EXTERN_C String_t* _stringLiteralD45487222C981ED9BE87F0E0426849BA1A76E60D;
@@ -786,6 +789,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralFB6ED1555A593161156D21E9CAABA3A867A69023
 IL2CPP_EXTERN_C String_t* _stringLiteralFC2E3CD23371BA52689FB4D84E983FD7C7D7ABCC;
 IL2CPP_EXTERN_C String_t* _stringLiteralFDB43E990DBA2349CEDE4E99EFD003A284CFC9EA;
 IL2CPP_EXTERN_C String_t* _stringLiteralFDC79D04FD56AB43DDE179A0F468A96BAF7E44CF;
+IL2CPP_EXTERN_C const RuntimeMethod* ActivatedClientTypeEntry__ctor_mDB863F62FB6E74573BE522FCD2446FE3871589AD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ActivatedServiceTypeEntry__ctor_m241F1489CC35CC37FFD59907B7132B1C59DB35D5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AppDomainLevelActivator_Activate_m35D2D9CCFF3DBCB9B4FB2348494BB291DC699D86_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Array_Empty_TisString_t_m9832B70DF2B936246FE60F75D3D12CB946C39D16_RuntimeMethod_var;
@@ -1530,6 +1534,9 @@ struct ReturnMessage_t7190B592F410BC0B2E5DC75356D9EC1E16D9349A  : public Runtime
 	Identity_t382AEDDF15E6ECE540A5A2F4EC722C9E91D89F02* ____targetIdentity;
 	ArgInfo_tC2B1A084F7885C1949A23F102448DD50A085CE88* ____inArgInfo;
 };
+struct RuntimeImports_tC174A6785D46460C7B85E1E45364FBD9C8104810  : public RuntimeObject
+{
+};
 struct SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37  : public RuntimeObject
 {
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___m_members;
@@ -1898,6 +1905,10 @@ struct Timer_t763C1D5F5A36087DC92C7DA4D1F8AB578F83AB00  : public MarshalByRefObj
 struct UInt32_t1833D51FFA667B18A5AA4B8D34DE284F8495D29B 
 {
 	uint32_t ___m_value;
+};
+struct UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF 
+{
+	uint64_t ___m_value;
 };
 struct UIntPtr_t 
 {
@@ -2331,6 +2342,9 @@ struct WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8_marshaled_com : publ
 	intptr_t ___waitHandle;
 	void* ___safeWaitHandle;
 	int32_t ___hasThreadAffinity;
+};
+struct AmbiguousImplementationException_tF37AE5B841F72455775D7119A4FE2681F7A37CFF  : public Exception_t
+{
 };
 struct ApplicationException_tA744BED4E90266BD255285CD4CF909BAB3EE811A  : public Exception_t
 {
@@ -2781,6 +2795,40 @@ struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeA
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
 	}
 };
+struct IContextAttributeU5BU5D_tBF33B08E7FE42BDCE617035E11328EC7F1678BB1  : public RuntimeArray
+{
+	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+
+	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
 {
 	ALIGN_FIELD (8) uint8_t m_Items[1];
@@ -2979,40 +3027,6 @@ struct ParameterModifierU5BU5D_t685261AD991B1E6582A0E53243DEE3B745E13364  : publ
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->____byRef), (void*)NULL);
-	}
-};
-struct IContextAttributeU5BU5D_tBF33B08E7FE42BDCE617035E11328EC7F1678BB1  : public RuntimeArray
-{
-	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
-
-	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
 	}
 };
 struct FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8  : public RuntimeArray
@@ -3261,6 +3275,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F (Exception_t* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Exception_set_HResult_m010A171183E240EBF4F7611E924B533FAB2E471F_inline (Exception_t* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m412D5FC4D69035738F1DB88FD771ABD6B0E9E120 (Exception_t* __this, SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ___0_info, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___1_context, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D (void* ___0_p, uint32_t ___1_byteLength, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ChannelServices_GetCurrentChannelInfo_mA1C33C926A7C7612AFE528E88747963A9E7B0BFD (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TypeEntry__ctor_m013FD8016C348D1036720B1E383FAAF4B8E01F22 (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TypeEntry_set_AssemblyName_m1A577A9EDEA6B0AA7490AD1C392D578E4833B345_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TypeEntry_set_TypeName_mD7EDCB69F495F37131DE1AA02ADB77FB606959BC_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, String_t* ___0_value, const RuntimeMethod* method) ;
@@ -3268,10 +3288,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Assembly_t* Assembly_Load_mC42733BACCA273EEAA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC (Type_t* ___0_left, Type_t* ___1_right, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m093934F71A9B351911EE46311674ED463B180006 (String_t* ___0_str0, String_t* ___1_str1, String_t* ___2_str2, String_t* ___3_str3, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemotingException__ctor_mB760BB4F8C02E4A8E07829F2D63D7AAA204FB948 (RemotingException_t2A1BD76EDC21EC474946432B08D98BE15811E213* __this, String_t* ___0_message, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TypeEntry_get_AssemblyName_m59FFB4F64604E2B1CA54ACE10839CC974DF51DCF_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TypeEntry_get_TypeName_m87C034FE84FBB84C90FBBAC8D4C7BFCAA2C23FF3_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TypeEntry_get_AssemblyName_m59FFB4F64604E2B1CA54ACE10839CC974DF51DCF_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ActivatedClientTypeEntry_get_ApplicationUrl_m3140AED20E1B838333C8B1C97ED0A4FC9A3616D4_inline (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___0_str0, String_t* ___1_str1, String_t* ___2_str2, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicPropertyCollection__ctor_mEFB85791EB4214E9213F06C4B165BB55A9307107 (DynamicPropertyCollection_tA3E9E747C8FF6A54F86DCBC525A71BC57C4FA3B0* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DynamicPropertyCollection_get_HasProperties_mBBB88B1E292BDF7AD7D88F31D73DC6B9DD32B0A0 (DynamicPropertyCollection_tA3E9E747C8FF6A54F86DCBC525A71BC57C4FA3B0* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicPropertyCollection_NotifyMessage_mDC18933613A8EBE9113BB3DEE8346B1862430CAF (DynamicPropertyCollection_tA3E9E747C8FF6A54F86DCBC525A71BC57C4FA3B0* __this, bool ___0_start, RuntimeObject* ___1_msg, bool ___2_client_site, bool ___3_async, const RuntimeMethod* method) ;
@@ -3291,7 +3312,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CrossAppDomainData__ctor_m91C6B967EAFACE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelInfo__ctor_m7FD33E68E4BFC8235D47B690444CC43979D065A3 (ChannelInfo_t0D234F9C7964D9C93B77535F44523D38B2F32A68* __this, RuntimeObject* ___0_remoteChannelData, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjRef__ctor_m4F44FE27D9C4037617192EB7F94B9C6DFA054C47 (ObjRef_t4E22D31BD764E833A74F63D99F39E3238B243396* __this, String_t* ___0_uri, RuntimeObject* ___1_cinfo, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CADSerializer_DeserializeObjectSafe_m64543D67473808184357BF03190ECEA5E3E42B3D (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_mem, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F (Exception_t* __this, String_t* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* CADSerializer_SerializeObject_m693394374F6AFCC73C5A3756DD96AD2DB725F3B8 (RuntimeObject* ___0_obj, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TypeInfo__ctor_m95AA1FA022A3384075D06AFD61EEE27D350F4553 (TypeInfo_t59DF3EC49F6B39AC5C8F3C1CD6C312421C5F9B06* __this, Type_t* ___0_type, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SerializationInfoEnumerator_t810DE600E5F6AA4F2B66A7F56074277CCD8F1540* SerializationInfo_GetEnumerator_m5230A1D4E4B612E90B10E2034C638CD42F667EA6 (SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* __this, const RuntimeMethod* method) ;
@@ -3315,7 +3335,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StreamReader__ctor_m08BA7049EACE030ACE06
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConfigHandler__ctor_m7B055C724C72FF1AF582C5A98B010A5D52F4B22C (ConfigHandler_tD1A013522BF2DAC248D55AF3DC8A684562A3E8AB* __this, bool ___0_onlyDelayedChannels, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmallXmlParser_Parse_mDBDCE208B61E525047652DEFB54D2B75695E0CBA (SmallXmlParser_tA3B98D88B89ED52CBE3AD0637C8912934A4C9DBB* __this, TextReader_tB8D43017CB6BE1633E5A86D64E7757366507C1F7* ___0_input, RuntimeObject* ___1_handler, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* ActivatedClientTypeEntry_get_ObjectType_m43BAB03A7A4C579996FD1C6BF1868653C728207B_inline (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___0_str0, String_t* ___1_str1, String_t* ___2_str2, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivationServices_EnableProxyActivation_m1C367BD6BF65C518569FBC442BC921FEC5127766 (Type_t* ___0_type, bool ___1_enable, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* ActivatedServiceTypeEntry_get_ObjectType_m409EC9E2DED4BEB5D7602CA6213350D4F5869E3B_inline (ActivatedServiceTypeEntry_tBDEA3FA20398A81D96E6A6A65717622B127DCE8B* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* WellKnownClientTypeEntry_get_ObjectType_mD74E241F8A37D55D580E961E638AFEDED1CE7CDC_inline (WellKnownClientTypeEntry_t347372ACAC92831B98A6A1743747BAB5993D6058* __this, const RuntimeMethod* method) ;
@@ -3468,7 +3487,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ConstructorInfo_t1B5967EE7E5554272F79F8880183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* __this, String_t* ___0_paramName, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjRef_t4E22D31BD764E833A74F63D99F39E3238B243396* RemotingServices_Marshal_mEE7A86240BB520ADBC230B7788F01F5ADDBF5B54 (MarshalByRefObject_t8C2F4C5854177FD60439EB1FCCFC1B3CFAFE8DCE* ___0_Obj, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR IContextAttributeU5BU5D_tBF33B08E7FE42BDCE617035E11328EC7F1678BB1* ActivatedClientTypeEntry_get_ContextAttributes_mB0B9B414B7D1996889CB94DAF237F887C78008AC (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ActivatedClientTypeEntry_get_ApplicationUrl_m3140AED20E1B838333C8B1C97ED0A4FC9A3616D4_inline (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RemotingServices_CreateClientProxy_m33B6E7CCA59C3148F1D81A2D41069E79F5713B34 (Type_t* ___0_objectType, String_t* ___1_url, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___2_activationAttributes, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_EndsWith_mCD3754F5401E19CE7821CD398986E4EAA6AD87DC (String_t* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RemotingServices_GetClientChannelSinkChain_mDDE583D2B6A4DD24B78AF425B4119CB9DBF62015 (String_t* ___0_url, RuntimeObject* ___1_channelData, String_t** ___2_objectUri, const RuntimeMethod* method) ;
@@ -3838,6 +3856,250 @@ inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List
 {
 	((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared)(__this, ___0_item, method);
 }
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AmbiguousImplementationException__ctor_m055A144AD6D394197D8C5C5F220C7FD98509AA3B (AmbiguousImplementationException_tF37AE5B841F72455775D7119A4FE2681F7A37CFF* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCCDFB7ACC5469688BABE1F67B6145B31A5F43B3F);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(Exception_t_il2cpp_TypeInfo_var);
+		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(__this, _stringLiteralCCDFB7ACC5469688BABE1F67B6145B31A5F43B3F, NULL);
+		Exception_set_HResult_m010A171183E240EBF4F7611E924B533FAB2E471F_inline(__this, ((int32_t)-2146234262), NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AmbiguousImplementationException__ctor_mC11EF5E90FCECB61209604318089A68DA82D1669 (AmbiguousImplementationException_tF37AE5B841F72455775D7119A4FE2681F7A37CFF* __this, String_t* ___0_message, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___0_message;
+		il2cpp_codegen_runtime_class_init_inline(Exception_t_il2cpp_TypeInfo_var);
+		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(__this, L_0, NULL);
+		Exception_set_HResult_m010A171183E240EBF4F7611E924B533FAB2E471F_inline(__this, ((int32_t)-2146234262), NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AmbiguousImplementationException__ctor_mA138B2AE10F877F264578B4AD084C14F4FB956F9 (AmbiguousImplementationException_tF37AE5B841F72455775D7119A4FE2681F7A37CFF* __this, SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ___0_info, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___1_context, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* L_0 = ___0_info;
+		StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 L_1 = ___1_context;
+		il2cpp_codegen_runtime_class_init_inline(Exception_t_il2cpp_TypeInfo_var);
+		Exception__ctor_m412D5FC4D69035738F1DB88FD771ABD6B0E9E120(__this, L_0, L_1, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_RhZeroMemory_m412EFFB5FBA11DD440375C72285A875977361A85 (uint8_t* ___0_b, uint64_t ___1_byteLength, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	{
+		uint8_t* L_0 = ___0_b;
+		V_0 = L_0;
+		uint8_t* L_1 = V_0;
+		uint64_t L_2 = ___1_byteLength;
+		RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D((void*)((uintptr_t)L_1), ((int32_t)(uint32_t)L_2), NULL);
+		V_0 = (uint8_t*)((uintptr_t)0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D (void* ___0_p, uint32_t ___1_byteLength, const RuntimeMethod* method) 
+{
+	typedef void (*RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D_ftn) (void*, uint32_t);
+	using namespace il2cpp::icalls;
+	((RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D_ftn)mscorlib::System::Runtime::RuntimeImports::ZeroMemory) (___0_p, ___1_byteLength);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_Memmove_mB3E90ADCBBB4053F9E03DA324E8AC50BB33ABA38 (uint8_t* ___0_dest, uint8_t* ___1_src, uint32_t ___2_len, const RuntimeMethod* method) 
+{
+	typedef void (*RuntimeImports_Memmove_mB3E90ADCBBB4053F9E03DA324E8AC50BB33ABA38_ftn) (uint8_t*, uint8_t*, uint32_t);
+	using namespace il2cpp::icalls;
+	((RuntimeImports_Memmove_mB3E90ADCBBB4053F9E03DA324E8AC50BB33ABA38_ftn)mscorlib::System::Runtime::RuntimeImports::Memmove) (___0_dest, ___1_src, ___2_len);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_Memmove_wbarrier_m8487273EE6161DB248FB65BB931279FF04F3CA79 (uint8_t* ___0_dest, uint8_t* ___1_src, uint32_t ___2_len, intptr_t ___3_type_handle, const RuntimeMethod* method) 
+{
+	typedef void (*RuntimeImports_Memmove_wbarrier_m8487273EE6161DB248FB65BB931279FF04F3CA79_ftn) (uint8_t*, uint8_t*, uint32_t, intptr_t);
+	using namespace il2cpp::icalls;
+	((RuntimeImports_Memmove_wbarrier_m8487273EE6161DB248FB65BB931279FF04F3CA79_ftn)mscorlib::System::Runtime::RuntimeImports::Memmove_wbarrier) (___0_dest, ___1_src, ___2_len, ___3_type_handle);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelInfo__ctor_m187885A17BC5D27FFEBCEF3A3AC7D9BF705BFA5D (ChannelInfo_t0D234F9C7964D9C93B77535F44523D38B2F32A68* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ChannelServices_t7892AD29816C874462159101B299713604D1A637_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(ChannelServices_t7892AD29816C874462159101B299713604D1A637_il2cpp_TypeInfo_var);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0;
+		L_0 = ChannelServices_GetCurrentChannelInfo_mA1C33C926A7C7612AFE528E88747963A9E7B0BFD(NULL);
+		__this->___channelData = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___channelData), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelInfo__ctor_m7FD33E68E4BFC8235D47B690444CC43979D065A3 (ChannelInfo_t0D234F9C7964D9C93B77535F44523D38B2F32A68* __this, RuntimeObject* ___0_remoteChannelData, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = L_0;
+		RuntimeObject* L_2 = ___0_remoteChannelData;
+		NullCheck(L_1);
+		ArrayElementTypeCheck (L_1, L_2);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_2);
+		__this->___channelData = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___channelData), (void*)L_1);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ChannelInfo_get_ChannelData_m2799D9CF45CA9E4B13DEA7505D72833B982E8AEB (ChannelInfo_t0D234F9C7964D9C93B77535F44523D38B2F32A68* __this, const RuntimeMethod* method) 
+{
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = __this->___channelData;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatedClientTypeEntry__ctor_mDB863F62FB6E74573BE522FCD2446FE3871589AD (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, String_t* ___0_typeName, String_t* ___1_assemblyName, String_t* ___2_appUrl, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Assembly_t* V_0 = NULL;
+	{
+		TypeEntry__ctor_m013FD8016C348D1036720B1E383FAAF4B8E01F22(__this, NULL);
+		String_t* L_0 = ___1_assemblyName;
+		TypeEntry_set_AssemblyName_m1A577A9EDEA6B0AA7490AD1C392D578E4833B345_inline(__this, L_0, NULL);
+		String_t* L_1 = ___0_typeName;
+		TypeEntry_set_TypeName_mD7EDCB69F495F37131DE1AA02ADB77FB606959BC_inline(__this, L_1, NULL);
+		String_t* L_2 = ___2_appUrl;
+		__this->___applicationUrl = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___applicationUrl), (void*)L_2);
+		String_t* L_3 = ___1_assemblyName;
+		Assembly_t* L_4;
+		L_4 = Assembly_Load_mC42733BACCA273EEAA32A341CBF53722A44DCC90(L_3, NULL);
+		V_0 = L_4;
+		Assembly_t* L_5 = V_0;
+		String_t* L_6 = ___0_typeName;
+		NullCheck(L_5);
+		Type_t* L_7;
+		L_7 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(16, L_5, L_6);
+		__this->___obj_type = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___obj_type), (void*)L_7);
+		Type_t* L_8 = __this->___obj_type;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_8, (Type_t*)NULL, NULL);
+		if (!L_9)
+		{
+			goto IL_0054;
+		}
+	}
+	{
+		String_t* L_10 = ___0_typeName;
+		String_t* L_11 = ___1_assemblyName;
+		String_t* L_12;
+		L_12 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralD152C10709DCAF3B9D53E13D4AA697A8B6701AFE)), L_10, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D)), L_11, NULL);
+		RemotingException_t2A1BD76EDC21EC474946432B08D98BE15811E213* L_13 = (RemotingException_t2A1BD76EDC21EC474946432B08D98BE15811E213*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&RemotingException_t2A1BD76EDC21EC474946432B08D98BE15811E213_il2cpp_TypeInfo_var)));
+		RemotingException__ctor_mB760BB4F8C02E4A8E07829F2D63D7AAA204FB948(L_13, L_12, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_13, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ActivatedClientTypeEntry__ctor_mDB863F62FB6E74573BE522FCD2446FE3871589AD_RuntimeMethod_var)));
+	}
+
+IL_0054:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ActivatedClientTypeEntry_get_ApplicationUrl_m3140AED20E1B838333C8B1C97ED0A4FC9A3616D4 (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___applicationUrl;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR IContextAttributeU5BU5D_tBF33B08E7FE42BDCE617035E11328EC7F1678BB1* ActivatedClientTypeEntry_get_ContextAttributes_mB0B9B414B7D1996889CB94DAF237F887C78008AC (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) 
+{
+	{
+		return (IContextAttributeU5BU5D_tBF33B08E7FE42BDCE617035E11328EC7F1678BB1*)NULL;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* ActivatedClientTypeEntry_get_ObjectType_m43BAB03A7A4C579996FD1C6BF1868653C728207B (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) 
+{
+	{
+		Type_t* L_0 = __this->___obj_type;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ActivatedClientTypeEntry_ToString_mDDA92930C16FBBF89F83B900E97AC4BD77FEB11F (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0;
+		L_0 = TypeEntry_get_TypeName_m87C034FE84FBB84C90FBBAC8D4C7BFCAA2C23FF3_inline(__this, NULL);
+		String_t* L_1;
+		L_1 = TypeEntry_get_AssemblyName_m59FFB4F64604E2B1CA54ACE10839CC974DF51DCF_inline(__this, NULL);
+		String_t* L_2;
+		L_2 = ActivatedClientTypeEntry_get_ApplicationUrl_m3140AED20E1B838333C8B1C97ED0A4FC9A3616D4_inline(__this, NULL);
+		String_t* L_3;
+		L_3 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -4228,7 +4490,7 @@ IL_000d:
 	{
 		NullCheck(G_B2_0);
 		RuntimeObject* L_2;
-		L_2 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(5, G_B2_0);
+		L_2 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(6, G_B2_0);
 		G_B3_0 = L_2;
 	}
 
@@ -4308,7 +4570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SoapAttribute_t41093087BF547190DF8FF1D30BF50A
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_0 = ((InternalRemotingServices_t81F9F079B19BF2581D39F50A82B4A02F06335628_StaticFields*)il2cpp_codegen_static_fields_for(InternalRemotingServices_t81F9F079B19BF2581D39F50A82B4A02F06335628_il2cpp_TypeInfo_var))->____soapAttributes;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(29, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(30, L_0);
 		V_0 = L_1;
 		V_1 = (bool)0;
 	}
@@ -4346,7 +4608,7 @@ IL_00b6:
 				RuntimeObject* L_6 = ___0_reflectionObject;
 				NullCheck(L_5);
 				RuntimeObject* L_7;
-				L_7 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_5, L_6);
+				L_7 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_5, L_6);
 				V_2 = ((SoapAttribute_t41093087BF547190DF8FF1D30BF50ACBDB003AD9*)IsInstClass((RuntimeObject*)L_7, SoapAttribute_t41093087BF547190DF8FF1D30BF50ACBDB003AD9_il2cpp_TypeInfo_var));
 				SoapAttribute_t41093087BF547190DF8FF1D30BF50ACBDB003AD9* L_8 = V_2;
 				if (!L_8)
@@ -4457,7 +4719,7 @@ IL_0095_1:
 				RuntimeObject* L_29 = ___0_reflectionObject;
 				SoapAttribute_t41093087BF547190DF8FF1D30BF50ACBDB003AD9* L_30 = V_2;
 				NullCheck(L_28);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_28, L_29, L_30);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_28, L_29, L_30);
 				SoapAttribute_t41093087BF547190DF8FF1D30BF50ACBDB003AD9* L_31 = V_2;
 				V_4 = L_31;
 				goto IL_00b7;
@@ -5352,7 +5614,7 @@ IL_0027:
 			Type_t* L_5 = ___0_svrType;
 			NullCheck(L_4);
 			bool L_6;
-			L_6 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_4, L_5);
+			L_6 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_4, L_5);
 			V_2 = L_6;
 			goto IL_0028;
 		}
@@ -5419,7 +5681,7 @@ IL_002c:
 			Type_t* L_5 = ___0_svrType;
 			NullCheck(L_4);
 			RuntimeObject* L_6;
-			L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_4, L_5);
+			L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_4, L_5);
 			V_2 = ((ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE*)IsInstClass((RuntimeObject*)L_6, ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE_il2cpp_TypeInfo_var));
 			goto IL_002d;
 		}
@@ -5486,7 +5748,7 @@ IL_002c:
 			Type_t* L_5 = ___0_svrType;
 			NullCheck(L_4);
 			RuntimeObject* L_6;
-			L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_4, L_5);
+			L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_4, L_5);
 			V_2 = ((WellKnownClientTypeEntry_t347372ACAC92831B98A6A1743747BAB5993D6058*)IsInstClass((RuntimeObject*)L_6, WellKnownClientTypeEntry_t347372ACAC92831B98A6A1743747BAB5993D6058_il2cpp_TypeInfo_var));
 			goto IL_002d;
 		}
@@ -5555,7 +5817,7 @@ IL_007c:
 				L_6 = ActivatedClientTypeEntry_get_ObjectType_m43BAB03A7A4C579996FD1C6BF1868653C728207B_inline(L_5, NULL);
 				NullCheck(L_4);
 				bool L_7;
-				L_7 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_4, L_6);
+				L_7 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_4, L_6);
 				if (L_7)
 				{
 					goto IL_0034_1;
@@ -5570,7 +5832,7 @@ IL_007c:
 				L_10 = ActivatedClientTypeEntry_get_ObjectType_m43BAB03A7A4C579996FD1C6BF1868653C728207B_inline(L_9, NULL);
 				NullCheck(L_8);
 				bool L_11;
-				L_11 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_8, L_10);
+				L_11 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_8, L_10);
 				if (!L_11)
 				{
 					goto IL_0054_1;
@@ -5603,7 +5865,7 @@ IL_0054_1:
 				L_19 = ActivatedClientTypeEntry_get_ObjectType_m43BAB03A7A4C579996FD1C6BF1868653C728207B_inline(L_18, NULL);
 				ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* L_20 = ___0_entry;
 				NullCheck(L_17);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_17, L_19, L_20);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_17, L_19, L_20);
 				ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* L_21 = ___0_entry;
 				NullCheck(L_21);
 				Type_t* L_22;
@@ -5675,7 +5937,7 @@ IL_002c:
 			L_6 = ActivatedServiceTypeEntry_get_ObjectType_m409EC9E2DED4BEB5D7602CA6213350D4F5869E3B_inline(L_5, NULL);
 			ActivatedServiceTypeEntry_tBDEA3FA20398A81D96E6A6A65717622B127DCE8B* L_7 = ___0_entry;
 			NullCheck(L_4);
-			VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(15, L_4, L_6, L_7);
+			VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(16, L_4, L_6, L_7);
 			goto IL_002d;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -5742,7 +6004,7 @@ IL_007c:
 				L_6 = WellKnownClientTypeEntry_get_ObjectType_mD74E241F8A37D55D580E961E638AFEDED1CE7CDC_inline(L_5, NULL);
 				NullCheck(L_4);
 				bool L_7;
-				L_7 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_4, L_6);
+				L_7 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_4, L_6);
 				if (L_7)
 				{
 					goto IL_0034_1;
@@ -5757,7 +6019,7 @@ IL_007c:
 				L_10 = WellKnownClientTypeEntry_get_ObjectType_mD74E241F8A37D55D580E961E638AFEDED1CE7CDC_inline(L_9, NULL);
 				NullCheck(L_8);
 				bool L_11;
-				L_11 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_8, L_10);
+				L_11 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_8, L_10);
 				if (!L_11)
 				{
 					goto IL_0054_1;
@@ -5790,7 +6052,7 @@ IL_0054_1:
 				L_19 = WellKnownClientTypeEntry_get_ObjectType_mD74E241F8A37D55D580E961E638AFEDED1CE7CDC_inline(L_18, NULL);
 				WellKnownClientTypeEntry_t347372ACAC92831B98A6A1743747BAB5993D6058* L_20 = ___0_entry;
 				NullCheck(L_17);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_17, L_19, L_20);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_17, L_19, L_20);
 				WellKnownClientTypeEntry_t347372ACAC92831B98A6A1743747BAB5993D6058* L_21 = ___0_entry;
 				NullCheck(L_21);
 				Type_t* L_22;
@@ -5863,7 +6125,7 @@ IL_0044:
 			L_6 = WellKnownServiceTypeEntry_get_ObjectUri_m7805966A4FCB0BC93EF36F00E9067516A91CFF30_inline(L_5, NULL);
 			WellKnownServiceTypeEntry_tDDA2E122B4DDF9380DA4B94FD9347D38FD9CF85F* L_7 = ___0_entry;
 			NullCheck(L_4);
-			VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_4, L_6, L_7);
+			VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_4, L_6, L_7);
 			WellKnownServiceTypeEntry_tDDA2E122B4DDF9380DA4B94FD9347D38FD9CF85F* L_8 = ___0_entry;
 			NullCheck(L_8);
 			Type_t* L_9;
@@ -5908,7 +6170,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemotingConfiguration_RegisterChannelTem
 		String_t* L_2 = L_1->___Id;
 		ChannelData_tA3F585C517C5096FDE7861E373EFA62862B644C5* L_3 = ___0_channel;
 		NullCheck(L_0);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_0, L_2, L_3);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_0, L_2, L_3);
 		return;
 	}
 }
@@ -5928,7 +6190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemotingConfiguration_RegisterClientProv
 		String_t* L_2 = L_1->___Id;
 		ProviderData_t8A7E7568AE71841B79E924C3D6ACC637D0568481* L_3 = ___0_prov;
 		NullCheck(L_0);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_0, L_2, L_3);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_0, L_2, L_3);
 		return;
 	}
 }
@@ -5948,7 +6210,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemotingConfiguration_RegisterServerProv
 		String_t* L_2 = L_1->___Id;
 		ProviderData_t8A7E7568AE71841B79E924C3D6ACC637D0568481* L_3 = ___0_prov;
 		NullCheck(L_0);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_0, L_2, L_3);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_0, L_2, L_3);
 		return;
 	}
 }
@@ -5979,7 +6241,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemotingConfiguration_RegisterChannels_m
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_0 = ___0_channels;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_0);
 		V_0 = L_1;
 	}
 	{
@@ -6079,7 +6341,7 @@ IL_004c_1:
 				String_t* L_19 = L_18->___Ref;
 				NullCheck(L_17);
 				RuntimeObject* L_20;
-				L_20 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_17, L_19);
+				L_20 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_17, L_19);
 				V_2 = ((ChannelData_tA3F585C517C5096FDE7861E373EFA62862B644C5*)CastclassClass((RuntimeObject*)L_20, ChannelData_tA3F585C517C5096FDE7861E373EFA62862B644C5_il2cpp_TypeInfo_var));
 				ChannelData_tA3F585C517C5096FDE7861E373EFA62862B644C5* L_21 = V_2;
 				if (L_21)
@@ -6114,7 +6376,7 @@ IL_008f_1:
 				L_29 = ChannelData_get_ServerProviders_mAF3717C094D3174DD8438E0CA0851682023984A2(L_28, NULL);
 				NullCheck(L_29);
 				RuntimeObject* L_30;
-				L_30 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_29);
+				L_30 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_29);
 				V_3 = L_30;
 			}
 			{
@@ -6173,7 +6435,7 @@ IL_009d_2:
 						String_t* L_40 = L_39->___Ref;
 						NullCheck(L_38);
 						RuntimeObject* L_41;
-						L_41 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_38, L_40);
+						L_41 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_38, L_40);
 						V_5 = ((ProviderData_t8A7E7568AE71841B79E924C3D6ACC637D0568481*)CastclassClass((RuntimeObject*)L_41, ProviderData_t8A7E7568AE71841B79E924C3D6ACC637D0568481_il2cpp_TypeInfo_var));
 						ProviderData_t8A7E7568AE71841B79E924C3D6ACC637D0568481* L_42 = V_5;
 						if (L_42)
@@ -6229,7 +6491,7 @@ IL_0112_1:
 				L_52 = ChannelData_get_ClientProviders_mA0B294926A71ABCCB1A863D47445DBF048F6DE01(L_51, NULL);
 				NullCheck(L_52);
 				RuntimeObject* L_53;
-				L_53 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_52);
+				L_53 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_52);
 				V_3 = L_53;
 			}
 			{
@@ -6288,7 +6550,7 @@ IL_0120_2:
 						String_t* L_63 = L_62->___Ref;
 						NullCheck(L_61);
 						RuntimeObject* L_64;
-						L_64 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_61, L_63);
+						L_64 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_61, L_63);
 						V_8 = ((ProviderData_t8A7E7568AE71841B79E924C3D6ACC637D0568481*)CastclassClass((RuntimeObject*)L_64, ProviderData_t8A7E7568AE71841B79E924C3D6ACC637D0568481_il2cpp_TypeInfo_var));
 						ProviderData_t8A7E7568AE71841B79E924C3D6ACC637D0568481* L_65 = V_8;
 						if (L_65)
@@ -6391,7 +6653,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemotingConfiguration_RegisterTypes_m4E8
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_0 = ___0_types;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_0);
 		V_0 = L_1;
 	}
 	{
@@ -8544,7 +8806,7 @@ IL_007c:
 		String_t* L_31 = V_2;
 		String_t* L_32 = V_3;
 		NullCheck(L_30);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(15, L_30, L_31, L_32);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(16, L_30, L_31, L_32);
 	}
 
 IL_0089:
@@ -8792,7 +9054,7 @@ IL_00a9:
 		String_t* L_37 = V_3;
 		String_t* L_38 = V_4;
 		NullCheck(L_36);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(15, L_36, L_37, L_38);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(16, L_36, L_37, L_38);
 	}
 
 IL_00b7:
@@ -9570,7 +9832,7 @@ IL_0050:
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_15 = L_14->____customProperties;
 		NullCheck(L_15);
 		RuntimeObject* L_16;
-		L_16 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(24, L_15);
+		L_16 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(25, L_15);
 		V_0 = L_16;
 	}
 	{
@@ -9619,7 +9881,7 @@ IL_0066_1:
 				L_23 = DictionaryEntry_get_Key_m09845C00732E530E6FCB9042079E90D3912215FE_inline((&V_1), NULL);
 				NullCheck(L_22);
 				bool L_24;
-				L_24 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_22, L_23);
+				L_24 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_22, L_23);
 				if (L_24)
 				{
 					goto IL_009f_1;
@@ -9633,7 +9895,7 @@ IL_0066_1:
 				RuntimeObject* L_27;
 				L_27 = DictionaryEntry_get_Value_m75FD18FE968AE131F28AA2CB0DF4895EBA39075E_inline((&V_1), NULL);
 				NullCheck(L_25);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_25, L_26, L_27);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_25, L_26, L_27);
 			}
 
 IL_009f_1:
@@ -9680,7 +9942,7 @@ IL_00ba:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_34 = L_33->____serverProviders;
 		NullCheck(L_34);
 		RuntimeObject* L_35;
-		L_35 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_34);
+		L_35 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_34);
 		V_3 = L_35;
 	}
 	{
@@ -9782,7 +10044,7 @@ IL_011e:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_53 = L_52->____clientProviders;
 		NullCheck(L_53);
 		RuntimeObject* L_54;
-		L_54 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_53);
+		L_54 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_53);
 		V_3 = L_54;
 	}
 	{
@@ -9974,7 +10236,7 @@ IL_003c:
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_10 = L_9->___CustomProperties;
 		NullCheck(L_10);
 		RuntimeObject* L_11;
-		L_11 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(24, L_10);
+		L_11 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(25, L_10);
 		V_0 = L_11;
 	}
 	{
@@ -10022,7 +10284,7 @@ IL_004a_1:
 				L_18 = DictionaryEntry_get_Key_m09845C00732E530E6FCB9042079E90D3912215FE_inline((&V_1), NULL);
 				NullCheck(L_17);
 				bool L_19;
-				L_19 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_17, L_18);
+				L_19 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_17, L_18);
 				if (L_19)
 				{
 					goto IL_0083_1;
@@ -10035,7 +10297,7 @@ IL_004a_1:
 				RuntimeObject* L_22;
 				L_22 = DictionaryEntry_get_Value_m75FD18FE968AE131F28AA2CB0DF4895EBA39075E_inline((&V_1), NULL);
 				NullCheck(L_20);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_20, L_21, L_22);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_20, L_21, L_22);
 			}
 
 IL_0083_1:
@@ -10471,7 +10733,7 @@ IL_0074:
 		L_29 = InterfaceFuncInvoker0< MethodBase_t* >::Invoke(3, IMethodMessage_t21F467ACE7B9F75715E33DDA32827935CC3D32D7_il2cpp_TypeInfo_var, L_28);
 		NullCheck(L_29);
 		bool L_30;
-		L_30 = VirtualFuncInvoker0< bool >::Invoke(24, L_29);
+		L_30 = VirtualFuncInvoker0< bool >::Invoke(26, L_29);
 		if (!L_30)
 		{
 			goto IL_00a1;
@@ -10484,16 +10746,16 @@ IL_0074:
 		L_32 = InterfaceFuncInvoker0< MethodBase_t* >::Invoke(3, IMethodMessage_t21F467ACE7B9F75715E33DDA32827935CC3D32D7_il2cpp_TypeInfo_var, L_31);
 		NullCheck(L_32);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_33;
-		L_33 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(26, L_32);
+		L_33 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(28, L_32);
 		V_4 = L_33;
 		MethodBase_t* L_34 = V_2;
 		NullCheck(((MethodInfo_t*)CastclassClass((RuntimeObject*)L_34, MethodInfo_t_il2cpp_TypeInfo_var)));
 		MethodInfo_t* L_35;
-		L_35 = VirtualFuncInvoker0< MethodInfo_t* >::Invoke(39, ((MethodInfo_t*)CastclassClass((RuntimeObject*)L_34, MethodInfo_t_il2cpp_TypeInfo_var)));
+		L_35 = VirtualFuncInvoker0< MethodInfo_t* >::Invoke(41, ((MethodInfo_t*)CastclassClass((RuntimeObject*)L_34, MethodInfo_t_il2cpp_TypeInfo_var)));
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_36 = V_4;
 		NullCheck(L_35);
 		MethodInfo_t* L_37;
-		L_37 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(40, L_35, L_36);
+		L_37 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(42, L_35, L_36);
 		V_2 = L_37;
 	}
 
@@ -11645,7 +11907,7 @@ IL_0029:
 		Type_t* L_11 = ___0_type;
 		NullCheck(L_11);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_12;
-		L_12 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(110, L_11);
+		L_12 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(112, L_11);
 		V_1 = L_12;
 		V_2 = 0;
 		goto IL_004e;
@@ -11833,7 +12095,7 @@ IL_002f:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_16 = V_0;
 		NullCheck(L_16);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_17;
-		L_17 = VirtualFuncInvoker0< ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(39, L_16);
+		L_17 = VirtualFuncInvoker0< ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(40, L_16);
 		il2cpp_codegen_runtime_class_init_inline(RemotingServices_t5C9F4139FFA73067C8FC6BEB3FED3C3C56571AF8_il2cpp_TypeInfo_var);
 		RuntimeObject* L_18;
 		L_18 = RemotingServices_CreateClientProxy_m33B6E7CCA59C3148F1D81A2D41069E79F5713B34(L_13, L_15, L_17, NULL);
@@ -12051,7 +12313,7 @@ IL_0054:
 				String_t* L_7 = V_0;
 				NullCheck(L_6);
 				RuntimeObject* L_8;
-				L_8 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_6, L_7);
+				L_8 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_6, L_7);
 				V_3 = ((Identity_t382AEDDF15E6ECE540A5A2F4EC722C9E91D89F02*)CastclassClass((RuntimeObject*)L_8, Identity_t382AEDDF15E6ECE540A5A2F4EC722C9E91D89F02_il2cpp_TypeInfo_var));
 				Identity_t382AEDDF15E6ECE540A5A2F4EC722C9E91D89F02* L_9 = V_3;
 				if (L_9)
@@ -12077,7 +12339,7 @@ IL_0054:
 				String_t* L_14 = V_0;
 				NullCheck(L_13);
 				RuntimeObject* L_15;
-				L_15 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_13, L_14);
+				L_15 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_13, L_14);
 				V_3 = ((Identity_t382AEDDF15E6ECE540A5A2F4EC722C9E91D89F02*)CastclassClass((RuntimeObject*)L_15, Identity_t382AEDDF15E6ECE540A5A2F4EC722C9E91D89F02_il2cpp_TypeInfo_var));
 			}
 
@@ -12287,7 +12549,7 @@ IL_00f5:
 				String_t* L_21 = V_5;
 				NullCheck(L_20);
 				RuntimeObject* L_22;
-				L_22 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_20, L_21);
+				L_22 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_20, L_21);
 				V_6 = ((ClientIdentity_t104904C79F58C99171A327A95A530DD92E178049*)IsInstClass((RuntimeObject*)L_22, ClientIdentity_t104904C79F58C99171A327A95A530DD92E178049_il2cpp_TypeInfo_var));
 				ClientIdentity_t104904C79F58C99171A327A95A530DD92E178049* L_23 = V_6;
 				if (!L_23)
@@ -12339,7 +12601,7 @@ IL_0082_1:
 				String_t* L_37 = V_5;
 				ClientIdentity_t104904C79F58C99171A327A95A530DD92E178049* L_38 = V_6;
 				NullCheck(L_36);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_36, L_37, L_38);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_36, L_37, L_38);
 				Type_t* L_39 = ___1_proxyType;
 				il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 				bool L_40;
@@ -12631,7 +12893,7 @@ IL_0059:
 				L_6 = Identity_get_ObjectUri_mBEB462FC0486F87D89E17EA1920010DC4EAFF75B_inline(L_5, NULL);
 				NullCheck(L_4);
 				bool L_7;
-				L_7 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_4, L_6);
+				L_7 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_4, L_6);
 				if (!L_7)
 				{
 					goto IL_003d_1;
@@ -12659,7 +12921,7 @@ IL_003d_1:
 				L_14 = Identity_get_ObjectUri_mBEB462FC0486F87D89E17EA1920010DC4EAFF75B_inline(L_13, NULL);
 				ServerIdentity_tCEA9C604C04F28C078FAD97838C53BD19AEA3767* L_15 = ___0_identity;
 				NullCheck(L_12);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_12, L_14, L_15);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_12, L_14, L_15);
 				goto IL_005a;
 			}
 		}
@@ -13176,7 +13438,7 @@ IL_005b:
 				String_t* L_11;
 				L_11 = RemotingServices_GetNormalizedUri_mD7BF644CD6C466C9942308A01132E4403CF279E3(L_10, NULL);
 				NullCheck(L_8);
-				VirtualActionInvoker1< RuntimeObject* >::Invoke(28, L_8, L_11);
+				VirtualActionInvoker1< RuntimeObject* >::Invoke(29, L_8, L_11);
 				goto IL_0049_1;
 			}
 
@@ -13189,7 +13451,7 @@ IL_0039_1:
 				String_t* L_14;
 				L_14 = Identity_get_ObjectUri_mBEB462FC0486F87D89E17EA1920010DC4EAFF75B_inline(L_13, NULL);
 				NullCheck(L_12);
-				VirtualActionInvoker1< RuntimeObject* >::Invoke(28, L_12, L_14);
+				VirtualActionInvoker1< RuntimeObject* >::Invoke(29, L_12, L_14);
 			}
 
 IL_0049_1:
@@ -13292,7 +13554,7 @@ IL_0051:
 			String_t* L_11 = V_2;
 			NullCheck(L_10);
 			RuntimeObject* L_12;
-			L_12 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_10, L_11);
+			L_12 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_10, L_11);
 			V_3 = ((ServerIdentity_tCEA9C604C04F28C078FAD97838C53BD19AEA3767*)IsInstClass((RuntimeObject*)L_12, ServerIdentity_tCEA9C604C04F28C078FAD97838C53BD19AEA3767_il2cpp_TypeInfo_var));
 			goto IL_0052;
 		}
@@ -14772,7 +15034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SoapServices_PreLoad_m4035280C001298A48C
 		Type_t* L_1 = ___0_type;
 		NullCheck(L_0);
 		RuntimeObject* L_2;
-		L_2 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_0, L_1);
+		L_2 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_0, L_1);
 		V_2 = ((TypeInfo_t62AF95443A1196CCF884DAFFC4E6785CC02AFC77*)IsInstClass((RuntimeObject*)L_2, TypeInfo_t62AF95443A1196CCF884DAFFC4E6785CC02AFC77_il2cpp_TypeInfo_var));
 		TypeInfo_t62AF95443A1196CCF884DAFFC4E6785CC02AFC77* L_3 = V_2;
 		if (!L_3)
@@ -14828,7 +15090,7 @@ IL_003d:
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_14 = ((SoapServices_t4D90B67F1A9FBE937B32D422081C7DC5B3304657_StaticFields*)il2cpp_codegen_static_fields_for(SoapServices_t4D90B67F1A9FBE937B32D422081C7DC5B3304657_il2cpp_TypeInfo_var))->____typeInfos;
 		NullCheck(L_14);
 		RuntimeObject* L_15;
-		L_15 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(29, L_14);
+		L_15 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(30, L_14);
 		V_3 = L_15;
 		V_4 = (bool)0;
 	}
@@ -14943,7 +15205,7 @@ IL_00ba_1:
 				String_t* L_43 = V_9;
 				FieldInfo_t* L_44 = V_7;
 				NullCheck(L_42);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_42, L_43, L_44);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_42, L_43, L_44);
 				goto IL_00ed_1;
 			}
 
@@ -14974,7 +15236,7 @@ IL_00de_1:
 				String_t* L_51 = V_9;
 				FieldInfo_t* L_52 = V_7;
 				NullCheck(L_50);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_50, L_51, L_52);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_50, L_51, L_52);
 			}
 
 IL_00ed_1:
@@ -14999,7 +15261,7 @@ IL_00f3_1:
 				Type_t* L_57 = ___0_type;
 				TypeInfo_t62AF95443A1196CCF884DAFFC4E6785CC02AFC77* L_58 = V_2;
 				NullCheck(L_56);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_56, L_57, L_58);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_56, L_57, L_58);
 				goto IL_0117;
 			}
 		}
@@ -15030,7 +15292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SoapServices_RegisterInteropXmlElement_m
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_0 = ((SoapServices_t4D90B67F1A9FBE937B32D422081C7DC5B3304657_StaticFields*)il2cpp_codegen_static_fields_for(SoapServices_t4D90B67F1A9FBE937B32D422081C7DC5B3304657_il2cpp_TypeInfo_var))->____xmlElements;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(29, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(30, L_0);
 		V_0 = L_1;
 		V_1 = (bool)0;
 	}
@@ -15070,7 +15332,7 @@ IL_0037:
 			L_8 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_6, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, L_7, NULL);
 			Type_t* L_9 = ___2_type;
 			NullCheck(L_5);
-			VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_5, L_8, L_9);
+			VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_5, L_8, L_9);
 			goto IL_0038;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -15100,7 +15362,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SoapServices_RegisterInteropXmlType_m788
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_0 = ((SoapServices_t4D90B67F1A9FBE937B32D422081C7DC5B3304657_StaticFields*)il2cpp_codegen_static_fields_for(SoapServices_t4D90B67F1A9FBE937B32D422081C7DC5B3304657_il2cpp_TypeInfo_var))->____xmlTypes;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(29, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(30, L_0);
 		V_0 = L_1;
 		V_1 = (bool)0;
 	}
@@ -15140,7 +15402,7 @@ IL_0037:
 			L_8 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_6, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, L_7, NULL);
 			Type_t* L_9 = ___2_type;
 			NullCheck(L_5);
-			VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_5, L_8, L_9);
+			VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_5, L_8, L_9);
 			goto IL_0038;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -15332,7 +15594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TypeInfo__ctor_m95AA1FA022A3384075D06AFD
 		Type_t* L_6 = ___0_type;
 		NullCheck(L_6);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_7;
-		L_7 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(110, L_6);
+		L_7 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(112, L_6);
 		V_0 = L_7;
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_8 = V_0;
 		NullCheck(L_8);
@@ -15396,7 +15658,7 @@ IL_0075:
 		Type_t* L_26 = ___0_type;
 		NullCheck(L_26);
 		Type_t* L_27;
-		L_27 = VirtualFuncInvoker0< Type_t* >::Invoke(108, L_26);
+		L_27 = VirtualFuncInvoker0< Type_t* >::Invoke(110, L_26);
 		V_3 = L_27;
 		goto IL_0097;
 	}
@@ -15406,7 +15668,7 @@ IL_008c:
 		Type_t* L_28 = V_3;
 		NullCheck(L_28);
 		Type_t* L_29;
-		L_29 = VirtualFuncInvoker0< Type_t* >::Invoke(108, L_28);
+		L_29 = VirtualFuncInvoker0< Type_t* >::Invoke(110, L_28);
 		V_3 = L_29;
 		int32_t L_30 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_30, 1));
@@ -15446,7 +15708,7 @@ IL_00b2:
 		Type_t* L_39 = ___0_type;
 		NullCheck(L_39);
 		Type_t* L_40;
-		L_40 = VirtualFuncInvoker0< Type_t* >::Invoke(108, L_39);
+		L_40 = VirtualFuncInvoker0< Type_t* >::Invoke(110, L_39);
 		V_3 = L_40;
 		V_5 = 0;
 		goto IL_00e6;
@@ -15465,7 +15727,7 @@ IL_00ca:
 		Type_t* L_45 = V_3;
 		NullCheck(L_45);
 		Type_t* L_46;
-		L_46 = VirtualFuncInvoker0< Type_t* >::Invoke(108, L_45);
+		L_46 = VirtualFuncInvoker0< Type_t* >::Invoke(110, L_45);
 		V_3 = L_46;
 		int32_t L_47 = V_5;
 		V_5 = ((int32_t)il2cpp_codegen_add(L_47, 1));
@@ -15484,7 +15746,7 @@ IL_00e6:
 		Type_t* L_50 = ___0_type;
 		NullCheck(L_50);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_51;
-		L_51 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(110, L_50);
+		L_51 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(112, L_50);
 		V_4 = L_51;
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_52 = V_4;
 		NullCheck(L_52);
@@ -16095,7 +16357,7 @@ IL_0023_1:
 				L_9 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_8, NULL);
 				NullCheck(L_7);
 				RuntimeArray* L_10;
-				L_10 = VirtualFuncInvoker1< RuntimeArray*, Type_t* >::Invoke(40, L_7, L_9);
+				L_10 = VirtualFuncInvoker1< RuntimeArray*, Type_t* >::Invoke(41, L_7, L_9);
 				V_0 = ((ITrackingHandlerU5BU5D_tEF6A8CB579AFB1FE5D9B2662CB61255D9E2F2EB3*)Castclass((RuntimeObject*)L_10, ITrackingHandlerU5BU5D_tEF6A8CB579AFB1FE5D9B2662CB61255D9E2F2EB3_il2cpp_TypeInfo_var));
 				goto IL_0049;
 			}
@@ -16221,7 +16483,7 @@ IL_0023_1:
 				L_9 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_8, NULL);
 				NullCheck(L_7);
 				RuntimeArray* L_10;
-				L_10 = VirtualFuncInvoker1< RuntimeArray*, Type_t* >::Invoke(40, L_7, L_9);
+				L_10 = VirtualFuncInvoker1< RuntimeArray*, Type_t* >::Invoke(41, L_7, L_9);
 				V_0 = ((ITrackingHandlerU5BU5D_tEF6A8CB579AFB1FE5D9B2662CB61255D9E2F2EB3*)Castclass((RuntimeObject*)L_10, ITrackingHandlerU5BU5D_tEF6A8CB579AFB1FE5D9B2662CB61255D9E2F2EB3_il2cpp_TypeInfo_var));
 				goto IL_0049;
 			}
@@ -16347,7 +16609,7 @@ IL_0023_1:
 				L_9 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_8, NULL);
 				NullCheck(L_7);
 				RuntimeArray* L_10;
-				L_10 = VirtualFuncInvoker1< RuntimeArray*, Type_t* >::Invoke(40, L_7, L_9);
+				L_10 = VirtualFuncInvoker1< RuntimeArray*, Type_t* >::Invoke(41, L_7, L_9);
 				V_0 = ((ITrackingHandlerU5BU5D_tEF6A8CB579AFB1FE5D9B2662CB61255D9E2F2EB3*)Castclass((RuntimeObject*)L_10, ITrackingHandlerU5BU5D_tEF6A8CB579AFB1FE5D9B2662CB61255D9E2F2EB3_il2cpp_TypeInfo_var));
 				goto IL_0049;
 			}
@@ -17253,7 +17515,7 @@ CATCH_00a2:
 			ReturnMessage__ctor_m721BBF7734A9F31BCFE085E30555FBABBC85C28F(L_36, L_34, ((RuntimeObject*)IsInst((RuntimeObject*)L_35, ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IMethodCallMessage_t3318E94E740BBE9C7951E69BCD019AB8F2D03853_il2cpp_TypeInfo_var)))), NULL);
 			NullCheck(L_33);
 			RuntimeObject* L_37;
-			L_37 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(18, L_33, L_36);
+			L_37 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(19, L_33, L_36);
 			RuntimeObject* L_38 = ___1_msg;
 			ReturnMessage_t7190B592F410BC0B2E5DC75356D9EC1E16D9349A* L_39 = (ReturnMessage_t7190B592F410BC0B2E5DC75356D9EC1E16D9349A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ReturnMessage_t7190B592F410BC0B2E5DC75356D9EC1E16D9349A_il2cpp_TypeInfo_var)));
 			ReturnMessage__ctor_mDE022A118495F7D96AAF9E2B853791521654E7CD(L_39, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL, 0, (LogicalCallContext_t4BB407B088DB9FA68FE1EC2DB78D33F5BB4BDE9E*)NULL, ((RuntimeObject*)IsInst((RuntimeObject*)L_38, ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IMethodCallMessage_t3318E94E740BBE9C7951E69BCD019AB8F2D03853_il2cpp_TypeInfo_var)))), NULL);
@@ -17303,7 +17565,7 @@ IL_00da:
 		RuntimeObject* L_45 = V_3;
 		NullCheck(L_44);
 		RuntimeObject* L_46;
-		L_46 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(18, L_44, L_45);
+		L_46 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(19, L_44, L_45);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918** L_47 = ___3_out_args;
 		RuntimeObject* L_48 = V_3;
 		NullCheck(L_48);
@@ -17711,14 +17973,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922F
 		MethodInfo_t* L_4 = V_0;
 		NullCheck(L_4);
 		Type_t* L_5;
-		L_5 = VirtualFuncInvoker0< Type_t* >::Invoke(38, L_4);
+		L_5 = VirtualFuncInvoker0< Type_t* >::Invoke(40, L_4);
 		RuntimeObject* L_6 = ___0_mrm;
 		NullCheck(L_6);
 		RuntimeObject* L_7;
 		L_7 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(2, IMethodReturnMessage_tB3CCA2DC13B4FD78DB6BEF253DDF54CBD52AB116_il2cpp_TypeInfo_var, L_6);
 		NullCheck(L_5);
 		bool L_8;
-		L_8 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(111, L_5, L_7);
+		L_8 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(113, L_5, L_7);
 		if (L_8)
 		{
 			goto IL_0032;
@@ -17931,7 +18193,7 @@ IL_0108:
 		RuntimeObject* L_62 = V_9;
 		NullCheck(L_61);
 		bool L_63;
-		L_63 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(111, L_61, L_62);
+		L_63 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(113, L_61, L_62);
 		if (L_63)
 		{
 			goto IL_013f;
@@ -18249,7 +18511,7 @@ IL_00d6:
 		AsyncResult_t125D959CA0F9FB74EF9F7DF4E04F15BB1B265760* L_49 = V_5;
 		RuntimeObject* L_50 = V_6;
 		NullCheck(L_49);
-		VirtualActionInvoker1< RuntimeObject* >::Invoke(17, L_49, L_50);
+		VirtualActionInvoker1< RuntimeObject* >::Invoke(18, L_49, L_50);
 	}
 
 IL_00f7:
@@ -18851,7 +19113,7 @@ IL_001a_1:
 				ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_8 = __this->____sponsors;
 				int32_t L_9 = V_2;
 				NullCheck(L_8);
-				VirtualActionInvoker1< int32_t >::Invoke(38, L_8, L_9);
+				VirtualActionInvoker1< int32_t >::Invoke(39, L_8, L_9);
 				goto IL_0055;
 			}
 
@@ -19045,7 +19307,7 @@ IL_001c:
 		RuntimeObject* L_9 = V_1;
 		NullCheck(L_9);
 		WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* L_10;
-		L_10 = InterfaceFuncInvoker0< WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* >::Invoke(0, IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5_il2cpp_TypeInfo_var, L_9);
+		L_10 = InterfaceFuncInvoker0< WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* >::Invoke(1, IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5_il2cpp_TypeInfo_var, L_9);
 		WaitOrTimerCallback_t7F57455D2C211D4751694104BA7DD36A9AB51711* L_11 = (WaitOrTimerCallback_t7F57455D2C211D4751694104BA7DD36A9AB51711*)il2cpp_codegen_object_new(WaitOrTimerCallback_t7F57455D2C211D4751694104BA7DD36A9AB51711_il2cpp_TypeInfo_var);
 		WaitOrTimerCallback__ctor_m846D9468BFEEFAC9C4F4E56FA63276A6620C7175(L_11, __this, (intptr_t)((void*)Lease_ProcessSponsorResponse_m0FBBA7E781DF74EC9E7A7EA81816FB366EF845EC_RuntimeMethod_var), NULL);
 		RuntimeObject* L_12 = V_1;
@@ -19556,7 +19818,7 @@ IL_001a_1:
 				ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_13 = __this->____objects;
 				int32_t L_14 = V_2;
 				NullCheck(L_13);
-				VirtualActionInvoker1< int32_t >::Invoke(38, L_13, L_14);
+				VirtualActionInvoker1< int32_t >::Invoke(39, L_13, L_14);
 				ServerIdentity_tCEA9C604C04F28C078FAD97838C53BD19AEA3767* L_15 = V_3;
 				NullCheck(L_15);
 				VirtualActionInvoker0::Invoke(5, L_15);
@@ -21851,7 +22113,7 @@ IL_002e_1:
 				ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_9 = __this->____properties;
 				int32_t L_10 = V_2;
 				NullCheck(L_9);
-				VirtualActionInvoker1< int32_t >::Invoke(38, L_9, L_10);
+				VirtualActionInvoker1< int32_t >::Invoke(39, L_9, L_10);
 				V_3 = (bool)1;
 				goto IL_0048;
 			}
@@ -21897,7 +22159,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicPropertyCollection_NotifyMessage_
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_2 = V_0;
 		NullCheck(L_2);
 		RuntimeObject* L_3;
-		L_3 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_2);
+		L_3 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_2);
 		V_1 = L_3;
 	}
 	{
@@ -21985,7 +22247,7 @@ IL_0051:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_18 = V_0;
 		NullCheck(L_18);
 		RuntimeObject* L_19;
-		L_19 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_18);
+		L_19 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_18);
 		V_1 = L_19;
 	}
 	{
@@ -22810,7 +23072,7 @@ IL_00e5:
 				ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_6 = ((ChannelServices_t7892AD29816C874462159101B299713604D1A637_StaticFields*)il2cpp_codegen_static_fields_for(ChannelServices_t7892AD29816C874462159101B299713604D1A637_il2cpp_TypeInfo_var))->___registeredChannels;
 				NullCheck(L_6);
 				RuntimeObject* L_7;
-				L_7 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_6);
+				L_7 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_6);
 				V_3 = L_7;
 			}
 			{
@@ -22909,7 +23171,7 @@ IL_0076_1:
 				ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_23 = ((ChannelServices_t7892AD29816C874462159101B299713604D1A637_StaticFields*)il2cpp_codegen_static_fields_for(ChannelServices_t7892AD29816C874462159101B299713604D1A637_il2cpp_TypeInfo_var))->___delayedClientChannels;
 				NullCheck(L_23);
 				RuntimeObject* L_24;
-				L_24 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_23);
+				L_24 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_23);
 				V_3 = L_24;
 			}
 			{
@@ -22971,7 +23233,7 @@ IL_0088_2:
 						ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_36 = ((ChannelServices_t7892AD29816C874462159101B299713604D1A637_StaticFields*)il2cpp_codegen_static_fields_for(ChannelServices_t7892AD29816C874462159101B299713604D1A637_il2cpp_TypeInfo_var))->___delayedClientChannels;
 						RuntimeObject* L_37 = V_8;
 						NullCheck(L_36);
-						VirtualActionInvoker1< RuntimeObject* >::Invoke(37, L_36, L_37);
+						VirtualActionInvoker1< RuntimeObject* >::Invoke(38, L_36, L_37);
 						RuntimeObject* L_38 = V_8;
 						ChannelServices_RegisterChannel_mB2ED71F69C4C31A2E6191CAD998ACDE80A73918D(L_38, NULL);
 						RuntimeObject* L_39 = V_9;
@@ -23367,7 +23629,7 @@ IL_00c3_1:
 				int32_t L_41 = V_2;
 				RuntimeObject* L_42 = ___0_chnl;
 				NullCheck(L_40);
-				VirtualActionInvoker2< int32_t, RuntimeObject* >::Invoke(35, L_40, L_41, L_42);
+				VirtualActionInvoker2< int32_t, RuntimeObject* >::Invoke(36, L_40, L_41, L_42);
 				goto IL_00ef_1;
 			}
 
@@ -24340,7 +24602,7 @@ IL_0075:
 				ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_6 = ((ChannelServices_t7892AD29816C874462159101B299713604D1A637_StaticFields*)il2cpp_codegen_static_fields_for(ChannelServices_t7892AD29816C874462159101B299713604D1A637_il2cpp_TypeInfo_var))->___registeredChannels;
 				NullCheck(L_6);
 				RuntimeObject* L_7;
-				L_7 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_6);
+				L_7 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_6);
 				V_3 = L_7;
 			}
 			{
@@ -24787,7 +25049,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CrossAppDomainSink_t857B6C94B9359293ED92A9BE9
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_0 = ((CrossAppDomainSink_t857B6C94B9359293ED92A9BE989EDAB43B304740_StaticFields*)il2cpp_codegen_static_fields_for(CrossAppDomainSink_t857B6C94B9359293ED92A9BE989EDAB43B304740_il2cpp_TypeInfo_var))->___s_sinks;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(29, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(30, L_0);
 		V_0 = L_1;
 		V_1 = (bool)0;
 	}
@@ -24827,7 +25089,7 @@ IL_0064:
 				RuntimeObject* L_8 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_7);
 				NullCheck(L_5);
 				bool L_9;
-				L_9 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(19, L_5, L_8);
+				L_9 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(20, L_5, L_8);
 				if (!L_9)
 				{
 					goto IL_003f_1;
@@ -24841,7 +25103,7 @@ IL_0064:
 				RuntimeObject* L_13 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_12);
 				NullCheck(L_10);
 				RuntimeObject* L_14;
-				L_14 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_10, L_13);
+				L_14 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_10, L_13);
 				V_2 = ((CrossAppDomainSink_t857B6C94B9359293ED92A9BE989EDAB43B304740*)CastclassClass((RuntimeObject*)L_14, CrossAppDomainSink_t857B6C94B9359293ED92A9BE989EDAB43B304740_il2cpp_TypeInfo_var));
 				goto IL_0065;
 			}
@@ -24859,7 +25121,7 @@ IL_003f_1:
 				RuntimeObject* L_20 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_19);
 				CrossAppDomainSink_t857B6C94B9359293ED92A9BE989EDAB43B304740* L_21 = V_3;
 				NullCheck(L_17);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_17, L_20, L_21);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_17, L_20, L_21);
 				CrossAppDomainSink_t857B6C94B9359293ED92A9BE989EDAB43B304740* L_22 = V_3;
 				V_2 = L_22;
 				goto IL_0065;
@@ -25770,7 +26032,7 @@ IL_0046:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_22 = V_2;
 		NullCheck(L_22);
 		RuntimeObject* L_23;
-		L_23 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_22);
+		L_23 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_22);
 		V_5 = L_23;
 	}
 	{
@@ -25934,13 +26196,13 @@ IL_00e3:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_54 = V_2;
 		NullCheck(L_54);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_55;
-		L_55 = VirtualFuncInvoker0< ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(39, L_54);
+		L_55 = VirtualFuncInvoker0< ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(40, L_54);
 		NullCheck(L_53);
 		ConstructionCall_SetActivationAttributes_m3C09E794BC1D31F1DA444490ED1B8971BA5AF7A5_inline(L_53, L_55, NULL);
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_56 = V_2;
 		NullCheck(L_56);
 		RuntimeObject* L_57;
-		L_57 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(33, L_56);
+		L_57 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(34, L_56);
 		V_5 = L_57;
 	}
 	{
@@ -27356,7 +27618,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IllogicalCallContext_get_HasUserData_mA4
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_1 = __this->___m_Datastore;
 		NullCheck(L_1);
 		int32_t L_2;
-		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(30, L_1);
+		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(31, L_1);
 		return (bool)((((int32_t)L_2) > ((int32_t)0))? 1 : 0);
 	}
 
@@ -27398,7 +27660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR IllogicalCallContext_tBE27BC899B192B585D0D20F
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_4 = __this->___m_Datastore;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
-		L_5 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(24, L_4);
+		L_5 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(25, L_4);
 		V_1 = L_5;
 		goto IL_0044;
 	}
@@ -27418,7 +27680,7 @@ IL_0028:
 		RuntimeObject* L_11;
 		L_11 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IDictionaryEnumerator_tE129D608FCDB7207E0F0ECE33473CC950A83AD16_il2cpp_TypeInfo_var, L_10);
 		NullCheck(L_7);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_7, ((String_t*)CastclassSealed((RuntimeObject*)L_9, String_t_il2cpp_TypeInfo_var)), L_11);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_7, ((String_t*)CastclassSealed((RuntimeObject*)L_9, String_t_il2cpp_TypeInfo_var)), L_11);
 	}
 
 IL_0044:
@@ -27602,7 +27864,7 @@ IL_00b2:
 		RuntimeObject* L_27;
 		L_27 = SerializationInfoEnumerator_get_Value_mBB22843FD639AD42D9A819A9745C21191C3B1DD9(L_26, NULL);
 		NullCheck(L_23);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_23, L_25, L_27);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_23, L_25, L_27);
 	}
 
 IL_00c9:
@@ -27735,7 +27997,7 @@ IL_008b:
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_18 = __this->___m_Datastore;
 		NullCheck(L_18);
 		RuntimeObject* L_19;
-		L_19 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(24, L_18);
+		L_19 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(25, L_18);
 		V_0 = L_19;
 		goto IL_00b8;
 	}
@@ -27863,7 +28125,7 @@ IL_0056:
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_15 = __this->___m_Datastore;
 		NullCheck(L_15);
 		RuntimeObject* L_16;
-		L_16 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(24, L_15);
+		L_16 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(25, L_15);
 		V_1 = L_16;
 		bool L_17 = __this->___m_IsCorrelationMgr;
 		if (L_17)
@@ -27890,7 +28152,7 @@ IL_0083:
 		RuntimeObject* L_23;
 		L_23 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IDictionaryEnumerator_tE129D608FCDB7207E0F0ECE33473CC950A83AD16_il2cpp_TypeInfo_var, L_22);
 		NullCheck(L_19);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_19, ((String_t*)CastclassSealed((RuntimeObject*)L_21, String_t_il2cpp_TypeInfo_var)), L_23);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_19, ((String_t*)CastclassSealed((RuntimeObject*)L_21, String_t_il2cpp_TypeInfo_var)), L_23);
 	}
 
 IL_009f:
@@ -27938,7 +28200,7 @@ IL_00a9:
 		RuntimeObject* L_35;
 		L_35 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0, ICloneable_t5118E0179AA4A8D8B4D4A85BF3CE9BB363B88E14_il2cpp_TypeInfo_var, ((RuntimeObject*)Castclass((RuntimeObject*)L_34, ICloneable_t5118E0179AA4A8D8B4D4A85BF3CE9BB363B88E14_il2cpp_TypeInfo_var)));
 		NullCheck(L_31);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_31, L_32, L_35);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_31, L_32, L_35);
 		goto IL_00f2;
 	}
 
@@ -27954,7 +28216,7 @@ IL_00e0:
 		RuntimeObject* L_40;
 		L_40 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IDictionaryEnumerator_tE129D608FCDB7207E0F0ECE33473CC950A83AD16_il2cpp_TypeInfo_var, L_39);
 		NullCheck(L_37);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_37, L_38, L_40);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_37, L_38, L_40);
 	}
 
 IL_00f2:
@@ -28017,7 +28279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LogicalCallContext_Merge_m3916319E5F2BDC
 		L_5 = LogicalCallContext_get_Datastore_m9CA4C3014A926567DF83EDE9AD70C4BE691E0649(L_4, NULL);
 		NullCheck(L_5);
 		RuntimeObject* L_6;
-		L_6 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(24, L_5);
+		L_6 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(25, L_5);
 		V_0 = L_6;
 		goto IL_0039;
 	}
@@ -28035,7 +28297,7 @@ IL_001d:
 		RuntimeObject* L_11;
 		L_11 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IDictionaryEnumerator_tE129D608FCDB7207E0F0ECE33473CC950A83AD16_il2cpp_TypeInfo_var, L_10);
 		NullCheck(L_7);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_7, ((String_t*)CastclassSealed((RuntimeObject*)L_9, String_t_il2cpp_TypeInfo_var)), L_11);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(24, L_7, ((String_t*)CastclassSealed((RuntimeObject*)L_9, String_t_il2cpp_TypeInfo_var)), L_11);
 	}
 
 IL_0039:
@@ -28137,7 +28399,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LogicalCallContext_get_HasUserData_mA18F
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_1 = __this->___m_Datastore;
 		NullCheck(L_1);
 		int32_t L_2;
-		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(30, L_1);
+		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(31, L_1);
 		return (bool)((((int32_t)L_2) > ((int32_t)0))? 1 : 0);
 	}
 
@@ -28907,7 +29169,7 @@ IL_001d_1:
 IL_0029:
 	{
 		WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* L_5;
-		L_5 = VirtualFuncInvoker0< WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* >::Invoke(10, __this);
+		L_5 = VirtualFuncInvoker0< WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* >::Invoke(11, __this);
 		NullCheck(L_5);
 		bool L_6;
 		L_6 = VirtualFuncInvoker0< bool >::Invoke(9, L_5);
@@ -28977,7 +29239,7 @@ IL_003e:
 			}
 			{
 				WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* L_5;
-				L_5 = VirtualFuncInvoker0< WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* >::Invoke(10, __this);
+				L_5 = VirtualFuncInvoker0< WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* >::Invoke(11, __this);
 				NullCheck(((ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158*)CastclassSealed((RuntimeObject*)L_5, ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158_il2cpp_TypeInfo_var)));
 				bool L_6;
 				L_6 = EventWaitHandle_Set_mDF98D67F214714A9590DF82A1C51D3D851281E4D(((ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158*)CastclassSealed((RuntimeObject*)L_5, ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158_il2cpp_TypeInfo_var)), NULL);
@@ -29234,7 +29496,7 @@ IL_0044:
 		MethodBase_t* L_15 = V_1;
 		NullCheck(L_15);
 		bool L_16;
-		L_16 = VirtualFuncInvoker0< bool >::Invoke(25, L_15);
+		L_16 = VirtualFuncInvoker0< bool >::Invoke(27, L_15);
 		if (L_16)
 		{
 			goto IL_005f;
@@ -29268,7 +29530,7 @@ IL_005f:
 		L_22 = CADMethodRef_GetTypes_m78261E68C2E4D2BB45F003A35BE4CDB5EFF0DA53(__this, L_21, NULL);
 		NullCheck(((MethodInfo_t*)CastclassClass((RuntimeObject*)L_20, MethodInfo_t_il2cpp_TypeInfo_var)));
 		MethodInfo_t* L_23;
-		L_23 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(40, ((MethodInfo_t*)CastclassClass((RuntimeObject*)L_20, MethodInfo_t_il2cpp_TypeInfo_var)), L_22);
+		L_23 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(42, ((MethodInfo_t*)CastclassClass((RuntimeObject*)L_20, MethodInfo_t_il2cpp_TypeInfo_var)), L_22);
 		V_1 = L_23;
 	}
 
@@ -29323,7 +29585,7 @@ IL_00ae:
 		MethodInfo_t* L_37 = V_5;
 		NullCheck(L_37);
 		bool L_38;
-		L_38 = VirtualFuncInvoker0< bool >::Invoke(25, L_37);
+		L_38 = VirtualFuncInvoker0< bool >::Invoke(27, L_37);
 		if (!L_38)
 		{
 			goto IL_0150;
@@ -29333,7 +29595,7 @@ IL_00ae:
 		MethodInfo_t* L_39 = V_5;
 		NullCheck(L_39);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_40;
-		L_40 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(26, L_39);
+		L_40 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(28, L_39);
 		NullCheck(L_40);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_41 = __this->___generic_arg_names;
 		NullCheck(L_41);
@@ -29349,7 +29611,7 @@ IL_00ae:
 		L_44 = CADMethodRef_GetTypes_m78261E68C2E4D2BB45F003A35BE4CDB5EFF0DA53(__this, L_43, NULL);
 		NullCheck(L_42);
 		MethodInfo_t* L_45;
-		L_45 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(40, L_42, L_44);
+		L_45 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(42, L_42, L_44);
 		V_1 = L_45;
 		MethodBase_t* L_46 = V_1;
 		NullCheck(L_46);
@@ -29584,7 +29846,7 @@ IL_0068:
 		MethodBase_t* L_25 = V_0;
 		NullCheck(L_25);
 		bool L_26;
-		L_26 = VirtualFuncInvoker0< bool >::Invoke(24, L_25);
+		L_26 = VirtualFuncInvoker0< bool >::Invoke(26, L_25);
 		if (!L_26)
 		{
 			goto IL_00b7;
@@ -29594,7 +29856,7 @@ IL_0068:
 		MethodBase_t* L_27 = V_0;
 		NullCheck(L_27);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_28;
-		L_28 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(26, L_27);
+		L_28 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(28, L_27);
 		V_3 = L_28;
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_29 = V_3;
 		NullCheck(L_29);
@@ -29642,6 +29904,14 @@ IL_00b7:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Exception_set_HResult_m010A171183E240EBF4F7611E924B533FAB2E471F_inline (Exception_t* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_value;
+		__this->____HResult = L_0;
+		return;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TypeEntry_set_AssemblyName_m1A577A9EDEA6B0AA7490AD1C392D578E4833B345_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -29660,6 +29930,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TypeEntry_set_TypeName_mD7ED
 		return;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TypeEntry_get_TypeName_m87C034FE84FBB84C90FBBAC8D4C7BFCAA2C23FF3_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___type_name;
+		return L_0;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TypeEntry_get_AssemblyName_m59FFB4F64604E2B1CA54ACE10839CC974DF51DCF_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29667,10 +29944,10 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TypeEntry_get_AssemblyN
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TypeEntry_get_TypeName_m87C034FE84FBB84C90FBBAC8D4C7BFCAA2C23FF3_inline (TypeEntry_tA8B9E2F03AA25274679409CAE88F9BBD047FCF36* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ActivatedClientTypeEntry_get_ApplicationUrl_m3140AED20E1B838333C8B1C97ED0A4FC9A3616D4_inline (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) 
 {
 	{
-		String_t* L_0 = __this->___type_name;
+		String_t* L_0 = __this->___applicationUrl;
 		return L_0;
 	}
 }
@@ -29847,13 +30124,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MarshalByRefObject_t8C2F4C5854177
 {
 	{
 		MarshalByRefObject_t8C2F4C5854177FD60439EB1FCCFC1B3CFAFE8DCE* L_0 = ((ServerIdentity_tCEA9C604C04F28C078FAD97838C53BD19AEA3767*)__this)->____serverObject;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ActivatedClientTypeEntry_get_ApplicationUrl_m3140AED20E1B838333C8B1C97ED0A4FC9A3616D4_inline (ActivatedClientTypeEntry_t131CADA377FC44615062212092ED260E551944CE* __this, const RuntimeMethod* method) 
-{
-	{
-		String_t* L_0 = __this->___applicationUrl;
 		return L_0;
 	}
 }
