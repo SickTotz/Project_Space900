@@ -15,7 +15,7 @@
 		475B26F38A3A652C6174529D /* IUnityInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 679ACDCF6D14CA6FE6F81479 /* IUnityInterface.h */; };
 		5623C57617FDCB0800090B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		5623C57717FDCB0800090B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B5C100E5ED4C100C7819F /* UIKit.framework */; };
-		5623C57D17FDCB0900090B9E = {isa = PBXBuildFile; fileRef = 5623C57B17FDCB0900090B9E /* InfoPlist.strings */; };
+		5623C57D17FDCB0900090B9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5623C57B17FDCB0900090B9E /* InfoPlist.strings */; };
 		5623C57F17FDCB0900090B9E /* Unity_iPhone_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5623C57E17FDCB0900090B9E /* Unity_iPhone_Tests.m */; };
 		56C56C9817D6015200616839 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C56C9717D6015100616839 /* Images.xcassets */; };
 		574A8D1BFDF4103B13A6538A /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ECD27EDF8EB21168769097 /* GameController.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -1308,7 +1308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5623C57D17FDCB0900090B9E,
+				5623C57D17FDCB0900090B9E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1329,7 +1329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "HOST_ARCH=$(uname -m)\nIL2CPP_DIR=\"$PROJECT_DIR/Il2CppOutputProject/IL2CPP/build/deploy_$HOST_ARCH\"\nIL2CPP=\"$IL2CPP_DIR/il2cpp\"\nchmod +x \"$IL2CPP\"\nchmod +x \"$IL2CPP_DIR/bee_backend/mac-$HOST_ARCH/bee_backend\"\nif [ \"$CONFIGURATION\" = \"Debug\" ];\nthen\n    IL2CPP_CONFIG=\"Debug\"\nelse\n    IL2CPP_CONFIG=\"Release\"\nfi\n\"$IL2CPP\" --compile-cpp --platform=iOS --architecture=arm64 --outputpath=\"libGameAssembly.a\" --baselib-directory=\"$PROJECT_DIR/Libraries\" --additional-defines=IL2CPP_DEBUG=0 --incremental-g-c-time-slice=3 --configuration=Release --dotnetprofile=unityaot-macos --profiler-report --profiler-output-file=\"$CONFIGURATION_TEMP_DIR/artifacts/profile.json\" --print-command-line --external-lib-il2-cpp=\"$PROJECT_DIR/Libraries/libil2cpp.a\" --data-folder=\"/Volumes/Archivio SSD/Project_Space900/Space900/Library/Bee/artifacts/iOS/il2cppOutput/data\" --generatedcppdir=\"Il2CppOutputProject/Source/il2cppOutput\" --architecture=arm64 --outputpath=\"$CONFIGURATION_BUILD_DIR/libGameAssembly.a\" --cachedirectory=\"$CONFIGURATION_TEMP_DIR/artifacts/arm64\" --configuration=\"$IL2CPP_CONFIG\"\n";
+			shellScript = "HOST_ARCH=$(uname -m)\nIL2CPP_DIR=\"$PROJECT_DIR/Il2CppOutputProject/IL2CPP/build/deploy_$HOST_ARCH\"\nIL2CPP=\"$IL2CPP_DIR/il2cpp\"\nchmod +x \"$IL2CPP\"\nchmod +x \"$IL2CPP_DIR/bee_backend/mac-$HOST_ARCH/bee_backend\"\nif [ \"$CONFIGURATION\" = \"Debug\" ];\nthen\n    IL2CPP_CONFIG=\"Debug\"\nelse\n    IL2CPP_CONFIG=\"Release\"\nfi\n\"$IL2CPP\" --compile-cpp --platform=iOS --architecture=arm64 --outputpath=\"libGameAssembly.a\" --baselib-directory=\"$PROJECT_DIR/Libraries\" --additional-defines=IL2CPP_DEBUG=0 --incremental-g-c-time-slice=3 --configuration=Release --dotnetprofile=unityaot-macos --profiler-report --profiler-output-file=\"$CONFIGURATION_TEMP_DIR/artifacts/profile.json\" --print-command-line --external-lib-il2-cpp=\"$PROJECT_DIR/Libraries/libil2cpp.a\" --data-folder=\"/Volumes/Archivio SSD 2/Project_Space900/Space900/Library/Bee/artifacts/iOS/il2cppOutput/data\" --generatedcppdir=\"Il2CppOutputProject/Source/il2cppOutput\" --architecture=arm64 --outputpath=\"$CONFIGURATION_BUILD_DIR/libGameAssembly.a\" --cachedirectory=\"$CONFIGURATION_TEMP_DIR/artifacts/arm64\" --configuration=\"$IL2CPP_CONFIG\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
