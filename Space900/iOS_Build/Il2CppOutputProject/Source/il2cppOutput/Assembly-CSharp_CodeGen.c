@@ -75,6 +75,12 @@ extern void VariableJoystick_OnPointerDown_m8ABE5C8EFBC8DB3A2EE135FFF3C0F67C533A
 extern void VariableJoystick_OnPointerUp_m65296D82A6C2E1BDC2D622B9C922FAE8E4544526 (void);
 extern void VariableJoystick_HandleInput_mD1BCF9A068737A9C057EE8CEB7E6DEB682CC03AB (void);
 extern void VariableJoystick__ctor_m6C7B41973BE20A94F16DB5DCC9AA805C5D8DF852 (void);
+extern void LookCamera_Start_mE9289E1E6CB37C5254B8BCAA97DEF20F5B8E3D7B (void);
+extern void LookCamera_Update_m68E69B1B5A7045536596C77570DDBB111AC6DEE0 (void);
+extern void LookCamera__ctor_m14F0C4DDA1FF55558C400791F6361D35EA975CB4 (void);
+extern void SkyboxChanger_Awake_mFA3795D4738C1605BB290573FF271D7F2B22C2F6 (void);
+extern void SkyboxChanger_ChangeSkybox_m485924083107A74613F32E18B94E58DB4BDF7A6E (void);
+extern void SkyboxChanger__ctor_mC961CEC26BEE8B006C7EFF30C777364DBC70884B (void);
 extern void AsteroidSpawner_Start_mF4C82D4EB98B0D7F2486923E47B173AE96444C0E (void);
 extern void AsteroidSpawner_InitializeAsteroidPool_m0DF8F6C1427BEEF52E31CDBCE7EE48B11B01931A (void);
 extern void AsteroidSpawner_SpawnAsteroids_m196DDAAB426A0D8717E2214A9060E6A30E96665F (void);
@@ -192,7 +198,7 @@ extern void TestVSCode__ctor_mE2FC78AA4137147D7ADF9C7BAF6A6D7838EAA55E (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
 extern void Tile__ctor_m69083E374CBACDCA1600BCBAACEB1BF6D695FF59 (void);
-static Il2CppMethodPointer s_methodPointers[181] = 
+static Il2CppMethodPointer s_methodPointers[187] = 
 {
 	ExampleFracture_Update_mE7DD0A8424B42FBECA34B6C8484A0574D2D9CD39,
 	ExampleFracture__ctor_m99323C6E595F1D353D0D88AF7755895A7686ED91,
@@ -257,6 +263,12 @@ static Il2CppMethodPointer s_methodPointers[181] =
 	VariableJoystick_OnPointerUp_m65296D82A6C2E1BDC2D622B9C922FAE8E4544526,
 	VariableJoystick_HandleInput_mD1BCF9A068737A9C057EE8CEB7E6DEB682CC03AB,
 	VariableJoystick__ctor_m6C7B41973BE20A94F16DB5DCC9AA805C5D8DF852,
+	LookCamera_Start_mE9289E1E6CB37C5254B8BCAA97DEF20F5B8E3D7B,
+	LookCamera_Update_m68E69B1B5A7045536596C77570DDBB111AC6DEE0,
+	LookCamera__ctor_m14F0C4DDA1FF55558C400791F6361D35EA975CB4,
+	SkyboxChanger_Awake_mFA3795D4738C1605BB290573FF271D7F2B22C2F6,
+	SkyboxChanger_ChangeSkybox_m485924083107A74613F32E18B94E58DB4BDF7A6E,
+	SkyboxChanger__ctor_mC961CEC26BEE8B006C7EFF30C777364DBC70884B,
 	AsteroidSpawner_Start_mF4C82D4EB98B0D7F2486923E47B173AE96444C0E,
 	AsteroidSpawner_InitializeAsteroidPool_m0DF8F6C1427BEEF52E31CDBCE7EE48B11B01931A,
 	AsteroidSpawner_SpawnAsteroids_m196DDAAB426A0D8717E2214A9060E6A30E96665F,
@@ -376,7 +388,7 @@ static Il2CppMethodPointer s_methodPointers[181] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 	Tile__ctor_m69083E374CBACDCA1600BCBAACEB1BF6D695FF59,
 };
-static const int32_t s_InvokerIndices[181] = 
+static const int32_t s_InvokerIndices[187] = 
 {
 	5555,
 	5555,
@@ -440,6 +452,12 @@ static const int32_t s_InvokerIndices[181] =
 	4390,
 	4390,
 	852,
+	5555,
+	5555,
+	5555,
+	5555,
+	5555,
+	5555,
 	5555,
 	5555,
 	5555,
@@ -513,8 +531,8 @@ static const int32_t s_InvokerIndices[181] =
 	5555,
 	5555,
 	5555,
-	8176,
-	8021,
+	8177,
+	8022,
 	5555,
 	5555,
 	5555,
@@ -556,7 +574,7 @@ static const int32_t s_InvokerIndices[181] =
 	5555,
 	5555,
 	5555,
-	8227,
+	8228,
 	5555,
 	5555,
 };
@@ -564,7 +582,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	181,
+	187,
 	s_methodPointers,
 	0,
 	NULL,

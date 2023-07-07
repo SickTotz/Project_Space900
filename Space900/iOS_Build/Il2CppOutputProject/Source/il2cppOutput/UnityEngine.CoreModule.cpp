@@ -18902,6 +18902,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Renderer_set_sharedMaterial_m5E842F9A06C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RenderSettings_set_skybox_m7988CC3217B1456CA0A7294127527BFC18EEC872 (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*RenderSettings_set_skybox_m7988CC3217B1456CA0A7294127527BFC18EEC872_ftn) (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*);
+	static RenderSettings_set_skybox_m7988CC3217B1456CA0A7294127527BFC18EEC872_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (RenderSettings_set_skybox_m7988CC3217B1456CA0A7294127527BFC18EEC872_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_skybox(UnityEngine.Material)");
+	_il2cpp_icall_func(___0_value);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

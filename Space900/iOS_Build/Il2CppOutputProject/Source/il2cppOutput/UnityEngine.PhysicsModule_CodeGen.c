@@ -84,6 +84,7 @@ extern void RaycastHit_get_rigidbody_mE6FCB1B1A9F0C8D4185A484C10B9A5403CCD6005 (
 extern void Rigidbody_set_velocity_mE4031DF1C2C1CCE889F2AC9D8871D83795BB0D62 (void);
 extern void Rigidbody_set_angularVelocity_m23266B4E52BF0D2E65CC984AC73CC40B8D4A27E0 (void);
 extern void Rigidbody_set_useGravity_m1B1B22E093F9DC92D7BEEBBE6B02642B3B6C4389 (void);
+extern void Rigidbody_set_freezeRotation_m6D049F82E9133020C31EEFB35A179A56364325DC (void);
 extern void Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC (void);
 extern void Rigidbody_AddForce_m7A3EEEED21F986917107CBA6CC0106DCBC212198 (void);
 extern void Rigidbody_AddExplosionForce_mE4673F6D1DA0C206DA79659E9005A0F067348402 (void);
@@ -126,7 +127,7 @@ extern void ContactPair_get_HasRemovedCollider_mF659D89CCB509F18E5B434C5441DABEA
 extern void ContactPair_ExtractContactsArray_mB82D786FF9A04BC4B5A4C10EA5DC400AB6D655EC (void);
 extern void ContactPair_GetContactPoint_Internal_m121E9C831FE1A673C1D76E00B731D3F5D558E565 (void);
 extern void ContactPair_ExtractContactsArray_Injected_mF91AF0D52F744FB7DEF1381BDDE212EF79A6932E (void);
-static Il2CppMethodPointer s_methodPointers[114] = 
+static Il2CppMethodPointer s_methodPointers[115] = 
 {
 	Collision_get_collider_mBB5A086C78FE4BE0589E216F899B611673ADD25D,
 	Collision_set_Flipped_m5AF63260E99357BB87655DDAD6316568BE65F3A1,
@@ -200,6 +201,7 @@ static Il2CppMethodPointer s_methodPointers[114] =
 	Rigidbody_set_velocity_mE4031DF1C2C1CCE889F2AC9D8871D83795BB0D62,
 	Rigidbody_set_angularVelocity_m23266B4E52BF0D2E65CC984AC73CC40B8D4A27E0,
 	Rigidbody_set_useGravity_m1B1B22E093F9DC92D7BEEBBE6B02642B3B6C4389,
+	Rigidbody_set_freezeRotation_m6D049F82E9133020C31EEFB35A179A56364325DC,
 	Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC,
 	Rigidbody_AddForce_m7A3EEEED21F986917107CBA6CC0106DCBC212198,
 	Rigidbody_AddExplosionForce_mE4673F6D1DA0C206DA79659E9005A0F067348402,
@@ -281,32 +283,32 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[30] =
 	{ 0x06000043, RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78_AdjustorThunk },
 	{ 0x06000044, RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155_AdjustorThunk },
 	{ 0x06000045, RaycastHit_get_rigidbody_mE6FCB1B1A9F0C8D4185A484C10B9A5403CCD6005_AdjustorThunk },
-	{ 0x06000054, ContactPoint_get_point_mCCDFDACC5D8DB469898060A56A3CC45132911208_AdjustorThunk },
-	{ 0x06000055, ContactPoint__ctor_mC0A53F0787CB05D31B97E761426675C3C2DC194B_AdjustorThunk },
-	{ 0x06000056, PhysicsScene_ToString_mA4E28A3068A823D16D96BBA45115A2C457FC57C7_AdjustorThunk },
-	{ 0x06000057, PhysicsScene_GetHashCode_m368888FB861F994FADEEDD281BD02B090C561814_AdjustorThunk },
-	{ 0x06000058, PhysicsScene_Equals_mE3A11329AB6C2F4F76D2321D8BAE52671A2EDDA3_AdjustorThunk },
-	{ 0x06000059, PhysicsScene_Equals_m81E4A78FC3644FDC44044B3A5F19F1C4283648A1_AdjustorThunk },
-	{ 0x0600005A, PhysicsScene_Raycast_m68D255133E274C5DDF33102EAAE70990C2A0A730_AdjustorThunk },
-	{ 0x0600005C, PhysicsScene_Raycast_m6EE0783D1B113CAD5450A2CB876F6CA305BAD2CE_AdjustorThunk },
-	{ 0x0600005E, PhysicsScene_Raycast_m3BD571CF6901C59C286D7B58ED9D15D836BC54C3_AdjustorThunk },
-	{ 0x06000063, ContactPairHeader_get_Body_m15AE148B3D38AAE1564028022C60D593E4B590FA_AdjustorThunk },
-	{ 0x06000064, ContactPairHeader_get_OtherBody_m02B0A310A4C0357ACC14C07FD31845FD57E20C08_AdjustorThunk },
-	{ 0x06000065, ContactPairHeader_get_HasRemovedBody_mB615CA10F918FFEABBF497E6C6232F9413F701A5_AdjustorThunk },
-	{ 0x06000066, ContactPairHeader_GetContactPair_m3DD517F464EDB35C4B0933854D95BE735DD2AC09_AdjustorThunk },
-	{ 0x06000067, ContactPairHeader_GetContactPair_Internal_mCED67397346C23F3ABC5063AFFCF1F099AF5FC27_AdjustorThunk },
-	{ 0x06000068, ContactPair_get_ColliderInstanceID_m9EB01473BB1DC19A73FE754B73ED5B86BE76384E_AdjustorThunk },
-	{ 0x06000069, ContactPair_get_OtherColliderInstanceID_mB66A7D2C2BD0C5DFABCAB3CCFAF9A97D54DDA8D3_AdjustorThunk },
-	{ 0x0600006A, ContactPair_get_Collider_m84ABA0A8AF353E3AC6592EF62515D6DF1E5B32AD_AdjustorThunk },
-	{ 0x0600006B, ContactPair_get_OtherCollider_m0D159FD7412F0AC0E1D35C9303BDF053CE544256_AdjustorThunk },
-	{ 0x0600006C, ContactPair_get_IsCollisionEnter_m7B72CBBDBA0EF4F39E6DED1866EA14D30C0A1B39_AdjustorThunk },
-	{ 0x0600006D, ContactPair_get_IsCollisionExit_m1BCEDE548BB79691F37FFEF74C898D7BBBEDB385_AdjustorThunk },
-	{ 0x0600006E, ContactPair_get_IsCollisionStay_mB17B13FBAD21D5742964832ACD8F9FCB55FDC3D8_AdjustorThunk },
-	{ 0x0600006F, ContactPair_get_HasRemovedCollider_mF659D89CCB509F18E5B434C5441DABEAD9C4B52E_AdjustorThunk },
-	{ 0x06000070, ContactPair_ExtractContactsArray_mB82D786FF9A04BC4B5A4C10EA5DC400AB6D655EC_AdjustorThunk },
-	{ 0x06000071, ContactPair_GetContactPoint_Internal_m121E9C831FE1A673C1D76E00B731D3F5D558E565_AdjustorThunk },
+	{ 0x06000055, ContactPoint_get_point_mCCDFDACC5D8DB469898060A56A3CC45132911208_AdjustorThunk },
+	{ 0x06000056, ContactPoint__ctor_mC0A53F0787CB05D31B97E761426675C3C2DC194B_AdjustorThunk },
+	{ 0x06000057, PhysicsScene_ToString_mA4E28A3068A823D16D96BBA45115A2C457FC57C7_AdjustorThunk },
+	{ 0x06000058, PhysicsScene_GetHashCode_m368888FB861F994FADEEDD281BD02B090C561814_AdjustorThunk },
+	{ 0x06000059, PhysicsScene_Equals_mE3A11329AB6C2F4F76D2321D8BAE52671A2EDDA3_AdjustorThunk },
+	{ 0x0600005A, PhysicsScene_Equals_m81E4A78FC3644FDC44044B3A5F19F1C4283648A1_AdjustorThunk },
+	{ 0x0600005B, PhysicsScene_Raycast_m68D255133E274C5DDF33102EAAE70990C2A0A730_AdjustorThunk },
+	{ 0x0600005D, PhysicsScene_Raycast_m6EE0783D1B113CAD5450A2CB876F6CA305BAD2CE_AdjustorThunk },
+	{ 0x0600005F, PhysicsScene_Raycast_m3BD571CF6901C59C286D7B58ED9D15D836BC54C3_AdjustorThunk },
+	{ 0x06000064, ContactPairHeader_get_Body_m15AE148B3D38AAE1564028022C60D593E4B590FA_AdjustorThunk },
+	{ 0x06000065, ContactPairHeader_get_OtherBody_m02B0A310A4C0357ACC14C07FD31845FD57E20C08_AdjustorThunk },
+	{ 0x06000066, ContactPairHeader_get_HasRemovedBody_mB615CA10F918FFEABBF497E6C6232F9413F701A5_AdjustorThunk },
+	{ 0x06000067, ContactPairHeader_GetContactPair_m3DD517F464EDB35C4B0933854D95BE735DD2AC09_AdjustorThunk },
+	{ 0x06000068, ContactPairHeader_GetContactPair_Internal_mCED67397346C23F3ABC5063AFFCF1F099AF5FC27_AdjustorThunk },
+	{ 0x06000069, ContactPair_get_ColliderInstanceID_m9EB01473BB1DC19A73FE754B73ED5B86BE76384E_AdjustorThunk },
+	{ 0x0600006A, ContactPair_get_OtherColliderInstanceID_mB66A7D2C2BD0C5DFABCAB3CCFAF9A97D54DDA8D3_AdjustorThunk },
+	{ 0x0600006B, ContactPair_get_Collider_m84ABA0A8AF353E3AC6592EF62515D6DF1E5B32AD_AdjustorThunk },
+	{ 0x0600006C, ContactPair_get_OtherCollider_m0D159FD7412F0AC0E1D35C9303BDF053CE544256_AdjustorThunk },
+	{ 0x0600006D, ContactPair_get_IsCollisionEnter_m7B72CBBDBA0EF4F39E6DED1866EA14D30C0A1B39_AdjustorThunk },
+	{ 0x0600006E, ContactPair_get_IsCollisionExit_m1BCEDE548BB79691F37FFEF74C898D7BBBEDB385_AdjustorThunk },
+	{ 0x0600006F, ContactPair_get_IsCollisionStay_mB17B13FBAD21D5742964832ACD8F9FCB55FDC3D8_AdjustorThunk },
+	{ 0x06000070, ContactPair_get_HasRemovedCollider_mF659D89CCB509F18E5B434C5441DABEAD9C4B52E_AdjustorThunk },
+	{ 0x06000071, ContactPair_ExtractContactsArray_mB82D786FF9A04BC4B5A4C10EA5DC400AB6D655EC_AdjustorThunk },
+	{ 0x06000072, ContactPair_GetContactPoint_Internal_m121E9C831FE1A673C1D76E00B731D3F5D558E565_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[114] = 
+static const int32_t s_InvokerIndices[115] = 
 {
 	5445,
 	4289,
@@ -316,9 +318,9 @@ static const int32_t s_InvokerIndices[114] =
 	1851,
 	3287,
 	6477,
-	8214,
-	8146,
-	8179,
+	8215,
+	8147,
+	8180,
 	5884,
 	6171,
 	6588,
@@ -355,18 +357,18 @@ static const int32_t s_InvokerIndices[114] =
 	6018,
 	6373,
 	7313,
-	8146,
+	8147,
 	7841,
 	7841,
 	7477,
 	7477,
 	7477,
 	6923,
-	8008,
+	8009,
 	6685,
-	8217,
-	8010,
-	8010,
+	8218,
+	8011,
+	8011,
 	5996,
 	5996,
 	2337,
@@ -379,6 +381,7 @@ static const int32_t s_InvokerIndices[114] =
 	5445,
 	4480,
 	4480,
+	4289,
 	4289,
 	2416,
 	4480,
@@ -427,7 +430,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenMod
 const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule = 
 {
 	"UnityEngine.PhysicsModule.dll",
-	114,
+	115,
 	s_methodPointers,
 	30,
 	s_adjustorThunks,

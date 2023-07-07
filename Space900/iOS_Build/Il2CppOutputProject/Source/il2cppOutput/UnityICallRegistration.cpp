@@ -2426,6 +2426,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Quaternion_Internal_FromEulerRad_Injected();
 		Register_UnityEngine_Quaternion_Internal_FromEulerRad_Injected();
 
+		//System.Void UnityEngine.Quaternion::Internal_ToEulerRad_Injected(UnityEngine.Quaternion&,UnityEngine.Vector3&)
+		void Register_UnityEngine_Quaternion_Internal_ToEulerRad_Injected();
+		Register_UnityEngine_Quaternion_Internal_ToEulerRad_Injected();
+
 		//System.Void UnityEngine.Quaternion::Inverse_Injected(UnityEngine.Quaternion&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Quaternion_Inverse_Injected();
 		Register_UnityEngine_Quaternion_Inverse_Injected();
@@ -2660,6 +2664,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Rendering.SortingGroup
 
+	//Start Registrations for type : UnityEngine.RenderSettings
+
+		//System.Void UnityEngine.RenderSettings::set_skybox(UnityEngine.Material)
+		void Register_UnityEngine_RenderSettings_set_skybox();
+		Register_UnityEngine_RenderSettings_set_skybox();
+
+	//End Registrations for type : UnityEngine.RenderSettings
+
 	//Start Registrations for type : UnityEngine.RenderTexture
 
 		//System.Int32 UnityEngine.RenderTexture::get_height()
@@ -2769,6 +2781,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Rigidbody::set_angularVelocity_Injected(UnityEngine.Vector3&)
 		void Register_UnityEngine_Rigidbody_set_angularVelocity_Injected();
 		Register_UnityEngine_Rigidbody_set_angularVelocity_Injected();
+
+		//System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
+		void Register_UnityEngine_Rigidbody_set_freezeRotation();
+		Register_UnityEngine_Rigidbody_set_freezeRotation();
 
 		//System.Void UnityEngine.Rigidbody::set_useGravity(System.Boolean)
 		void Register_UnityEngine_Rigidbody_set_useGravity();
