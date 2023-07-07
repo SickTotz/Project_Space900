@@ -902,7 +902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5317824812090666383, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 500
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: xRange
@@ -917,8 +917,24 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
+      propertyPath: maxSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
+      propertyPath: maxSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
+      propertyPath: minSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: spawnDensity
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
+      propertyPath: spawnInterval
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: asteroidDensity
@@ -930,11 +946,15 @@ PrefabInstance:
       objectReference: {fileID: 1140422180}
     - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: maxRotationSpeed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: minRotationSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
+      propertyPath: maxAsteroidsInPool
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 6281222397589379270, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: _healthbar
@@ -946,7 +966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7398463508545201598, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: maxDistanceFromOriginY
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
