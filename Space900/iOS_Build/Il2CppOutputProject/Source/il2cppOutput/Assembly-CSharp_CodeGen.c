@@ -91,6 +91,9 @@ extern void U3CSpawnAsteroidsU3Ed__14_System_Collections_IEnumerator_get_Current
 extern void CameraController_Start_m8EAAC188934ECCBD009EC00751280DCFF4D96C71 (void);
 extern void CameraController_LateUpdate_mC14DB0924E6F67288113AA92B3345A9B0ACEA27F (void);
 extern void CameraController__ctor_mE196A6332BDDED632D6F9DB6260E424594598950 (void);
+extern void DistanceTracker_Start_mCB4DBC4D1EFFC82875CB7B902918B23BD9A33C27 (void);
+extern void DistanceTracker_Update_m53DD212B05E41719BB7C73F6A4856218E0A6FB3D (void);
+extern void DistanceTracker__ctor_mFB598C4CB9B7DF61FD816847A66345DCE9A89667 (void);
 extern void ER_PlayerController_Start_m837A9EE1A20B69CED411F7868321EF96975CFADD (void);
 extern void ER_PlayerController_Update_mE374C66CF7AC4C06768B25917364194669C71EEC (void);
 extern void ER_PlayerController_HandleTouchInput_m3ED3C74495A11F3B8EFA0355C4B9D7EAF9DA9AAF (void);
@@ -189,7 +192,7 @@ extern void TestVSCode__ctor_mE2FC78AA4137147D7ADF9C7BAF6A6D7838EAA55E (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
 extern void Tile__ctor_m69083E374CBACDCA1600BCBAACEB1BF6D695FF59 (void);
-static Il2CppMethodPointer s_methodPointers[178] = 
+static Il2CppMethodPointer s_methodPointers[181] = 
 {
 	ExampleFracture_Update_mE7DD0A8424B42FBECA34B6C8484A0574D2D9CD39,
 	ExampleFracture__ctor_m99323C6E595F1D353D0D88AF7755895A7686ED91,
@@ -270,6 +273,9 @@ static Il2CppMethodPointer s_methodPointers[178] =
 	CameraController_Start_m8EAAC188934ECCBD009EC00751280DCFF4D96C71,
 	CameraController_LateUpdate_mC14DB0924E6F67288113AA92B3345A9B0ACEA27F,
 	CameraController__ctor_mE196A6332BDDED632D6F9DB6260E424594598950,
+	DistanceTracker_Start_mCB4DBC4D1EFFC82875CB7B902918B23BD9A33C27,
+	DistanceTracker_Update_m53DD212B05E41719BB7C73F6A4856218E0A6FB3D,
+	DistanceTracker__ctor_mFB598C4CB9B7DF61FD816847A66345DCE9A89667,
 	ER_PlayerController_Start_m837A9EE1A20B69CED411F7868321EF96975CFADD,
 	ER_PlayerController_Update_mE374C66CF7AC4C06768B25917364194669C71EEC,
 	ER_PlayerController_HandleTouchInput_m3ED3C74495A11F3B8EFA0355C4B9D7EAF9DA9AAF,
@@ -370,7 +376,7 @@ static Il2CppMethodPointer s_methodPointers[178] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 	Tile__ctor_m69083E374CBACDCA1600BCBAACEB1BF6D695FF59,
 };
-static const int32_t s_InvokerIndices[178] = 
+static const int32_t s_InvokerIndices[181] = 
 {
 	5555,
 	5555,
@@ -448,6 +454,9 @@ static const int32_t s_InvokerIndices[178] =
 	5445,
 	5555,
 	5445,
+	5555,
+	5555,
+	5555,
 	5555,
 	5555,
 	5555,
@@ -555,7 +564,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	178,
+	181,
 	s_methodPointers,
 	0,
 	NULL,
