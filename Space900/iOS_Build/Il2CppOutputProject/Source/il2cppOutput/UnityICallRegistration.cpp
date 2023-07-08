@@ -1558,10 +1558,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Internal.InputUnsafeUtility
 
-		//System.Boolean UnityEngine.Internal.InputUnsafeUtility::GetButton(System.String)
-		void Register_UnityEngine_Internal_InputUnsafeUtility_GetButton();
-		Register_UnityEngine_Internal_InputUnsafeUtility_GetButton();
-
 		//System.Boolean UnityEngine.Internal.InputUnsafeUtility::GetButtonDown(System.String)
 		void Register_UnityEngine_Internal_InputUnsafeUtility_GetButtonDown();
 		Register_UnityEngine_Internal_InputUnsafeUtility_GetButtonDown();

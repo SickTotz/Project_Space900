@@ -1142,8 +1142,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
+      propertyPath: minSpawnInterval
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: maxAsteroidsInPool
       value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715313908614230001, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
+      propertyPath: initialSpawnInterval
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6281222397589379270, guid: 1524a316993754d8e8451ffcbb937767, type: 3}
       propertyPath: _healthbar

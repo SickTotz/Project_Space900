@@ -222,7 +222,8 @@ struct VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE;
 struct VirutalDPad_t59752974C34B9A27A0592DAF370E9DD758CA28EE;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3;
-struct U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1;
+struct U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3;
+struct U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0;
 struct CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD;
 struct WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC;
 struct DropdownEvent_t8A008B010A742724CFC93576D6976E474BB13059;
@@ -252,7 +253,8 @@ IL2CPP_EXTERN_C RuntimeClass* Quaternion_tDA59F214EF07D7700B26E40E562F267AF73069
 IL2CPP_EXTERN_C RuntimeClass* RectTransformUtility_t65C00A84A72F17D78B81F2E7D88C2AA98AB61244_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TouchPhase_t54E0A1AF80465997849420A72317B733E1D49A9E_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Unit_Health_tCA45C56527948D6DB56AEC0923E10B4DA8107CFB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Unit_Stamina_t82B8AAA846FC9580E850449ABE431E51687DA6D7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var;
@@ -281,7 +283,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral6A1FF2C3DA82D8BEF7B91EA75A8AEEEB4D6B7085
 IL2CPP_EXTERN_C String_t* _stringLiteral6D5A495AD49A3D2BC172D33C8262C2A31AFE7963;
 IL2CPP_EXTERN_C String_t* _stringLiteral75E8DCB7CE51FE0935A45C2DF4B5B4699100EA78;
 IL2CPP_EXTERN_C String_t* _stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E;
-IL2CPP_EXTERN_C String_t* _stringLiteral8235A77696A1614EAC4A4F386F2DC49A48B2E049;
 IL2CPP_EXTERN_C String_t* _stringLiteral882F78A5EA7D90281E41836E4EE816E2D56C0BFC;
 IL2CPP_EXTERN_C String_t* _stringLiteral88BEE283254D7094E258B3A88730F4CC4F1E4AC7;
 IL2CPP_EXTERN_C String_t* _stringLiteral990164373C337C0AB8B2F6BD8421CD8EF6F5D3D1;
@@ -322,7 +323,8 @@ IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisFracturedAsteroid_t99
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F_mDEDF859CF450BC0E0B2E696B76536A40D594D77B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CSpawnAsteroidsU3Ed__14_System_Collections_IEnumerator_Reset_m615B050EEF873D8BD0B69B78DB1D860DF2EAC78D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CFireCoroutineU3Ed__9_System_Collections_IEnumerator_Reset_mE9CE2BA277040896BF296EAA5CE08AF770E6E29B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CSpawnAsteroidsU3Ed__18_System_Collections_IEnumerator_Reset_m20F5169674FE44EC716240BD3B90AB9A5402C12A_RuntimeMethod_var;
 struct CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D_marshaled_com;
 struct CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D_marshaled_pinvoke;
 struct CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_marshaled_com;
@@ -543,7 +545,7 @@ struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinv
 struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
 {
 };
-struct U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1  : public RuntimeObject
+struct U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -553,6 +555,12 @@ struct U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1  : pu
 	float ___U3CsizeU3E5__3;
 	float ___U3CspeedU3E5__4;
 	float ___U3CrotationSpeedU3E5__5;
+};
+struct U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* ___U3CU3E4__this;
 };
 struct Enumerator_t88BD1282EF117E59AACFC9EC55B89F0B9EDACE60 
 {
@@ -1675,6 +1683,7 @@ struct Asteroid_tF91EEF076E5A4C5568D6A44D034DE498A69AD1C0  : public MonoBehaviou
 };
 struct AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___playerTransform;
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___asteroidPrefabs;
 	float ___minSize;
 	float ___maxSize;
@@ -1682,11 +1691,14 @@ struct AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F  : public MonoB
 	float ___maxSpeed;
 	float ___minRotationSpeed;
 	float ___maxRotationSpeed;
-	float ___spawnInterval;
+	float ___initialSpawnInterval;
 	float ___yRange;
 	float ___zRange;
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___activeAsteroids;
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___asteroidPool;
+	float ___spawnInterval;
+	float ___distanceThreshold;
+	float ___minSpawnInterval;
 };
 struct BeltObject_t18B08028BC05DC727E2DB3AAE3D6BE58AB7280EC  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -1701,7 +1713,8 @@ struct BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E  : public Mono
 	ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* ____projectilePrefab;
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____muzzle;
 	float ____coolDownTime;
-	float ____coolDown;
+	bool ____isFiring;
+	bool ____canFire;
 };
 struct CameraController_tDC4FF0FA10418272A26E5E7539156F4F4A98E8C5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -2957,15 +2970,17 @@ inline int32_t List_1_get_Count_m4C37ED2D928D63B80F55AF434730C2D64EEB9F22_inline
 {
 	return ((  int32_t (*) (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__14__ctor_m1E0EDB48F32D81F9C4307D9B281AAE83FF4A0F2E (U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__18__ctor_m3351F20991E18D2EC42E5722C9C11EC13B7DDA02 (U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeInHierarchy_m49250F4F168DCC5388D5BE4F6A5681386907B109 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GameObject_get_tag_mEDD27BF795072834D656B286CBE51B2C99747805 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_CompareTag_m6378BE50D009A93D46036F74CC3F7E2ECB0636E5 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, String_t* ___0_tag, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner_CheckAsteroidsOutOfBounds_mEA1793D857CB74940E85348EC4FE9F9DAE2C0CB7 (AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner_UpdateSpawnInterval_m02BAFD102A1364870D37E752F0BC93B8EC2A072D (AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F* __this, const RuntimeMethod* method) ;
 inline void List_1_RemoveAt_m3196E18C5CF157CAC58991FACEB9DFD441702260 (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* __this, int32_t ___0_index, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*, int32_t, const RuntimeMethod*))List_1_RemoveAt_m54F62297ADEE4D4FDA697F49ED807BF901201B54_gshared)(__this, ___0_index, method);
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) ;
 inline void List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* __this, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
@@ -3045,14 +3060,16 @@ inline Detonator_tDF4DEB246AF1B2C6638D78897960FC510EF63B34* Object_Instantiate_T
 {
 	return ((  Detonator_tDF4DEB246AF1B2C6638D78897960FC510EF63B34* (*) (Detonator_tDF4DEB246AF1B2C6638D78897960FC510EF63B34*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m249A6BA4F2F19C2D3CE217D4D31847DF0EF03EFE_gshared)(___0_original, ___1_position, ___2_rotation, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BlasterMechanics_get_canFire_mF26F1A10675485680E0133A554682134370B38B9 (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BlasterMechanics_IsFireButtonPressed_m5D529F43AE7444DD445BB89C2D0AFF1FF1AE2C79 (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_FireProjectile_mD6BACD02C337FC15E726152AE6B04215C977547B (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetButton_m2F217DAE69DB3D1324FB848B3C9C84F19A80989E (String_t* ___0_buttonName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BlasterMechanics_IsTouchInput_mEE714D01E18C701AF677176198EF5005222C6D2E (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_StartFiring_m7645DE0AA36F45DF42A411A5A0BBB8C62755D425 (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_StopFiring_m809DB9C6CDE079DA4ABF94347C8E80AEDC7FE544 (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BlasterMechanics_FireCoroutine_m1047C8FDF4FE6833FAB6019C2F988EB2A9CC9DBA (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFireCoroutineU3Ed__9__ctor_m46782D472E00D806FDE31765343AB1963A6FD302 (U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 inline ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* Object_Instantiate_TisProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F_mDEDF859CF450BC0E0B2E696B76536A40D594D77B (ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* ___0_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, const RuntimeMethod* method)
 {
 	return ((  ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* (*) (ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m249A6BA4F2F19C2D3CE217D4D31847DF0EF03EFE_gshared)(___0_original, ___1_position, ___2_rotation, method);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_FireProjectile_mD6BACD02C337FC15E726152AE6B04215C977547B (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m7F3B0FA9256CE368D7636558EFEFC4AB0E1A0F41_inline (float ___0_d, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_a, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_m7A3EEEED21F986917107CBA6CC0106DCBC212198 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_force, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ProjectileMechanics_get_OutOfFuel_mF42982D105BD56D9CA036F51A4E8E18AAC6D942E (ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* __this, const RuntimeMethod* method) ;
@@ -5591,11 +5608,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SkyboxChanger__ctor_mC961CEC26BEE8B006C7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner_Start_mF4C82D4EB98B0D7F2486923E47B173AE96444C0E (AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F* __this, const RuntimeMethod* method) 
 {
 	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
+		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		__this->___playerTransform = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerTransform), (void*)L_0);
 		AsteroidSpawner_InitializeAsteroidPool_m0DF8F6C1427BEEF52E31CDBCE7EE48B11B01931A(__this, NULL);
-		RuntimeObject* L_0;
-		L_0 = AsteroidSpawner_SpawnAsteroids_m196DDAAB426A0D8717E2214A9060E6A30E96665F(__this, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1;
-		L_1 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_0, NULL);
+		float L_1 = __this->___initialSpawnInterval;
+		__this->___spawnInterval = L_1;
+		RuntimeObject* L_2;
+		L_2 = AsteroidSpawner_SpawnAsteroids_m196DDAAB426A0D8717E2214A9060E6A30E96665F(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
+		L_3 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_2, NULL);
 		return;
 	}
 }
@@ -5690,13 +5713,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AsteroidSpawner_SpawnAsteroids
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* L_0 = (U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1*)il2cpp_codegen_object_new(U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1_il2cpp_TypeInfo_var);
-		U3CSpawnAsteroidsU3Ed__14__ctor_m1E0EDB48F32D81F9C4307D9B281AAE83FF4A0F2E(L_0, 0, NULL);
-		U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* L_1 = L_0;
+		U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* L_0 = (U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3*)il2cpp_codegen_object_new(U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3_il2cpp_TypeInfo_var);
+		U3CSpawnAsteroidsU3Ed__18__ctor_m3351F20991E18D2EC42E5722C9C11EC13B7DDA02(L_0, 0, NULL);
+		U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
@@ -5830,6 +5853,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner_Update_mBB9C7ED4AC712DA9
 {
 	{
 		AsteroidSpawner_CheckAsteroidsOutOfBounds_mEA1793D857CB74940E85348EC4FE9F9DAE2C0CB7(__this, NULL);
+		AsteroidSpawner_UpdateSpawnInterval_m02BAFD102A1364870D37E752F0BC93B8EC2A072D(__this, NULL);
 		return;
 	}
 }
@@ -5918,6 +5942,33 @@ IL_0065:
 		return;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner_UpdateSpawnInterval_m02BAFD102A1364870D37E752F0BC93B8EC2A072D (AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___playerTransform;
+		NullCheck(L_0);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_0, NULL);
+		float L_2 = L_1.___z;
+		float L_3;
+		L_3 = fabsf(L_2);
+		V_0 = L_3;
+		float L_4 = __this->___initialSpawnInterval;
+		float L_5 = __this->___minSpawnInterval;
+		float L_6 = __this->___distanceThreshold;
+		V_1 = ((float)il2cpp_codegen_multiply(((float)(((float)il2cpp_codegen_subtract(L_4, L_5))/L_6)), (300.0f)));
+		float L_7 = __this->___initialSpawnInterval;
+		float L_8 = V_1;
+		float L_9 = V_0;
+		float L_10 = __this->___minSpawnInterval;
+		float L_11;
+		L_11 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(((float)il2cpp_codegen_subtract(L_7, ((float)il2cpp_codegen_multiply(L_8, ((float)(L_9/(1000.0f))))))), L_10, NULL);
+		__this->___spawnInterval = L_11;
+		return;
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner__ctor_m3627A196A90E6A03D3D863D2819D458BD8F1BF49 (AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5934,7 +5985,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner__ctor_m3627A196A90E6A03D
 		__this->___maxSpeed = (5.0f);
 		__this->___minRotationSpeed = (10.0f);
 		__this->___maxRotationSpeed = (50.0f);
-		__this->___spawnInterval = (2.0f);
+		__this->___initialSpawnInterval = (0.0500000007f);
 		__this->___yRange = (5.0f);
 		__this->___zRange = (20.0f);
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*)il2cpp_codegen_object_new(List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var);
@@ -5945,6 +5996,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner__ctor_m3627A196A90E6A03D
 		List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC(L_1, List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var);
 		__this->___asteroidPool = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___asteroidPool), (void*)L_1);
+		__this->___distanceThreshold = (1000.0f);
+		__this->___minSpawnInterval = (0.00999999978f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -5957,7 +6010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsteroidSpawner__ctor_m3627A196A90E6A03D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__14__ctor_m1E0EDB48F32D81F9C4307D9B281AAE83FF4A0F2E (U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__18__ctor_m3351F20991E18D2EC42E5722C9C11EC13B7DDA02 (U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -5966,13 +6019,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__14__ctor_m1E0EDB4
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__14_System_IDisposable_Dispose_mAF9C92D113255A459A03F8D44E32560D5D481694 (U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__18_System_IDisposable_Dispose_m2C95B81E24365B329B5298E54D85D8142AD7EA06 (U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSpawnAsteroidsU3Ed__14_MoveNext_m7ADD3583DE5A46A4031A36E7BE09F1E0F356594B (U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSpawnAsteroidsU3Ed__18_MoveNext_m7BD4126AFFB897510810E8125860D916B45AFEBA (U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -6079,8 +6132,7 @@ IL_0028:
 		L_24 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494(((-L_21)), L_23, NULL);
 		AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F* L_25 = __this->___U3CU3E4__this;
 		NullCheck(L_25);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26;
-		L_26 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_25, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = L_25->___playerTransform;
 		NullCheck(L_26);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
 		L_27 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_26, NULL);
@@ -6185,22 +6237,22 @@ IL_01fb:
 		goto IL_0028;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSpawnAsteroidsU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7F63238E4E67E17B7C1B7A641EC8AEC889D2776F (U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSpawnAsteroidsU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m82E9DA2A131702758CF3D28008029C82547D5D49 (U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
 		return L_0;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__14_System_Collections_IEnumerator_Reset_m615B050EEF873D8BD0B69B78DB1D860DF2EAC78D (U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnAsteroidsU3Ed__18_System_Collections_IEnumerator_Reset_m20F5169674FE44EC716240BD3B90AB9A5402C12A (U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSpawnAsteroidsU3Ed__14_System_Collections_IEnumerator_Reset_m615B050EEF873D8BD0B69B78DB1D860DF2EAC78D_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSpawnAsteroidsU3Ed__18_System_Collections_IEnumerator_Reset_m20F5169674FE44EC716240BD3B90AB9A5402C12A_RuntimeMethod_var)));
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSpawnAsteroidsU3Ed__14_System_Collections_IEnumerator_get_Current_m24ED7F0AD230667EA3CA79BF21AEC19C96E58330 (U3CSpawnAsteroidsU3Ed__14_tFE3FA6B265B7E630F3C0DE805DC572BD5799E3D1* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSpawnAsteroidsU3Ed__18_System_Collections_IEnumerator_get_Current_mA26D3EE043D2EDBE92397796A7FD30834B0C988E (U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
@@ -7543,32 +7595,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enemy_AI__ctor_mE92201E42B18F770C38DA176
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BlasterMechanics_get_canFire_mF26F1A10675485680E0133A554682134370B38B9 (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	{
-		float L_0 = __this->____coolDown;
-		float L_1;
-		L_1 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		__this->____coolDown = ((float)il2cpp_codegen_subtract(L_0, L_1));
-		float L_2 = __this->____coolDown;
-		V_0 = (bool)((((int32_t)((!(((float)L_2) <= ((float)(0.0f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_0026;
-	}
-
-IL_0026:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_Update_m4B51C0F1711994D5BC3ACD16A141257588AF502C (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
+	bool V_1 = false;
 	int32_t G_B3_0 = 0;
+	int32_t G_B8_0 = 0;
 	{
-		bool L_0;
-		L_0 = BlasterMechanics_get_canFire_mF26F1A10675485680E0133A554682134370B38B9(__this, NULL);
+		bool L_0 = __this->____canFire;
 		if (!L_0)
 		{
 			goto IL_0011;
@@ -7576,7 +7610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_Update_m4B51C0F1711994D
 	}
 	{
 		bool L_1;
-		L_1 = BlasterMechanics_IsFireButtonPressed_m5D529F43AE7444DD445BB89C2D0AFF1FF1AE2C79(__this, NULL);
+		L_1 = BlasterMechanics_IsTouchInput_mEE714D01E18C701AF677176198EF5005222C6D2E(__this, NULL);
 		G_B3_0 = ((int32_t)(L_1));
 		goto IL_0012;
 	}
@@ -7592,37 +7626,141 @@ IL_0012:
 		bool L_2 = V_0;
 		if (!L_2)
 		{
-			goto IL_001f;
+			goto IL_0021;
 		}
 	}
 	{
-		BlasterMechanics_FireProjectile_mD6BACD02C337FC15E726152AE6B04215C977547B(__this, NULL);
+		BlasterMechanics_StartFiring_m7645DE0AA36F45DF42A411A5A0BBB8C62755D425(__this, NULL);
+		goto IL_0042;
 	}
 
-IL_001f:
+IL_0021:
+	{
+		bool L_3 = __this->____canFire;
+		if (L_3)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		bool L_4;
+		L_4 = BlasterMechanics_IsTouchInput_mEE714D01E18C701AF677176198EF5005222C6D2E(__this, NULL);
+		G_B8_0 = ((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
+		goto IL_0035;
+	}
+
+IL_0034:
+	{
+		G_B8_0 = 0;
+	}
+
+IL_0035:
+	{
+		V_1 = (bool)G_B8_0;
+		bool L_5 = V_1;
+		if (!L_5)
+		{
+			goto IL_0042;
+		}
+	}
+	{
+		BlasterMechanics_StopFiring_m809DB9C6CDE079DA4ABF94347C8E80AEDC7FE544(__this, NULL);
+	}
+
+IL_0042:
 	{
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BlasterMechanics_IsFireButtonPressed_m5D529F43AE7444DD445BB89C2D0AFF1FF1AE2C79 (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BlasterMechanics_IsTouchInput_mEE714D01E18C701AF677176198EF5005222C6D2E (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) 
+{
+	Touch_t03E51455ED508492B3F278903A0114FA0E87B417 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	int32_t G_B3_0 = 0;
+	{
+		int32_t L_0;
+		L_0 = Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39(NULL);
+		if ((((int32_t)L_0) <= ((int32_t)0)))
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_1;
+		L_1 = Input_GetTouch_m75D99FE801A94279874FA8DC6B6ADAD35F5123B1(0, NULL);
+		V_0 = L_1;
+		int32_t L_2;
+		L_2 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_0), NULL);
+		G_B3_0 = ((((int32_t)((((int32_t)L_2) == ((int32_t)3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_0020;
+	}
+
+IL_001f:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0020:
+	{
+		V_1 = (bool)G_B3_0;
+		goto IL_0023;
+	}
+
+IL_0023:
+	{
+		bool L_3 = V_1;
+		return L_3;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_StartFiring_m7645DE0AA36F45DF42A411A5A0BBB8C62755D425 (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		bool L_0 = __this->____isFiring;
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		__this->____isFiring = (bool)1;
+		RuntimeObject* L_2;
+		L_2 = BlasterMechanics_FireCoroutine_m1047C8FDF4FE6833FAB6019C2F988EB2A9CC9DBA(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
+		L_3 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_2, NULL);
+	}
+
+IL_0024:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_StopFiring_m809DB9C6CDE079DA4ABF94347C8E80AEDC7FE544 (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) 
+{
+	{
+		__this->____isFiring = (bool)0;
+		__this->____canFire = (bool)1;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BlasterMechanics_FireCoroutine_m1047C8FDF4FE6833FAB6019C2F988EB2A9CC9DBA (BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8235A77696A1614EAC4A4F386F2DC49A48B2E049);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
-		bool L_0;
-		L_0 = Input_GetButton_m2F217DAE69DB3D1324FB848B3C9C84F19A80989E(_stringLiteral8235A77696A1614EAC4A4F386F2DC49A48B2E049, NULL);
-		V_0 = L_0;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		bool L_1 = V_0;
+		U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* L_0 = (U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0*)il2cpp_codegen_object_new(U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0_il2cpp_TypeInfo_var);
+		U3CFireCoroutineU3Ed__9__ctor_m46782D472E00D806FDE31765343AB1963A6FD302(L_0, 0, NULL);
+		U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
 		return L_1;
 	}
 }
@@ -7636,21 +7774,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics_FireProjectile_mD6BACD0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		float L_0 = __this->____coolDownTime;
-		__this->____coolDown = L_0;
-		ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* L_1 = __this->____projectilePrefab;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->____muzzle;
-		NullCheck(L_2);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
-		L_3 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_2, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
-		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_4);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_5;
-		L_5 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_4, NULL);
+		ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* L_0 = __this->____projectilePrefab;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->____muzzle;
+		NullCheck(L_1);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_1, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4;
+		L_4 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_3, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* L_6;
-		L_6 = Object_Instantiate_TisProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F_mDEDF859CF450BC0E0B2E696B76536A40D594D77B(L_1, L_3, L_5, Object_Instantiate_TisProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F_mDEDF859CF450BC0E0B2E696B76536A40D594D77B_RuntimeMethod_var);
+		ProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F* L_5;
+		L_5 = Object_Instantiate_TisProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F_mDEDF859CF450BC0E0B2E696B76536A40D594D77B(L_0, L_2, L_4, Object_Instantiate_TisProjectileMechanics_tF8AE94F4E0E866B50C85B1D75647CD544F71621F_mDEDF859CF450BC0E0B2E696B76536A40D594D77B_RuntimeMethod_var);
+		__this->____canFire = (bool)0;
 		return;
 	}
 }
@@ -7658,8 +7795,148 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlasterMechanics__ctor_m0E1C1CFA7B753F21
 {
 	{
 		__this->____coolDownTime = (0.25f);
+		__this->____isFiring = (bool)0;
+		__this->____canFire = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFireCoroutineU3Ed__9__ctor_m46782D472E00D806FDE31765343AB1963A6FD302 (U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFireCoroutineU3Ed__9_System_IDisposable_Dispose_m5BC6DB797B575369D89EB95209C0682D1BEC7484 (U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFireCoroutineU3Ed__9_MoveNext_m6AFBFDA90AB8A03BE1338352078FE6809B0C5035 (U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) == ((int32_t)1)))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		goto IL_0016;
+	}
+
+IL_0012:
+	{
+		goto IL_0018;
+	}
+
+IL_0014:
+	{
+		goto IL_004e;
+	}
+
+IL_0016:
+	{
+		return (bool)0;
+	}
+
+IL_0018:
+	{
+		__this->___U3CU3E1__state = (-1);
+		goto IL_0056;
+	}
+
+IL_0022:
+	{
+		BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* L_3 = __this->___U3CU3E4__this;
+		NullCheck(L_3);
+		BlasterMechanics_FireProjectile_mD6BACD02C337FC15E726152AE6B04215C977547B(L_3, NULL);
+		BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* L_4 = __this->___U3CU3E4__this;
+		NullCheck(L_4);
+		float L_5 = L_4->____coolDownTime;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_6 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_6, L_5, NULL);
+		__this->___U3CU3E2__current = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_6);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_004e:
+	{
+		__this->___U3CU3E1__state = (-1);
+	}
+
+IL_0056:
+	{
+		BlasterMechanics_t5D3737AAADCEF03C91237D037B502D943841530E* L_7 = __this->___U3CU3E4__this;
+		NullCheck(L_7);
+		bool L_8 = L_7->____isFiring;
+		V_1 = L_8;
+		bool L_9 = V_1;
+		if (L_9)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		return (bool)0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFireCoroutineU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC962566DF572AC58E9B8E89AD8036D3295E892BA (U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFireCoroutineU3Ed__9_System_Collections_IEnumerator_Reset_mE9CE2BA277040896BF296EAA5CE08AF770E6E29B (U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFireCoroutineU3Ed__9_System_Collections_IEnumerator_Reset_mE9CE2BA277040896BF296EAA5CE08AF770E6E29B_RuntimeMethod_var)));
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFireCoroutineU3Ed__9_System_Collections_IEnumerator_get_Current_m51EAC2E2B590C597BC80313C69B40B46B25A5263 (U3CFireCoroutineU3Ed__9_t76F31D64945EF66EAEC47052960150221C7070E0* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
 	}
 }
 #ifdef __clang__
@@ -10557,6 +10834,42 @@ IL_001d:
 	{
 		float L_9 = V_2;
 		return L_9;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float G_B3_0 = 0.0f;
+	{
+		float L_0 = ___0_a;
+		float L_1 = ___1_b;
+		if ((((float)L_0) > ((float)L_1)))
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		float L_2 = ___1_b;
+		G_B3_0 = L_2;
+		goto IL_0009;
+	}
+
+IL_0008:
+	{
+		float L_3 = ___0_a;
+		G_B3_0 = L_3;
+	}
+
+IL_0009:
+	{
+		V_0 = G_B3_0;
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		float L_4 = V_0;
+		return L_4;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
