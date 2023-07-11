@@ -33,10 +33,10 @@ public class ProjectileMechanics : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
-            IDamageable damageable = collision.collider.gameObject.GetComponent<IDamageable>();
-            if(damageable != null){
-                Vector3 hitPosition = collision.GetContact(index:0).point;
-                damageable.TakeDamage(_damage, hitPosition);
-            }
+        IDamageable damageable = collision.collider.gameObject.GetComponent<IDamageable>();
+        if(damageable != null){
+            Vector3 hitPosition = collision.GetContact(index:0).point;
+            damageable.TakeDamage(_damage, hitPosition);
         }
+    }
 }

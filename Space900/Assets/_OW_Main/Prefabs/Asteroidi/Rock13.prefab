@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3675202373685115374}
   - component: {fileID: -592957953624557874}
   - component: {fileID: 3506383582155062142}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rock13
   m_TagString: Asteroid
   m_Icon: {fileID: 0}

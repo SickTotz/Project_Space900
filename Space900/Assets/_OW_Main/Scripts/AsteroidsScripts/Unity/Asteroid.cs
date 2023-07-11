@@ -6,7 +6,7 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour, IDamageable
 {   
     [SerializeField] private FracturedAsteroid _fracturedAsteroidPrefab;
-    [SerializeField] private Detonator _explosionPrefab;
+    [SerializeField] public Detonator _explosionPrefab;
 
     private Transform _transform;
 

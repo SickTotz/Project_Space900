@@ -9,6 +9,4 @@ public class FracturedAsteroid : MonoBehaviour
     private void OnEnable(){
         Destroy(gameObject, _duration);
     }
-
-
 }

@@ -2960,7 +2960,7 @@ GameObject:
   - component: {fileID: -908509022606024776}
   m_Layer: 0
   m_Name: RockFracture15
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

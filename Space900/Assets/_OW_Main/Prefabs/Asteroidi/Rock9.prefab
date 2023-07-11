@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6391614343693723625}
   - component: {fileID: -5104636339958443770}
   - component: {fileID: 4824927581931566166}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rock9
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
