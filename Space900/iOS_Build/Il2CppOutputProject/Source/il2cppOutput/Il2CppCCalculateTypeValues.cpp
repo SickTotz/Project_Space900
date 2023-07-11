@@ -7372,7 +7372,7 @@ struct ArrayListEnumeratorSimple_tB829A175318C37ED5427A14633AC85D5816CF2DA  : pu
 struct ResolveEventHolder_t3CB1550411277AD1F17B720A3C07C37973A99558  : public RuntimeObject
 {
 };
-struct U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3  : public RuntimeObject
+struct U3CSpawnAsteroidsU3Ed__16_t375FC305DF5DCEBB17469E271978CE774EDFAC53  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -39479,7 +39479,6 @@ struct AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F  : public MonoB
 	float ___yRange;
 	float ___zRange;
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___activeAsteroids;
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___asteroidPool;
 	float ___spawnInterval;
 	float ___distanceThreshold;
 	float ___minSpawnInterval;
@@ -55922,7 +55921,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize4526 = { sizeof(LookCamera_t
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4527;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize4527 = { sizeof(SkyboxChanger_t5887B815D830EF1458A78D4C935C9BBAFC9637C6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4528;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize4528 = { sizeof(U3CSpawnAsteroidsU3Ed__18_t7BEE8F9ABFB0BC3DE8D449A0079ED6FB9771C8E3), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize4528 = { sizeof(U3CSpawnAsteroidsU3Ed__16_t375FC305DF5DCEBB17469E271978CE774EDFAC53), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4529;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize4529 = { sizeof(AsteroidSpawner_t86B3C3303FFC121FB22687503E13D1D72F52FF7F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4530;
