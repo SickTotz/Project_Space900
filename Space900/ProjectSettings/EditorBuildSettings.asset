@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_OW_Main/Scenes/OW_TestScene.unity
-    guid: 933c722e15f694c1a93ca62370491ca9
+  - enabled: 1
+    path: Assets/_ER_Main/_Scenes/MainMenu.unity
+    guid: 82c110ed3c24742b398ca85465083a7e
   - enabled: 1
     path: Assets/_ER_Main/_Scenes/ER_TestScene.unity
     guid: dbeb419da37eb4f0c9f8605265bb994f
