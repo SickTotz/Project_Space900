@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_OW_Main/Scenes/OW_TestScene.unity
     guid: 933c722e15f694c1a93ca62370491ca9
   - enabled: 1
-    path: Assets/_ER_Main/Scenes/ER_TestScene.unity
+    path: Assets/_ER_Main/_Scenes/ER_TestScene.unity
     guid: dbeb419da37eb4f0c9f8605265bb994f
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: b05ea5aa584504006a5d106a185b7c3a, type: 2}
