@@ -38,7 +38,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3769407004005533691
 MonoBehaviour:
@@ -367,6 +367,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
   - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
   distanceThreshold: 50
-  minVolume: 0.4
-  maxVolume: 1
+  minVolume: 0.15
+  maxVolume: 0.2
   rolloffFactor: 0.5

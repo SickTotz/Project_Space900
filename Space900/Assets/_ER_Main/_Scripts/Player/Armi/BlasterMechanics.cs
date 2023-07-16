@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlasterMechanics : MonoBehaviour
 {
-    [SerializeField] ProjectileMechanics _projectilePrefab; 
+    [SerializeField] ProjectileMechanics _projectilePrefab;
     [SerializeField] Transform _muzzle;
     [SerializeField] [Range(0f, 5f)] float _coolDownTime = 0.25f;
 
@@ -13,11 +13,11 @@ public class BlasterMechanics : MonoBehaviour
 
     private void Update()
     {
-        if (_canFire && IsTouchInput())
+        if (_canFire && !PauseMenu.GameIsPaused && IsTouchInput())
         {
             StartFiring();
         }
-        else if (!_canFire && !IsTouchInput())
+        else if (!_canFire && (!IsTouchInput() || PauseMenu.GameIsPaused))
         {
             StopFiring();
         }

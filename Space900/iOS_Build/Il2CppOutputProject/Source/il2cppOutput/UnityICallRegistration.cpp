@@ -254,10 +254,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_AudioSource_PlayHelper();
 		Register_UnityEngine_AudioSource_PlayHelper();
 
-		//System.Void UnityEngine.AudioSource::PlayOneShotHelper(UnityEngine.AudioSource,UnityEngine.AudioClip,System.Single)
-		void Register_UnityEngine_AudioSource_PlayOneShotHelper();
-		Register_UnityEngine_AudioSource_PlayOneShotHelper();
-
 		//System.Void UnityEngine.AudioSource::SetPitch(UnityEngine.AudioSource,System.Single)
 		void Register_UnityEngine_AudioSource_SetPitch();
 		Register_UnityEngine_AudioSource_SetPitch();
@@ -269,6 +265,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.AudioSource::set_loop(System.Boolean)
 		void Register_UnityEngine_AudioSource_set_loop();
 		Register_UnityEngine_AudioSource_set_loop();
+
+		//System.Void UnityEngine.AudioSource::set_volume(System.Single)
+		void Register_UnityEngine_AudioSource_set_volume();
+		Register_UnityEngine_AudioSource_set_volume();
 
 	//End Registrations for type : UnityEngine.AudioSource
 
@@ -2812,11 +2812,23 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Rigidbody
 
+	//Start Registrations for type : UnityEngine.SceneManagement.Scene
+
+		//System.Int32 UnityEngine.SceneManagement.Scene::GetBuildIndexInternal(System.Int32)
+		void Register_UnityEngine_SceneManagement_Scene_GetBuildIndexInternal();
+		Register_UnityEngine_SceneManagement_Scene_GetBuildIndexInternal();
+
+	//End Registrations for type : UnityEngine.SceneManagement.Scene
+
 	//Start Registrations for type : UnityEngine.SceneManagement.SceneManager
 
 		//System.Int32 UnityEngine.SceneManagement.SceneManager::get_sceneCount()
 		void Register_UnityEngine_SceneManagement_SceneManager_get_sceneCount();
 		Register_UnityEngine_SceneManagement_SceneManager_get_sceneCount();
+
+		//System.Void UnityEngine.SceneManagement.SceneManager::GetActiveScene_Injected(UnityEngine.SceneManagement.Scene&)
+		void Register_UnityEngine_SceneManagement_SceneManager_GetActiveScene_Injected();
+		Register_UnityEngine_SceneManagement_SceneManager_GetActiveScene_Injected();
 
 		//System.Void UnityEngine.SceneManagement.SceneManager::GetSceneAt_Injected(System.Int32,UnityEngine.SceneManagement.Scene&)
 		void Register_UnityEngine_SceneManagement_SceneManager_GetSceneAt_Injected();

@@ -13,6 +13,8 @@ public class ER_PlayerController : MonoBehaviour
     private Vector3 originalPosition;
     private Vector3 lastValidPosition;
 
+    private bool canPlayerInput = true; // Aggiunta della variabile per controllare l'input del giocatore
+
     private void Start()
     {
         originalPosition = transform.position;
@@ -24,8 +26,11 @@ public class ER_PlayerController : MonoBehaviour
         // Movimento automatico lungo l'asse Z
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        // Controllo dell'input dell'utente su dispositivi mobili
-        HandleTouchInput();
+        // Controllo dell'input dell'utente su dispositivi mobili solo se può input
+        if (canPlayerInput)
+        {
+            HandleTouchInput();
+        }
     }
 
     private void HandleTouchInput()
@@ -67,5 +72,11 @@ public class ER_PlayerController : MonoBehaviour
                 transform.position = newPosition;
             }
         }
+    }
+
+    // Metodo per abilitare o disabilitare l'input del giocatore
+    public void SetPlayerInputEnabled(bool enabled)
+    {
+        canPlayerInput = enabled;
     }
 }
