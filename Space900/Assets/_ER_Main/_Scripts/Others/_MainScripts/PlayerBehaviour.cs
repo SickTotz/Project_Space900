@@ -5,25 +5,18 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] HealthBar_Mechanics _healthbar;
     [SerializeField] ER_PlayerController _playerController;
 
-    public void Update()
-    {
-        /* DEBUG HEALTH BAR AND STAMINA BAR */
-
-        // Health input
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PlayerTakeDamage(20);
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            PlayerHeal(10);
-        }
-    }
+    public delegate void PlayerTakeDamageHandler(int currentHealth);
+    public event PlayerTakeDamageHandler PlayerTakeDamageEvent;
 
     public void PlayerTakeDamage(int damage)
     {
         GameManager.gameManager._playerHealth.DamageUnit(damage);
         _healthbar.setHealth(GameManager.gameManager._playerHealth.Health);
+
+        if (PlayerTakeDamageEvent != null)
+        {
+            PlayerTakeDamageEvent(GameManager.gameManager._playerHealth.Health);
+        }
     }
 
     public void PlayerHeal(int healing)
@@ -38,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             // Debug per le collisioni con gli asteroidi
             Debug.Log("Collision with asteroid: " + collision.gameObject.name + " - Reference: " + collision.gameObject.GetInstanceID());
-            
+
             // Calcola il danno da applicare alla navicella
             int damage = CalculateDamageFromAsteroid(collision);
 
@@ -53,6 +46,7 @@ public class PlayerBehaviour : MonoBehaviour
             }
         }
     }
+
     private int CalculateDamageFromAsteroid(Collision collision)
     {
         // Ottieni la velocità dell'asteroide

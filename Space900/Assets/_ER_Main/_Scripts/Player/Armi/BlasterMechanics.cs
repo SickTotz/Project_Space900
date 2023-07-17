@@ -9,15 +9,35 @@ public class BlasterMechanics : MonoBehaviour
     [SerializeField] [Range(0f, 5f)] float _coolDownTime = 0.25f;
 
     bool _isFiring = false;
-    bool _canFire = true;
+
+    private PlayerBehaviour playerBehaviour;
+    private GameOverManager gameOverManager;
+
+    private void Awake()
+    {
+        playerBehaviour = FindObjectOfType<PlayerBehaviour>();
+        if (playerBehaviour == null)
+        {
+            Debug.LogError("PlayerBehaviour not found in the scene!");
+        }
+
+        gameOverManager = FindObjectOfType<GameOverManager>();
+        if (gameOverManager == null)
+        {
+            Debug.LogError("GameOverManager not found in the scene!");
+        }
+    }
 
     private void Update()
     {
-        if (_canFire && !PauseMenu.GameIsPaused && IsTouchInput())
+        if (IsTouchInput() && !PauseMenu.GameIsPaused && !gameOverManager.isGameOver)
         {
-            StartFiring();
+            if (!_isFiring)
+            {
+                StartFiring();
+            }
         }
-        else if (!_canFire && (!IsTouchInput() || PauseMenu.GameIsPaused))
+        else
         {
             StopFiring();
         }
@@ -31,17 +51,13 @@ public class BlasterMechanics : MonoBehaviour
 
     private void StartFiring()
     {
-        if (!_isFiring)
-        {
-            _isFiring = true;
-            StartCoroutine(FireCoroutine());
-        }
+        _isFiring = true;
+        StartCoroutine(FireCoroutine());
     }
 
     private void StopFiring()
     {
         _isFiring = false;
-        _canFire = true;
     }
 
     private IEnumerator FireCoroutine()
@@ -56,6 +72,5 @@ public class BlasterMechanics : MonoBehaviour
     private void FireProjectile()
     {
         Instantiate(_projectilePrefab, _muzzle.position, transform.rotation);
-        _canFire = false;
     }
 }
