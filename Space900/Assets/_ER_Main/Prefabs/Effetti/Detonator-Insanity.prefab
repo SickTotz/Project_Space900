@@ -367,6 +367,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
   - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
   distanceThreshold: 50
-  minVolume: 0.15
-  maxVolume: 0.2
+  minVolume: 0.01
+  maxVolume: 0.02
   rolloffFactor: 0.5
