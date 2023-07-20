@@ -13,7 +13,7 @@ public class ER_PlayerController : MonoBehaviour
     private Vector3 originalPosition;
     private Vector3 lastValidPosition;
 
-    private bool canPlayerInput = true; // Aggiunta della variabile per controllare l'input del giocatore
+    private bool canPlayerInput = true;
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class ER_PlayerController : MonoBehaviour
         // Movimento automatico lungo l'asse Z
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        // Controllo del input da touchscreen
+        // Controllo dell'input da touchscreen
         if (canPlayerInput)
         {
             HandleTouchInput();

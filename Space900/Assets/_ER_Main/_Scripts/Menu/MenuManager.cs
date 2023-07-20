@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     public GameObject menuUI;
     public string gameSceneName = "ER_TestScene";
     private bool isVideoFinished = false;
-    public AudioManager audioManager; // Assegna manualmente l'oggetto AudioManager nell'editor Unity
+    public AudioManager audioManager; 
     private bool isPlayingGame = false; // Variabile per tenere traccia dello stato di gioco
 
     private void Start()
@@ -46,17 +46,16 @@ public class MenuManager : MonoBehaviour
 
         if (isPlayingGame)
         {
-            audioManager.PlaySoundWithFade("MainMenu Theme", 1.0f); // Riproduci nuovamente l'audio di sfondo quando il video è finito e si è tornati al menu di gioco
+            audioManager.PlaySoundWithFade("MainMenu Theme", 1.0f);
         }
     }
 
     private void OnEnable()
     {
-        // Riproduci l'audio di sfondo del menu quando si torna al menu di gioco
         if (isPlayingGame)
         {
-            menuUI.SetActive(true); // Riattiva il menu di gioco
-            audioManager.PlaySoundWithFade("MainMenu Theme", 1.0f); // Riproduci l'audio di sfondo del menu con fade-in
+            menuUI.SetActive(true); 
+            audioManager.PlaySoundWithFade("MainMenu Theme", 1.0f); 
         }
     }
 }

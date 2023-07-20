@@ -5,10 +5,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public SoundSettings[] sounds;
-    public float fadeInDuration = 1.0f; // Durata della transizione di volume in secondi
-    public float fadeOutDuration = 1.0f; // Durata della transizione di volume in secondi
+    public float fadeInDuration = 1.0f;
+    public float fadeOutDuration = 1.0f; 
 
-    private Coroutine fadeCoroutine; // Riferimento al coroutine per la transizione di volume
+    private Coroutine fadeCoroutine;
 
     void Start()
     {
@@ -28,17 +28,15 @@ public class AudioManager : MonoBehaviour
         {
             if (s.name == name)
             {
-                // Interrompi la transizione di volume corrente, se presente
                 if (fadeCoroutine != null)
                 {
                     StopCoroutine(fadeCoroutine);
                     fadeCoroutine = null;
                 }
 
-                // Avvia una nuova transizione di volume
-                s.source.volume = 0f; // Imposta il volume iniziale a 0
-                s.source.Play(); // Avvia la riproduzione audio
-                fadeCoroutine = StartCoroutine(FadeSound(s.source, fadeDuration, 0f, s.volume)); // Esegui il fade-in
+                s.source.volume = 0f; 
+                s.source.Play();
+                fadeCoroutine = StartCoroutine(FadeSound(s.source, fadeDuration, 0f, s.volume));
             }
         }
     }
@@ -49,14 +47,12 @@ public class AudioManager : MonoBehaviour
         {
             if (s.source.isPlaying)
             {
-                // Interrompi la transizione di volume corrente, se presente
                 if (fadeCoroutine != null)
                 {
                     StopCoroutine(fadeCoroutine);
                     fadeCoroutine = null;
                 }
 
-                // Avvia una nuova transizione di volume per interrompere gradualmente l'audio
                 fadeCoroutine = StartCoroutine(FadeSound(s.source, fadeDuration, s.source.volume, 0f));
             }
         }

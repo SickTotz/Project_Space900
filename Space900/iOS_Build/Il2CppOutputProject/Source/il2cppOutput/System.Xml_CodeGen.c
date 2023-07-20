@@ -33,7 +33,9 @@ extern void XmlCharType__ctor_mB4A379AC51751894C31365E176E3B9BFB5ABC771 (void);
 extern void XmlCharType_get_Instance_m1279A3FC91B74599A9BC76979E50DBFC07F67C55 (void);
 extern void XmlConvert_EscapeValueForDebuggerDisplay_m4290160B46B7BA2841826618DBBD1403371CA202 (void);
 extern void XmlConvert__cctor_m7B068115A3F73B6954E126C91D02F3B338BCBC1C (void);
-static Il2CppMethodPointer s_methodPointers[30] = 
+extern void XmlAttributeAttribute_get_AttributeName_mD12BFE7D2970617D6BAEA2C7726BFCC1E78043B9 (void);
+extern void XmlElementAttribute_get_ElementName_mFD5C95EC3061DC2A2D88E0EACC2DDFFA91C76F6F (void);
+static Il2CppMethodPointer s_methodPointers[32] = 
 {
 	NULL,
 	XmlReader_get_Name_m584CCDFC01FC6C2679778096652800364589F784,
@@ -65,6 +67,8 @@ static Il2CppMethodPointer s_methodPointers[30] =
 	XmlConvert_EscapeValueForDebuggerDisplay_m4290160B46B7BA2841826618DBBD1403371CA202,
 	XmlConvert__cctor_m7B068115A3F73B6954E126C91D02F3B338BCBC1C,
 	NULL,
+	XmlAttributeAttribute_get_AttributeName_mD12BFE7D2970617D6BAEA2C7726BFCC1E78043B9,
+	XmlElementAttribute_get_ElementName_mFD5C95EC3061DC2A2D88E0EACC2DDFFA91C76F6F,
 };
 extern void XmlReaderDebuggerDisplayProxy__ctor_m56B82747E748FBB7BC8D0A1728D526EA23B54C1A_AdjustorThunk (void);
 extern void XmlReaderDebuggerDisplayProxy_ToString_mEBDAEFA455D93E9934990687C8ED5421E6537FFB_AdjustorThunk (void);
@@ -79,44 +83,46 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[5] =
 	{ 0x06000016, DebuggerDisplayXmlNodeProxy_ToString_mAE6AF3B460B62D08C1090FA5FA67BB80EB091D48_AdjustorThunk },
 	{ 0x0600001A, XmlCharType__ctor_mB4A379AC51751894C31365E176E3B9BFB5ABC771_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[30] = 
+static const int32_t s_InvokerIndices[32] = 
 {
 	0,
-	5447,
+	5548,
 	0,
 	0,
 	0,
 	0,
 	0,
-	5447,
-	8230,
-	4392,
-	5447,
-	5447,
-	5416,
-	5447,
-	5447,
-	5447,
+	5548,
+	8506,
+	4474,
+	5548,
+	5548,
+	5516,
+	5548,
+	5548,
+	5548,
 	0,
-	5447,
+	5548,
 	0,
-	5447,
-	4392,
-	5447,
-	8188,
-	8230,
-	6910,
-	4392,
-	8231,
-	7855,
-	8230,
+	5548,
+	4474,
+	5548,
+	8464,
+	8506,
+	7106,
+	4474,
+	8507,
+	8111,
+	8506,
 	0,
+	5548,
+	5548,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Xml_CodeGenModule;
 const Il2CppCodeGenModule g_System_Xml_CodeGenModule = 
 {
 	"System.Xml.dll",
-	30,
+	32,
 	s_methodPointers,
 	5,
 	s_adjustorThunks,
