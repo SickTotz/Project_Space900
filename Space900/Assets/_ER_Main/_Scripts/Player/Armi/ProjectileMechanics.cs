@@ -3,40 +3,68 @@ using UnityEngine;
 public class ProjectileMechanics : MonoBehaviour
 {   
     [SerializeField] [Range(5000f, 25000f)]
-    float _launchForce = 10000f;
-    [SerializeField] [Range(10f, 1000f)] int _damage = 100;
-    [SerializeField] [Range(2f, 10f)] float _range = 2f;
+    private float _launchForce = 10000f;
+    [SerializeField] [Range(10f, 1000f)]
+    private int _damage = 100;
+    [SerializeField] [Range(2f, 10f)]
+    private float _range = 2f;
+    [SerializeField] [Range(0f, 1f)]
+    public float volume = 1f;
+    [SerializeField]
+    private AudioClip _shootSound;
 
-    bool OutOfFuel{
-        get{
+    private bool OutOfFuel
+    {
+        get
+        {
             _duration -= Time.deltaTime;
             return _duration <= 0f;
         }
     }
 
-    Rigidbody _rigidbody;
-    float _duration;
+    private Rigidbody _rigidbody;
+    private float _duration;
+    private AudioSource _audioSource;
+    private bool _isFiring = false;
 
-    void Awake() {
+    private void Awake()
+    {
         _rigidbody = GetComponent<Rigidbody>();
+        _audioSource = gameObject.AddComponent<AudioSource>();
+        _audioSource.playOnAwake = false;
     }
 
-    void OnEnable() {
+    private void OnEnable()
+    {
         _rigidbody.AddForce(_launchForce * transform.forward);
         _duration = _range;
+
+        if (_shootSound != null && !_isFiring)
+        {
+            _audioSource.volume = volume;
+            _audioSource.PlayOneShot(_shootSound);
+            _isFiring = true; // Imposta la variabile _isFiring a true quando il proiettile viene sparato
+        }
     }
 
-    void Update() {
-        if(OutOfFuel){
+    private void Update()
+    {
+        if (OutOfFuel)
+        {
             Destroy(gameObject);
         }
     }
 
-    void OnCollisionEnter(Collision collision) {
+    private void OnCollisionEnter(Collision collision)
+    {
         IDamageable damageable = collision.collider.gameObject.GetComponent<IDamageable>();
-        if(damageable != null){
-            Vector3 hitPosition = collision.GetContact(index:0).point;
+        if (damageable != null)
+        {
+            Vector3 hitPosition = collision.GetContact(0).point;
             damageable.TakeDamage(_damage, hitPosition);
         }
+
+        // Resetta la variabile _isFiring dopo che il proiettile ha colpito qualcosa
+        _isFiring = false;
     }
 }

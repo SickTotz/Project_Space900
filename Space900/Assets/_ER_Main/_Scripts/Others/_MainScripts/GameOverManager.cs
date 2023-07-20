@@ -10,6 +10,11 @@ public class GameOverManager : MonoBehaviour
 
     public bool isGameOver = false;
 
+    // Aggiungi questa variabile per l'effetto audio
+    public AudioSource gameOverAudioSource;
+    public AudioClip gameOverClip;
+    public float gameOverVolume = 1.0f;
+
     private void Start()
     {
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
@@ -22,6 +27,12 @@ public class GameOverManager : MonoBehaviour
         }
 
         playerBehaviour.PlayerTakeDamageEvent += CheckGameOver;
+
+        // Inizializza l'AudioSource per l'effetto audio del game over
+        gameOverAudioSource = gameObject.AddComponent<AudioSource>();
+        gameOverAudioSource.clip = gameOverClip;
+        gameOverAudioSource.volume = gameOverVolume;
+        gameOverAudioSource.loop = false;
     }
 
     private void OnDisable()
@@ -45,5 +56,8 @@ public class GameOverManager : MonoBehaviour
         Debug.Log("G A M E  O V E R");
         GameOverUI.SetActive(true);
         playerController.SetPlayerInputEnabled(false);
+
+        // Riproduci l'effetto audio del game over
+        gameOverAudioSource.Play();
     }
 }

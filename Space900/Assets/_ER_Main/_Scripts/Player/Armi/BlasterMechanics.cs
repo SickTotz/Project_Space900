@@ -9,6 +9,7 @@ public class BlasterMechanics : MonoBehaviour
     [SerializeField] [Range(0f, 5f)] float _coolDownTime = 0.25f;
 
     bool _isFiring = false;
+    private float _nextFireTime = 0f;
 
     private PlayerBehaviour playerBehaviour;
     private GameOverManager gameOverManager;
@@ -28,13 +29,20 @@ public class BlasterMechanics : MonoBehaviour
         }
     }
 
+    private bool IsTouchInput()
+    {
+        // Controlla se il tasto/tocco fuoco è stato premuto
+        return Input.GetButton("Fire1");
+    }
+
     private void Update()
     {
         if (IsTouchInput() && !PauseMenu.GameIsPaused && !gameOverManager.isGameOver)
         {
-            if (!_isFiring)
+            if (!_isFiring && Time.time >= _nextFireTime)
             {
-                StartFiring();
+                FireProjectile();
+                _nextFireTime = Time.time + _coolDownTime;
             }
         }
         else
@@ -43,30 +51,14 @@ public class BlasterMechanics : MonoBehaviour
         }
     }
 
-    private bool IsTouchInput()
-    {
-        // Controlla se è stato effettuato un tocco su schermo
-        return Input.touchCount > 0 && Input.GetTouch(0).phase != TouchPhase.Ended;
-    }
-
     private void StartFiring()
     {
         _isFiring = true;
-        StartCoroutine(FireCoroutine());
     }
 
     private void StopFiring()
     {
         _isFiring = false;
-    }
-
-    private IEnumerator FireCoroutine()
-    {
-        while (_isFiring)
-        {
-            FireProjectile();
-            yield return new WaitForSeconds(_coolDownTime);
-        }
     }
 
     private void FireProjectile()

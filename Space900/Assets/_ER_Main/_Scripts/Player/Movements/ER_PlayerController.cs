@@ -26,7 +26,7 @@ public class ER_PlayerController : MonoBehaviour
         // Movimento automatico lungo l'asse Z
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        // Controllo dell'input dell'utente su dispositivi mobili solo se può input
+        // Controllo del input da touchscreen
         if (canPlayerInput)
         {
             HandleTouchInput();
